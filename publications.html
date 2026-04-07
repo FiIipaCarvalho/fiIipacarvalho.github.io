@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Dr. Filipa Carvalho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar"><div class="container"><div class="nav-wrapper">
+        <a href="index.html" class="logo">Filipa Carvalho</a>
+        <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="publications.html" class="nav-link active">Publications</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="people.html" class="nav-link">People</a></li>
+            <li><a href="photos.html" class="nav-link">Photos</a></li>
+            <li><a href="news.html" class="nav-link">News</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div></div></nav>
+
+    <section class="section page-header"><div class="container">
+        <h1 class="page-title">Publications</h1>
+        <p class="page-subtitle">Automatically updated from ORCID</p>
+    </div></section>
+
+    <section class="section"><div class="container">
+        <div class="publications-controls">
+            <div class="search-box">
+                <input type="text" id="pub-search" placeholder="Search publications...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-year="all">All Years</button>
+                <div id="year-filters"></div>
+            </div>
+        </div>
+        <div id="publications-list" class="publications-list">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading publications from ORCID...</p>
+            </div>
+        </div>
+    </div></section>
+
+    <footer class="footer"><div class="container">
+        <div class="footer-bottom"><p>&copy; 2026 Dr. Filipa Carvalho</p></div>
+    </div></footer>
+
+    <script src="js/marked.min.js"></script>
+    <script src="js/publications.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

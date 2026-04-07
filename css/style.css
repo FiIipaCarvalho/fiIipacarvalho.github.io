@@ -842,6 +842,11 @@ body {
     box-shadow: 0 5px 20px var(--shadow-hover);
 }
 
+.person-photo-link {
+    display: block;
+    text-decoration: none;
+}
+
 .person-photo {
     width: 100%;
     height: 250px;
@@ -853,6 +858,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.person-card:hover .person-photo img {
+    transform: scale(1.05);
 }
 
 .person-info {
@@ -862,7 +872,16 @@ body {
 .person-info h3 {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
+}
+
+.person-name-link {
     color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.person-name-link:hover {
+    color: var(--primary-color);
 }
 
 .person-role {
