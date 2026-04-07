@@ -1167,87 +1167,105 @@ body {
    Biography Page
    ========================================= */
 .biography-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.biography-content p {
+.biography-content > p {
     color: var(--text-secondary);
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: var(--spacing-lg);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .biography-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-md);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.biography-content h2:first-of-type {
+    margin-top: 2rem;
 }
 
 .bio-table {
     width: 100%;
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 2rem;
     border-collapse: collapse;
 }
 
 .bio-table tr {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.bio-table tr:last-child {
+    border-bottom: none;
 }
 
 .bio-table td {
-    padding: var(--spacing-md) var(--spacing-sm);
+    padding: 1rem 0;
     vertical-align: top;
 }
 
 .bio-years {
-    width: 140px;
-    min-width: 140px;
-    color: var(--text-muted);
+    width: 130px;
+    min-width: 130px;
+    color: var(--primary-color);
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
-    padding-right: var(--spacing-md);
+    padding-right: 2rem;
 }
 
 .bio-details {
     color: var(--text-secondary);
     line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 .bio-details strong {
     color: var(--text-primary);
+    font-weight: 600;
 }
 
 .bio-details em {
     color: var(--text-muted);
     font-style: italic;
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.bio-details br + strong {
+    display: inline-block;
+    margin-top: 0.25rem;
 }
 
 @media (max-width: 768px) {
-    .bio-table {
-        display: block;
+    .biography-content {
+        max-width: 100%;
     }
     
     .bio-table tr {
-        display: block;
-        margin-bottom: var(--spacing-md);
-        padding-bottom: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     
     .bio-table td {
-        display: block;
-        width: 100%;
         padding: 0.25rem 0;
+        width: 100%;
     }
     
     .bio-years {
         width: 100%;
-        font-weight: 600;
-        color: var(--primary-color);
         margin-bottom: 0.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -1304,6 +1322,232 @@ body {
     
     .research-image {
         height: 200px;
+    }
+}
+
+/* =========================================
+   Projects List Page
+   ========================================= */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.project-card-list {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card-list:hover {
+    box-shadow: 0 5px 20px var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.project-card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.project-card-content h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-card-content h3 a:hover {
+    color: var(--primary-color);
+}
+
+.project-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.project-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-description-short {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* =========================================
+   Project Pages
+   ========================================= */
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.project-page-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-meta-bar {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    padding: var(--spacing-md);
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.project-meta-bar .meta-item {
+    font-size: 0.95rem;
+}
+
+.project-meta-bar .meta-item strong {
+    color: var(--text-primary);
+    margin-right: 0.25rem;
+}
+
+.project-website-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-website-link:hover {
+    text-decoration: underline;
+}
+
+.project-description h2,
+.project-team h2,
+.project-publications h2,
+.project-photos h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.project-description p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
+}
+
+/* Team Grid - Small version for project pages */
+.team-grid-small {
+    margin-top: var(--spacing-md);
+}
+
+.team-role-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-role-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.team-member-mini {
+    text-align: center;
+}
+
+.team-member-mini img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--border-color);
+}
+
+.team-member-mini p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Compact publication list for project pages */
+.publications-list-compact {
+    margin-top: var(--spacing-md);
+}
+
+.pub-item-compact {
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pub-item-compact:last-child {
+    border-bottom: none;
+}
+
+.pub-item-compact h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+}
+
+.pub-meta-compact {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.pub-link-compact {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.pub-link-compact:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .project-meta-bar {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .team-member-mini img {
+        width: 80px;
+        height: 80px;
     }
 }
 

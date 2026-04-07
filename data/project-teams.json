@@ -1,0 +1,77 @@
+{
+  "project_teams": {
+    "rebels": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Tommy Ryan-Keogh", "Flavien Petit"],
+      "students": ["Hans Hilder", "Daniel Bangay"]
+    },
+    "polomints": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Elise Droste"],
+      "students": []
+    },
+    "partitrics": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Tommy Ryan-Keogh"],
+      "students": []
+    },
+    "idapro": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Orlando Prugel-Bennett"],
+      "students": []
+    },
+    "gliders-i": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
+      "students": []
+    },
+    "gliders-ii": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
+      "students": []
+    },
+    "apart": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": ["Raul Costa", "Faron Quinn"]
+    },
+    "techoceans": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": []
+    },
+    "biarritz": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": []
+    },
+    "gocart": {
+      "pi": ["Filipa Carvalho"],
+      "staff": ["Tommy Ryan-Keogh"],
+      "students": [],
+      "alumni": ["Sarah Cryer"]
+    },
+    "comics": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": [],
+      "alumni": ["Evelyn Byer"]
+    },
+    "custard": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": []
+    },
+    "pal-lter": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": [],
+      "alumni": []
+    },
+    "fire-glider": {
+      "pi": ["Filipa Carvalho"],
+      "staff": [],
+      "students": []
+    }
+  }
+}

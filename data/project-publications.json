@@ -1,0 +1,30 @@
+{
+  "publications": [
+    {
+      "title": "Implications for oceanographic and seafloor geodetic applications due to settling of self-calibrating bottom pressure recorders",
+      "doi": "10.1029/2025GL117927",
+      "projects": ["polomints"]
+    },
+    {
+      "title": "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
+      "doi": "10.1002/lom3.10380",
+      "projects": ["fire-glider", "pal-lter"]
+    },
+    {
+      "title": "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
+      "doi": "10.3390/jmse8110939",
+      "projects": []
+    },
+    {
+      "title": "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
+      "doi": "10.1016/j.dsr2.2022.105094",
+      "projects": ["gocart"]
+    },
+    {
+      "title": "Primary production dynamics on the Agulhas Bank in autumn",
+      "doi": "10.1016/j.dsr2.2022.105153",
+      "projects": ["gocart"]
+    }
+  ],
+  "instructions": "Add publications here by DOI or exact title match. ORCID will auto-fetch, this file just tags them to projects."
+}

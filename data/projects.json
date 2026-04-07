@@ -1,0 +1,177 @@
+{
+  "projects": [
+    {
+      "id": "rebels",
+      "title": "ReBELS",
+      "fullTitle": "Resolving Biological carbon Export in the Labrador Sea",
+      "status": "current",
+      "dates": "2023-2028",
+      "funding": "NERC Standard Grant, £1.05M",
+      "role": "Co-PI, WP1-2 lead",
+      "description": "Understanding how winter convection and spring restratification control biological carbon export in the Labrador Sea using autonomous platforms and ship-based observations.",
+      "website": "https://rebelsproject.com",
+      "themes": ["biophysical", "polar"]
+    },
+    {
+      "id": "polomints",
+      "title": "POLOMINTS",
+      "fullTitle": "Polar Ocean Mixing by Internal Tsunamis",
+      "status": "current",
+      "dates": "2024-2029",
+      "funding": "NERC Large Grant, £3.7M",
+      "role": "Co-PI, WP2 lead",
+      "description": "Investigating the role of internal waves and mixing in polar ocean biogeochemistry and carbon cycling.",
+      "website": "",
+      "themes": ["polar", "biophysical"]
+    },
+    {
+      "id": "partitrics",
+      "title": "PARTITRICS",
+      "fullTitle": "PARTIcle Transformation and Respiration Influence on ocean Carbon Storage",
+      "status": "current",
+      "dates": "2023-2026",
+      "funding": "NERC BIO-Carbon Programme, £2.3M",
+      "role": "Co-PI, WP1 lead",
+      "description": "Quantifying particle transformation processes and their impact on carbon export efficiency in the twilight zone.",
+      "website": "https://bio-carbon.ac.uk",
+      "themes": ["biophysical"]
+    },
+    {
+      "id": "idapro",
+      "title": "IDAPro",
+      "fullTitle": "Integrating Drivers of Atlantic Productivity",
+      "status": "current",
+      "dates": "2023-2026",
+      "funding": "NERC BIO-Carbon Programme, £2.3M",
+      "role": "Co-PI, NOC PI",
+      "description": "Integrating physical and biological drivers of productivity across Atlantic Ocean regions to understand carbon export variability.",
+      "website": "https://bio-carbon.ac.uk",
+      "themes": ["biophysical"]
+    },
+    {
+      "id": "gliders-i",
+      "title": "GLIDERS I",
+      "fullTitle": "GLider-type Infrastructure and Digital Environment for Research Science",
+      "status": "current",
+      "dates": "2025-2026",
+      "funding": "Internal funding (RISC), £167k",
+      "role": "PI",
+      "description": "Developing glider infrastructure and data pipelines for sustained ocean observation.",
+      "website": "",
+      "themes": ["autonomous"]
+    },
+    {
+      "id": "gliders-ii",
+      "title": "GLIDERS II",
+      "fullTitle": "GLider-type Infrastructure and Digital Environment for Research Science",
+      "status": "current",
+      "dates": "2026-2027",
+      "funding": "FMRI, £250k",
+      "role": "PI",
+      "description": "Expanding glider capabilities and observing networks for ecosystem monitoring.",
+      "website": "",
+      "themes": ["autonomous"]
+    },
+    {
+      "id": "apart",
+      "title": "APART",
+      "fullTitle": "Autonomous Platforms as A Research Tool",
+      "status": "current",
+      "dates": "2025-2026",
+      "funding": "UKRI, £44k",
+      "role": "PI",
+      "description": "Training and capacity building for autonomous platform deployment and data analysis.",
+      "website": "",
+      "themes": ["autonomous"]
+    },
+    {
+      "id": "techoceans",
+      "title": "TechOceans",
+      "fullTitle": "Technologies for Ocean Sensing",
+      "status": "past",
+      "dates": "2021-2024",
+      "funding": "H2020, €8.9M",
+      "role": "Co-I",
+      "description": "Developing and testing new sensor technologies for autonomous ocean platforms.",
+      "website": "",
+      "themes": ["autonomous"]
+    },
+    {
+      "id": "biarritz",
+      "title": "BIARRITZ",
+      "fullTitle": "Bridging International Activity and Related Research Into the Twilight Zone",
+      "status": "past",
+      "dates": "2018-2020",
+      "funding": "NERC GPSF, £83.4k",
+      "role": "Res Co-I",
+      "description": "International collaboration on twilight zone biogeochemistry and carbon export processes.",
+      "website": "",
+      "themes": ["biophysical"]
+    },
+    {
+      "id": "gocart",
+      "title": "GOCART",
+      "fullTitle": "Glider Observations and Connectivity Along a Reproductive Tract",
+      "status": "past",
+      "dates": "2017-2018",
+      "funding": "",
+      "role": "Researcher",
+      "description": "Using ocean gliders to study phytoplankton dynamics and productivity on the Agulhas Bank.",
+      "website": "",
+      "themes": ["biophysical", "autonomous"]
+    },
+    {
+      "id": "comics",
+      "title": "COMICS",
+      "fullTitle": "Controls Over Ocean Mesopelagic Interior Carbon Storage",
+      "status": "past",
+      "dates": "2017-2018",
+      "funding": "",
+      "role": "Researcher",
+      "description": "Investigating mesopelagic carbon storage mechanisms in the South Atlantic and around South Georgia.",
+      "website": "",
+      "themes": ["biophysical"]
+    },
+    {
+      "id": "custard",
+      "title": "CUSTARD",
+      "fullTitle": "Carbon Uptake and Seasonal Traits in Antarctic Remineralisation Depth",
+      "status": "past",
+      "dates": "2018",
+      "funding": "",
+      "role": "Researcher",
+      "description": "Examining seasonal controls on carbon export and remineralization in the Southern Ocean.",
+      "website": "",
+      "themes": ["polar", "biophysical"]
+    },
+    {
+      "id": "pal-lter",
+      "title": "PAL-LTER",
+      "fullTitle": "Palmer Antarctica Long-Term Ecological Research",
+      "status": "past",
+      "dates": "2011-2015",
+      "funding": "NSF",
+      "role": "PhD Research",
+      "description": "Long-term ecological research along the West Antarctic Peninsula examining climate impacts on marine ecosystems.",
+      "website": "https://pal.lternet.edu",
+      "themes": ["polar"]
+    },
+    {
+      "id": "fire-glider",
+      "title": "FIRe-Glider",
+      "fullTitle": "Fluorescence Induction and Relaxation on Gliders",
+      "status": "past",
+      "dates": "2015-2018",
+      "funding": "",
+      "role": "Postdoc",
+      "description": "Developing and deploying fluorescence-based phytoplankton physiology sensors on autonomous gliders.",
+      "website": "",
+      "themes": ["autonomous"]
+    }
+  ],
+  "themes": {
+    "biophysical": "Biophysical Controls on Marine Productivity and Carbon Export",
+    "polar": "Polar and Subpolar Ocean Ecosystems",
+    "autonomous": "Autonomous Ocean Observing Systems"
+  }
+}
