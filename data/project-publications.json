@@ -1,30 +1,129 @@
 {
+  "_instructions": "Assign publications to projects by adding project IDs to the 'projects' array. Publications are fetched automatically from ORCID, this file just tags them.",
+  
   "publications": [
     {
       "title": "Implications for oceanographic and seafloor geodetic applications due to settling of self-calibrating bottom pressure recorders",
       "doi": "10.1029/2025GL117927",
+      "year": 2026,
       "projects": ["polomints"]
     },
     {
-      "title": "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
-      "doi": "10.1002/lom3.10380",
-      "projects": ["fire-glider", "pal-lter"]
+      "title": "Decoding drivers of carbon flux attenuation in the oceanic biological pump",
+      "doi": "10.1038/s41586-024-07850-x",
+      "year": 2024,
+      "projects": []
     },
     {
-      "title": "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
-      "doi": "10.3390/jmse8110939",
+      "title": "Assessment of oceanographic conditions during the North Atlantic EXport processes in the ocean from RemoTe Sensing (EXPORTS) Field campaign",
+      "doi": "10.1016/j.pocean.2023.103170",
+      "year": 2023,
       "projects": []
+    },
+    {
+      "title": "Vertical imbalance in organic carbon budgets is indicative of a missing vertical transfer during a phytoplankton bloom near South Georgia (COMICS)",
+      "doi": "10.1016/j.dsr2.2023.105277",
+      "year": 2023,
+      "projects": ["comics"]
+    },
+    {
+      "title": "A seasonal transition in biological carbon pump efficiency in the northern Scotia Sea, Southern Ocean",
+      "doi": "10.1016/j.dsr2.2023.105274",
+      "year": 2023,
+      "projects": ["comics", "custard"]
     },
     {
       "title": "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
       "doi": "10.1016/j.dsr2.2022.105094",
+      "year": 2022,
       "projects": ["gocart"]
     },
     {
       "title": "Primary production dynamics on the Agulhas Bank in autumn",
       "doi": "10.1016/j.dsr2.2022.105153",
+      "year": 2022,
       "projects": ["gocart"]
+    },
+    {
+      "title": "Combining gliders and models to understand mesoscale biogeochemical patterns at the Angola-Benguela front",
+      "doi": "",
+      "year": 2021,
+      "projects": ["gocart"]
+    },
+    {
+      "title": "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
+      "doi": "10.1002/lom3.10380",
+      "year": 2020,
+      "projects": ["fire-glider", "pal-lter"]
+    },
+    {
+      "title": "Testing the Canyon Hypothesis: Evaluating light and nutrient controls of phytoplankton growth in penguin foraging hotspots along the West Antarctic Peninsula",
+      "doi": "10.1002/LNO.11313",
+      "year": 2020,
+      "projects": ["pal-lter"]
+    },
+    {
+      "title": "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
+      "doi": "10.3390/jmse8110939",
+      "year": 2020,
+      "projects": ["techoceans"]
+    },
+    {
+      "title": "Coccolithovirus facilitation of carbon export in the North Atlantic",
+      "doi": "10.1038/s41564-018-0128-4",
+      "year": 2018,
+      "projects": []
+    },
+    {
+      "title": "Coupled Physical and Phytoplankton dynamics in Coastal Antarctica",
+      "doi": "",
+      "year": 2017,
+      "note": "PhD Thesis",
+      "projects": ["pal-lter"]
+    },
+    {
+      "title": "Mapping Antarctic phytoplankton physiology using autonomous gliders",
+      "doi": "10.1109/OCEANS.2016.7761193",
+      "year": 2016,
+      "projects": ["pal-lter"]
+    },
+    {
+      "title": "Population structure and reproduction of Pseudione elongata africana (Bopyridae, Isopoda)",
+      "doi": "",
+      "year": 2013,
+      "projects": []
+    },
+    {
+      "title": "The Trans-Atlantic Slocum Glider Expeditions: A Catalyst for Undergraduate Participation in Ocean Science and Technology",
+      "doi": "",
+      "year": 2011,
+      "projects": []
+    },
+    {
+      "title": "Morphology of fish eggs: a comparative method for different salinities and preservatives",
+      "doi": "10.13140/RG.2.1.4455.4726",
+      "year": 2009,
+      "note": "MSc Thesis",
+      "projects": []
     }
   ],
-  "instructions": "Add publications here by DOI or exact title match. ORCID will auto-fetch, this file just tags them to projects."
+  
+  "_project_ids_available": [
+    "rebels",
+    "polomints",
+    "partitrics",
+    "idapro",
+    "gliders-i",
+    "gliders-ii",
+    "apart",
+    "techoceans",
+    "biarritz",
+    "gocart",
+    "comics",
+    "custard",
+    "pal-lter",
+    "fire-glider"
+  ],
+  
+  "_how_to_use": "For each publication above, add the relevant project IDs to the 'projects' array. Example: 'projects': ['rebels', 'partitrics'] if a publication relates to both projects. The ORCID integration will automatically fetch publications and match them by DOI or title."
 }
