@@ -6,146 +6,164 @@
       "title": "Polar Ocean Mixing by Internal Tsunamis",
       "doi": "",
       "year": 2025,
-      "projects": ["polomints"]
-    },
-    {
-      "title": "Implications for oceanographic and seafloor geodetic applications due to settling of self-calibrating bottom pressure recorders",
-      "doi": "10.1029/2025GL117927",
-      "year": 2026,
-      "projects": ["polomints"]
+      "projects": ["polomints"],
+      "themes": ["biophysical", "autonomous", "polar"]
     },
     {
       "title": "Species-specific diatom dynamics shape their vertical distribution and export during bloom decline",
       "doi": "",
       "year": 2025,
-      "projects": ["comics", "gocart"]
+      "projects": ["comics"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Mesopelagic particle layers in the dynamic hypoxic northern Benguela are shaped by zooplankton activity",
       "doi": "",
       "year": 2025,
-      "projects": ["gocart"]
+      "projects": ["gocart"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Decoding drivers of carbon flux attenuation in the oceanic biological pump",
       "doi": "10.1038/s41586-024-07850-x",
       "year": 2024,
-      "projects": ["rebels", "partitrics"]
+      "projects": ["comics"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Active and passive organic carbon fluxes during a bloom in the Southern Ocean",
       "doi": "",
       "year": 2024,
-      "projects": ["comics"]
+      "projects": ["comics"],
+      "themes": ["biophysical"]
     },
     {
       "title": "model for community-driven development of best practices",
       "doi": "",
       "year": 2024,
-      "projects": []
+      "projects": [],
+      "themes": ["autonomous"]
     },
     {
       "title": "Assessment of oceanographic conditions during the North Atlantic EXport processes in the ocean from RemoTe Sensing",
       "doi": "10.1016/j.pocean.2023.103170",
       "year": 2023,
-      "projects": []
+      "projects": ["gocart"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Vertical imbalance in organic carbon budgets is indicative of a missing vertical transfer during a phytoplankton bloom near South Georgia",
       "doi": "10.1016/j.dsr2.2023.105277",
       "year": 2023,
-      "projects": ["comics"]
+      "projects": ["comics"],
+      "themes": ["biophysical"]
     },
     {
       "title": "seasonal transition in biological carbon pump efficiency in the northern Scotia Sea",
       "doi": "10.1016/j.dsr2.2023.105274",
       "year": 2023,
-      "projects": ["comics", "custard"]
+      "projects": ["gocart", "comics"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Technologies for Ocean Sensing project developments in imaging and sensing",
       "doi": "",
       "year": 2023,
-      "projects": ["techoceans"]
+      "projects": ["techoceans"],
+      "themes": ["autonomous"]
     },
     {
       "title": "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
       "doi": "10.1016/j.dsr2.2022.105094",
       "year": 2022,
-      "projects": ["gocart"]
+      "projects": [],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Primary production dynamics on the Agulhas Bank in autumn",
       "doi": "10.1016/j.dsr2.2022.105153",
       "year": 2022,
-      "projects": ["gocart"]
+      "projects": [],
+      "themes": ["biophysical"]
     },
     {
       "title": "OceanGliders oxygen SOP",
       "doi": "",
       "year": 2022,
-      "projects": ["gliders-i"]
+      "projects": [],
+      "themes": ["autonomous"]
     },
     {
       "title": "Combining gliders and models to understand mesoscale biogeochemical patterns at the Angola-Benguela front",
       "doi": "",
       "year": 2021,
-      "projects": ["gocart"]
+      "projects": ["gocart"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
       "doi": "10.1002/lom3.10380",
       "year": 2020,
-      "projects": ["fire-glider", "pal-lter"]
+      "projects": ["fire-glider", "pal-lter"],
+      "themes": ["biophysical", "autonomous","polar"]
     },
     {
       "title": "Mapping variable chlorophyll fluorescence using autonomous underwater gliders",
       "doi": "",
       "year": 2020,
-      "projects": ["fire-glider", "pal-lter"]
+      "projects": ["fire-glider", "pal-lter"],
+      "themes": ["biophysical", "autonomous", "polar"]
     },
     {
       "title": "Testing the Canyon Hypothesis: Evaluating light and nutrient controls of phytoplankton growth in penguin foraging hotspots along the West Antarctic Peninsula",
       "doi": "10.1002/LNO.11313",
       "year": 2020,
-      "projects": ["pal-lter"]
+      "projects": ["pal-lter"],
+      "themes": ["biophysical", "polar", "autonomous"]
     },
     {
       "title": "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
       "doi": "10.3390/jmse8110939",
       "year": 2020,
-      "projects": ["techoceans"]
+      "projects": ["techoceans"],
+      "themes": ["autonomous"]
     },
     {
       "title": "Glider technology enabling a diversity of opportunities with autonomous ocean sampling",
       "doi": "",
       "year": 2019,
-      "projects": ["pal-lter"]
+      "projects": ["pal-lter"],
+      "themes": ["autonomous"]
     },
     {
       "title": "Coccolithovirus facilitation of carbon export in the North Atlantic",
       "doi": "10.1038/s41564-018-0128-4",
       "year": 2018,
-      "projects": []
+      "projects": ["na-vice"],
+      "themes": ["biophysical", "autonomous"]
     },
     {
       "title": "Coupled physical and phytoplankton dynamics in coastal Antarctica",
       "doi": "",
       "year": 2017,
       "note": "PhD Thesis",
-      "projects": ["pal-lter"]
+      "projects": ["pal-lter"],
+      "themes": ["biophysical", "polar", "autonomous"]    
     },
     {
       "title": "Decadal trends in phytoplankton communities along a rapidly changing West Antarctic Peninsula",
       "doi": "",
       "year": 2017,
-      "projects": ["pal-lter"]
+      "projects": ["pal-lter"],
+      "themes": ["biophysical", "polar"]    
     },
     {
       "title": "Mapping Antarctic phytoplankton physiology using autonomous gliders",
       "doi": "10.1109/OCEANS.2016.7761193",
       "year": 2016,
-      "projects": ["pal-lter"]
+      "projects": ["pal-lter"],
+      "themes": ["autonomous", "polar"]    
+    }
     },
     {
       "title": "Population structure and reproduction of Pseudione elongata africana",
@@ -158,7 +176,8 @@
       "doi": "10.13140/RG.2.1.4455.4726",
       "year": 2009,
       "note": "MSc Thesis",
-      "projects": []
+      "projects": [],
+      "themes": []    
     }
   ],
   
