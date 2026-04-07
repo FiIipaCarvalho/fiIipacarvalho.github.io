@@ -1,7 +1,13 @@
 {
-  "_instructions": "Assign publications to projects by adding project IDs to the 'projects' array. Publications are fetched automatically from ORCID, this file just tags them.",
+  "_instructions": "Assign publications to projects by adding project IDs to the 'projects' array. Publications are fetched automatically from ORCID, this file just tags them. Titles should match or be substrings of ORCID titles.",
   
   "publications": [
+    {
+      "title": "Polar Ocean Mixing by Internal Tsunamis",
+      "doi": "",
+      "year": 2025,
+      "projects": ["polomints"]
+    },
     {
       "title": "Implications for oceanographic and seafloor geodetic applications due to settling of self-calibrating bottom pressure recorders",
       "doi": "10.1029/2025GL117927",
@@ -9,28 +15,58 @@
       "projects": ["polomints"]
     },
     {
+      "title": "Species-specific diatom dynamics shape their vertical distribution and export during bloom decline",
+      "doi": "",
+      "year": 2025,
+      "projects": ["comics", "gocart"]
+    },
+    {
+      "title": "Mesopelagic particle layers in the dynamic hypoxic northern Benguela are shaped by zooplankton activity",
+      "doi": "",
+      "year": 2025,
+      "projects": ["gocart"]
+    },
+    {
       "title": "Decoding drivers of carbon flux attenuation in the oceanic biological pump",
       "doi": "10.1038/s41586-024-07850-x",
+      "year": 2024,
+      "projects": ["rebels", "partitrics"]
+    },
+    {
+      "title": "Active and passive organic carbon fluxes during a bloom in the Southern Ocean",
+      "doi": "",
+      "year": 2024,
+      "projects": ["comics"]
+    },
+    {
+      "title": "model for community-driven development of best practices",
+      "doi": "",
       "year": 2024,
       "projects": []
     },
     {
-      "title": "Assessment of oceanographic conditions during the North Atlantic EXport processes in the ocean from RemoTe Sensing (EXPORTS) Field campaign",
+      "title": "Assessment of oceanographic conditions during the North Atlantic EXport processes in the ocean from RemoTe Sensing",
       "doi": "10.1016/j.pocean.2023.103170",
       "year": 2023,
       "projects": []
     },
     {
-      "title": "Vertical imbalance in organic carbon budgets is indicative of a missing vertical transfer during a phytoplankton bloom near South Georgia (COMICS)",
+      "title": "Vertical imbalance in organic carbon budgets is indicative of a missing vertical transfer during a phytoplankton bloom near South Georgia",
       "doi": "10.1016/j.dsr2.2023.105277",
       "year": 2023,
       "projects": ["comics"]
     },
     {
-      "title": "A seasonal transition in biological carbon pump efficiency in the northern Scotia Sea, Southern Ocean",
+      "title": "seasonal transition in biological carbon pump efficiency in the northern Scotia Sea",
       "doi": "10.1016/j.dsr2.2023.105274",
       "year": 2023,
       "projects": ["comics", "custard"]
+    },
+    {
+      "title": "Technologies for Ocean Sensing project developments in imaging and sensing",
+      "doi": "",
+      "year": 2023,
+      "projects": ["techoceans"]
     },
     {
       "title": "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
@@ -45,6 +81,12 @@
       "projects": ["gocart"]
     },
     {
+      "title": "OceanGliders oxygen SOP",
+      "doi": "",
+      "year": 2022,
+      "projects": ["gliders-i"]
+    },
+    {
       "title": "Combining gliders and models to understand mesoscale biogeochemical patterns at the Angola-Benguela front",
       "doi": "",
       "year": 2021,
@@ -53,6 +95,12 @@
     {
       "title": "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
       "doi": "10.1002/lom3.10380",
+      "year": 2020,
+      "projects": ["fire-glider", "pal-lter"]
+    },
+    {
+      "title": "Mapping variable chlorophyll fluorescence using autonomous underwater gliders",
+      "doi": "",
       "year": 2020,
       "projects": ["fire-glider", "pal-lter"]
     },
@@ -69,16 +117,28 @@
       "projects": ["techoceans"]
     },
     {
+      "title": "Glider technology enabling a diversity of opportunities with autonomous ocean sampling",
+      "doi": "",
+      "year": 2019,
+      "projects": ["pal-lter"]
+    },
+    {
       "title": "Coccolithovirus facilitation of carbon export in the North Atlantic",
       "doi": "10.1038/s41564-018-0128-4",
       "year": 2018,
       "projects": []
     },
     {
-      "title": "Coupled Physical and Phytoplankton dynamics in Coastal Antarctica",
+      "title": "Coupled physical and phytoplankton dynamics in coastal Antarctica",
       "doi": "",
       "year": 2017,
       "note": "PhD Thesis",
+      "projects": ["pal-lter"]
+    },
+    {
+      "title": "Decadal trends in phytoplankton communities along a rapidly changing West Antarctic Peninsula",
+      "doi": "",
+      "year": 2017,
       "projects": ["pal-lter"]
     },
     {
@@ -88,15 +148,9 @@
       "projects": ["pal-lter"]
     },
     {
-      "title": "Population structure and reproduction of Pseudione elongata africana (Bopyridae, Isopoda)",
+      "title": "Population structure and reproduction of Pseudione elongata africana",
       "doi": "",
       "year": 2013,
-      "projects": []
-    },
-    {
-      "title": "The Trans-Atlantic Slocum Glider Expeditions: A Catalyst for Undergraduate Participation in Ocean Science and Technology",
-      "doi": "",
-      "year": 2011,
       "projects": []
     },
     {
@@ -109,21 +163,13 @@
   ],
   
   "_project_ids_available": [
-    "rebels",
-    "polomints",
-    "partitrics",
-    "idapro",
-    "gliders-i",
-    "gliders-ii",
-    "apart",
-    "techoceans",
-    "biarritz",
-    "gocart",
-    "comics",
-    "custard",
-    "pal-lter",
-    "fire-glider"
+    "rebels", "polomints", "partitrics", "idapro",
+    "gliders-i", "gliders-ii", "apart",
+    "techoceans", "biarritz", "gocart", "comics", "custard",
+    "pal-lter", "fire-glider"
   ],
   
-  "_how_to_use": "For each publication above, add the relevant project IDs to the 'projects' array. Example: 'projects': ['rebels', 'partitrics'] if a publication relates to both projects. The ORCID integration will automatically fetch publications and match them by DOI or title."
+  "_matching_note": "The system matches by DOI (exact) or title (substring). You can use partial titles like 'FIRe glider' to match 'FIRe glider: Mapping in situ...'",
+  
+  "_how_to_use": "Add relevant project IDs to the 'projects' array for each publication. The ORCID integration will automatically fetch all publications and match them by DOI or title substring."
 }
