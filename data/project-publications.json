@@ -1,5 +1,5 @@
 {
-  "_instructions": "Assign publications to projects by adding project IDs to the 'projects' array. Publications are fetched automatically from ORCID, this file just tags them. Titles should match or be substrings of ORCID titles.",
+  "_instructions": "Tag publications with both PROJECTS and THEMES. Publications are fetched automatically from ORCID, this file adds the tags.",
   
   "publications": [
     {
@@ -163,7 +163,6 @@
       "year": 2016,
       "projects": ["pal-lter"],
       "themes": ["autonomous", "polar"]    
-    }
     },
     {
       "title": "Population structure and reproduction of Pseudione elongata africana",
@@ -181,14 +180,34 @@
     }
   ],
   
-  "_project_ids_available": [
+  "_available_themes": [
+    "biophysical",
+    "polar", 
+    "autonomous"
+  ],
+  
+  "_theme_descriptions": {
+    "biophysical": "Biophysical Controls on Marine Productivity and Carbon Export",
+    "polar": "Polar and Subpolar Ocean Ecosystems",
+    "autonomous": "Autonomous Ocean Observing Systems"
+  },
+  
+  "_available_projects": [
     "rebels", "polomints", "partitrics", "idapro",
     "gliders-i", "gliders-ii", "apart",
     "techoceans", "biarritz", "gocart", "comics", "custard",
     "pal-lter", "fire-glider"
   ],
   
-  "_matching_note": "The system matches by DOI (exact) or title (substring). You can use partial titles like 'FIRe glider' to match 'FIRe glider: Mapping in situ...'",
-  
-  "_how_to_use": "Add relevant project IDs to the 'projects' array for each publication. The ORCID integration will automatically fetch all publications and match them by DOI or title substring."
+  "_how_to_use": {
+    "projects": "Add project IDs to track which projects used this publication",
+    "themes": "Add theme IDs (biophysical, polar, autonomous) to categorize research topics",
+    "example": {
+      "title": "Your paper title",
+      "doi": "10.xxxx/xxxxx",
+      "year": 2024,
+      "projects": ["rebels", "partitrics"],
+      "themes": ["biophysical", "polar"]
+    }
+  }
 }

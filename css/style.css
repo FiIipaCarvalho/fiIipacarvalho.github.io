@@ -1062,6 +1062,51 @@ body {
 }
 
 /* Publication Links */
+.publication-item {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.pub-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.pub-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.pub-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.theme-tag {
+    background-color: var(--bg-secondary);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
 .pub-links {
     display: flex;
     gap: var(--spacing-sm);
@@ -1090,11 +1135,12 @@ body {
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .search-box {
-    flex: 1;
+    width: 100%;
     min-width: 200px;
 }
 
@@ -1106,6 +1152,38 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-size: 1rem;
+}
+
+/* Theme Filters */
+.theme-filters {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.theme-filter-btn {
+    padding: 0.6rem 1.25rem;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--bg-secondary);
+}
+
+.theme-filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 .filter-buttons {
