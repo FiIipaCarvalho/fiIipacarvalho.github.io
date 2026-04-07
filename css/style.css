@@ -1207,7 +1207,7 @@ body {
 }
 
 .bio-table td {
-    padding: 1rem 0;
+    padding: 0.6rem 0;
     vertical-align: top;
 }
 
@@ -1322,6 +1322,99 @@ body {
     
     .research-image {
         height: 200px;
+    }
+}
+
+/* =========================================
+   Fieldwork Page
+   ========================================= */
+.fieldwork-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fieldwork-intro {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.fieldwork-intro p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.fieldwork-region-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.fieldwork-region-title:first-of-type {
+    margin-top: 2rem;
+}
+
+.expedition-card {
+    background-color: var(--bg-primary);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.expedition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.expedition-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.expedition-date {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.expedition-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.expedition-card strong {
+    color: var(--text-primary);
+}
+
+.expedition-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.expedition-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .expedition-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
