@@ -19,8 +19,6 @@ async function initPublications() {
 
 // Fetch publications from ORCID
 async function fetchPublications() {
-    const loadingEl = document.getElementById('publications-list');
-    
     try {
         const response = await fetch(ORCID_API_URL, {
             headers: {
@@ -37,8 +35,8 @@ async function fetchPublications() {
         filteredPublications = [...allPublications];
         
         // Sort by year (most recent first)
-        allPublications.sort((a, b) => b.year - a.year);
-        filteredPublications.sort((a, b) => b.year - a.year);
+        allPublications.sort((a, b) => (b.year || 0) - (a.year || 0));
+        filteredPublications.sort((a, b) => (b.year || 0) - (a.year || 0));
         
     } catch (error) {
         console.error('Error fetching from ORCID:', error);
@@ -59,12 +57,14 @@ function parseORCIDData(data) {
         
         const pub = {
             title: workSummary.title?.title?.value || 'Untitled',
-            year: workSummary['publication-date']?.year?.value || 'n.d.',
+            year: parseInt(workSummary['publication-date']?.year?.value) || null,
+            month: workSummary['publication-date']?.month?.value || '',
             journal: workSummary['journal-title']?.value || '',
             authors: '', // ORCID API doesn't provide authors in summary
             doi: extractDOI(workSummary),
             url: workSummary.url?.value || '',
-            type: workSummary.type || 'journal-article'
+            type: workSummary.type || 'journal-article',
+            description: ''
         };
         
         publications.push(pub);
@@ -82,92 +82,137 @@ function extractDOI(workSummary) {
     return doiId?.['external-id-value'] || '';
 }
 
-// Fallback publications (subset of your key papers)
+// Fallback publications (with full example data)
 async function loadFallbackPublications() {
     allPublications = [
         {
-            title: "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
-            authors: "Carvalho, F., et al.",
-            year: 2020,
-            journal: "Limnology and Oceanography: Methods",
-            doi: "10.1002/lom3.10380",
-            url: "https://aslopubs.onlinelibrary.wiley.com/doi/full/10.1002/lom3.10380"
-        },
-        {
-            title: "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
-            authors: "Carvalho, F., et al.",
-            year: 2020,
-            journal: "Journal of Marine Science and Engineering",
-            doi: "10.3390/jmse8110939",
-            url: "https://www.mdpi.com/2077-1312/8/11/939"
-        },
-        {
-            title: "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
-            authors: "Carvalho, F., et al.",
-            year: 2022,
-            journal: "Deep Sea Research Part II",
-            doi: "10.1016/j.dsr2.2022.105094",
-            url: "https://doi.org/10.1016/j.dsr2.2022.105094"
+            title: "Implications for oceanographic and seafloor geodetic applications due to settling of self-calibrating bottom pressure recorders",
+            authors: "N. Harmon, C. A. Rychert, B. Moat, D. Smeed, F. Carvalho, T. Petit, M. Walker, P. Provost, T. Thomas",
+            year: 2026,
+            month: "January",
+            journal: "Geophysical Research Letters",
+            description: "Measurements of the pressure at the bottom of the oceans are useful for understanding ocean currents and vertical motions of the seafloor.",
+            pdf: "https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2025GL117927",
+            doi: "10.1029/2025GL117927",
+            project: "https://eleanorfrajka.com/project/epoc/"
         },
         {
             title: "Primary production dynamics on the Agulhas Bank in autumn",
             authors: "Carvalho, F., et al.",
             year: 2022,
             journal: "Deep Sea Research Part II",
-            doi: "10.1016/j.dsr2.2022.105153",
-            url: "https://doi.org/10.1016/j.dsr2.2022.105153"
+            description: "Investigation of primary production patterns and drivers on the Agulhas Bank during autumn conditions.",
+            doi: "10.1016/j.dsr2.2022.105153"
+        },
+        {
+            title: "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
+            authors: "Carvalho, F., et al.",
+            year: 2022,
+            journal: "Deep Sea Research Part II",
+            description: "Using optical particle measurements to understand cross-shelf variability in turbidity and particle dynamics.",
+            doi: "10.1016/j.dsr2.2022.105094"
+        },
+        {
+            title: "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
+            authors: "Carvalho, F., et al.",
+            year: 2020,
+            journal: "Journal of Marine Science and Engineering",
+            description: "Assessment of autonomous surface vehicles for monitoring ocean acidification in coastal environments.",
+            doi: "10.3390/jmse8110939"
+        },
+        {
+            title: "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
+            authors: "Carvalho, F., et al.",
+            year: 2020,
+            journal: "Limnology and Oceanography: Methods",
+            description: "Development and application of fluorescence measurements on autonomous underwater gliders for studying phytoplankton physiology.",
+            doi: "10.1002/lom3.10380",
+            pdf: "https://aslopubs.onlinelibrary.wiley.com/doi/epdf/10.1002/lom3.10380"
         }
     ];
     
     filteredPublications = [...allPublications];
 }
 
-// Render publications list
+// Render publications list with year grouping
 function renderPublications() {
     const container = document.getElementById('publications-list');
     
     if (filteredPublications.length === 0) {
-        container.innerHTML = '<p class="text-center">No publications found matching your criteria.</p>';
+        container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No publications found matching your criteria.</p>';
         return;
     }
     
-    const html = filteredPublications.map(pub => createPublicationHTML(pub)).join('');
+    // Group publications by year
+    const pubsByYear = {};
+    filteredPublications.forEach(pub => {
+        const year = pub.year || 'Unknown';
+        if (!pubsByYear[year]) {
+            pubsByYear[year] = [];
+        }
+        pubsByYear[year].push(pub);
+    });
+    
+    // Sort years descending
+    const years = Object.keys(pubsByYear).sort((a, b) => {
+        if (a === 'Unknown') return 1;
+        if (b === 'Unknown') return -1;
+        return parseInt(b) - parseInt(a);
+    });
+    
+    // Build HTML with year headers
+    let html = '';
+    years.forEach(year => {
+        html += `
+        <div class="year-group">
+            <h2 class="year-header">${year}</h2>
+            <div class="year-publications">
+                ${pubsByYear[year].map(pub => createPublicationHTML(pub)).join('')}
+            </div>
+        </div>`;
+    });
+    
     container.innerHTML = html;
 }
 
-// Create HTML for single publication
+// Create HTML for single publication (Eleanor's style)
 function createPublicationHTML(pub) {
     const links = [];
     
-    if (pub.doi) {
-        links.push(`<a href="https://doi.org/${pub.doi}" target="_blank" class="publication-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-            DOI
-        </a>`);
+    // PDF link
+    if (pub.pdf) {
+        links.push(`<a href="${pub.pdf}" target="_blank" class="pub-link">PDF</a>`);
     }
     
-    if (pub.url && !pub.doi) {
-        links.push(`<a href="${pub.url}" target="_blank" class="publication-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-            Link
-        </a>`);
+    // Cite link (placeholder)
+    links.push(`<a href="#" class="pub-link" onclick="event.preventDefault(); alert('Citation: ${pub.title}')">Cite</a>`);
+    
+    // Project link
+    if (pub.project) {
+        links.push(`<a href="${pub.project}" target="_blank" class="pub-link">Project</a>`);
     }
+    
+    // DOI link
+    if (pub.doi) {
+        links.push(`<a href="https://doi.org/${pub.doi}" target="_blank" class="pub-link">DOI</a>`);
+    } else if (pub.url) {
+        links.push(`<a href="${pub.url}" target="_blank" class="pub-link">Link</a>`);
+    }
+    
+    // Create description preview
+    const description = pub.description || '';
+    const shortDesc = description.length > 150 ? description.substring(0, 150) + '…' : description;
     
     return `
-        <div class="publication-item" data-year="${pub.year}">
-            <span class="publication-year">${pub.year}</span>
-            <h3 class="publication-title">${pub.title}</h3>
-            ${pub.authors ? `<p class="publication-authors">${pub.authors}</p>` : ''}
-            ${pub.journal ? `<p class="publication-journal">${pub.journal}</p>` : ''}
-            ${links.length > 0 ? `<div class="publication-links">${links.join('')}</div>` : ''}
+        <div class="publication-item">
+            <h3 class="pub-title">${pub.title}</h3>
+            ${shortDesc ? `<p class="pub-description">${shortDesc}</p>` : ''}
+            ${pub.authors ? `<p class="pub-authors">${pub.authors}</p>` : ''}
+            <p class="pub-meta">
+                ${pub.month ? `<span class="pub-date">${pub.month} ${pub.year}</span>` : `<span class="pub-date">${pub.year}</span>`}
+                ${pub.journal ? `<span class="pub-venue">${pub.journal}</span>` : ''}
+            </p>
+            <div class="pub-links">${links.join(' ')}</div>
         </div>
     `;
 }
@@ -175,33 +220,39 @@ function createPublicationHTML(pub) {
 // Setup filters and search
 function setupFilters() {
     // Get unique years
-    const years = [...new Set(allPublications.map(pub => pub.year))].sort((a, b) => b - a);
+    const years = [...new Set(allPublications.map(pub => pub.year).filter(y => y))].sort((a, b) => b - a);
     
     // Create year filter buttons
     const yearFiltersEl = document.getElementById('year-filters');
-    years.forEach(year => {
-        const btn = document.createElement('button');
-        btn.className = 'filter-btn';
-        btn.setAttribute('data-year', year);
-        btn.textContent = year;
-        btn.addEventListener('click', () => filterByYear(year, btn));
-        yearFiltersEl.appendChild(btn);
-    });
+    if (yearFiltersEl) {
+        years.forEach(year => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-btn';
+            btn.setAttribute('data-year', year);
+            btn.textContent = year;
+            btn.addEventListener('click', () => filterByYear(year, btn));
+            yearFiltersEl.appendChild(btn);
+        });
+    }
     
     // Setup search
     const searchInput = document.getElementById('pub-search');
-    searchInput.addEventListener('input', (e) => searchPublications(e.target.value));
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => searchPublications(e.target.value));
+    }
     
     // Setup "All Years" button
     const allBtn = document.querySelector('[data-year="all"]');
-    allBtn.addEventListener('click', () => {
-        filteredPublications = [...allPublications];
-        renderPublications();
-        
-        // Update active state
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-        allBtn.classList.add('active');
-    });
+    if (allBtn) {
+        allBtn.addEventListener('click', () => {
+            filteredPublications = [...allPublications];
+            renderPublications();
+            
+            // Update active state
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            allBtn.classList.add('active');
+        });
+    }
 }
 
 // Filter publications by year
