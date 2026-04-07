@@ -1186,35 +1186,69 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-.funding-table {
+.bio-table {
     width: 100%;
     margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
     border-collapse: collapse;
 }
 
-.funding-table tr {
+.bio-table tr {
     border-bottom: 1px solid var(--border-color);
 }
 
-.funding-table td {
-    padding: var(--spacing-sm) 0;
+.bio-table td {
+    padding: var(--spacing-md) var(--spacing-sm);
     vertical-align: top;
 }
 
-.funding-years {
-    width: 120px;
+.bio-years {
+    width: 140px;
+    min-width: 140px;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
+    white-space: nowrap;
+    padding-right: var(--spacing-md);
 }
 
-.funding-details {
+.bio-details {
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-.funding-details strong {
+.bio-details strong {
     color: var(--text-primary);
+}
+
+.bio-details em {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .bio-table {
+        display: block;
+    }
+    
+    .bio-table tr {
+        display: block;
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    .bio-table td {
+        display: block;
+        width: 100%;
+        padding: 0.25rem 0;
+    }
+    
+    .bio-years {
+        width: 100%;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
 }
 
 /* =========================================
