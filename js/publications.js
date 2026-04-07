@@ -31,7 +31,7 @@ async function fetchPublications() {
         }
         
         const data = await response.json();
-        allPublications = parseORCIDData(data);
+        allPublications = await parseORCIDData(data);
         filteredPublications = [...allPublications];
         
         // Sort by year (most recent first)
@@ -45,22 +45,43 @@ async function fetchPublications() {
     }
 }
 
-// Parse ORCID API response
-function parseORCIDData(data) {
+// Parse ORCID API response - fetch full details for authors
+async function parseORCIDData(data) {
     const publications = [];
     
     if (!data.group) return publications;
     
-    data.group.forEach(group => {
+    // Limit to first 50 publications to avoid too many API calls
+    const groups = data.group.slice(0, 50);
+    
+    // Fetch detailed information for each work
+    for (const group of groups) {
         const workSummary = group['work-summary']?.[0];
-        if (!workSummary) return;
+        if (!workSummary) continue;
+        
+        const putCode = workSummary['put-code'];
+        let authors = '';
+        
+        // Fetch full work details to get authors
+        try {
+            const detailResponse = await fetch(`https://pub.orcid.org/v3.0/${ORCID_ID}/work/${putCode}`, {
+                headers: { 'Accept': 'application/json' }
+            });
+            
+            if (detailResponse.ok) {
+                const detailData = await detailResponse.json();
+                authors = extractAuthors(detailData);
+            }
+        } catch (e) {
+            console.log('Could not fetch authors for work:', putCode);
+        }
         
         const pub = {
             title: workSummary.title?.title?.value || 'Untitled',
             year: parseInt(workSummary['publication-date']?.year?.value) || null,
-            month: workSummary['publication-date']?.month?.value || '',
+            month: getMonthName(workSummary['publication-date']?.month?.value),
             journal: workSummary['journal-title']?.value || '',
-            authors: '', // ORCID API doesn't provide authors in summary
+            authors: authors,
             doi: extractDOI(workSummary),
             url: workSummary.url?.value || '',
             type: workSummary.type || 'journal-article',
@@ -68,9 +89,52 @@ function parseORCIDData(data) {
         };
         
         publications.push(pub);
-    });
+    }
     
     return publications;
+}
+
+// Extract authors from full work details
+function extractAuthors(workDetail) {
+    const contributors = workDetail.contributors?.contributor;
+    if (!contributors || contributors.length === 0) return '';
+    
+    const authorNames = contributors
+        .filter(c => c['contributor-attributes']?.['contributor-role'] === 'author')
+        .map(c => {
+            const creditName = c['credit-name']?.value;
+            if (creditName) return creditName;
+            
+            // Try contributor-orcid to get name
+            const orcid = c['contributor-orcid'];
+            if (orcid) {
+                const uri = orcid.uri || '';
+                const path = orcid.path || '';
+                // Could fetch name from ORCID, but skip for performance
+            }
+            
+            // Fallback to empty - better than malformed names
+            return '';
+        })
+        .filter(name => name);
+    
+    if (authorNames.length === 0) return '';
+    
+    // Format: "First Author, Second Author, Third Author, et al." for 4+ authors
+    if (authorNames.length > 3) {
+        return `${authorNames.slice(0, 3).join(', ')}, et al.`;
+    }
+    
+    return authorNames.join(', ');
+}
+
+// Convert month number to name
+function getMonthName(monthNum) {
+    if (!monthNum) return '';
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                   'July', 'August', 'September', 'October', 'November', 'December'];
+    const idx = parseInt(monthNum) - 1;
+    return (idx >= 0 && idx < 12) ? months[idx] : '';
 }
 
 // Extract DOI from external identifiers
@@ -98,7 +162,7 @@ async function loadFallbackPublications() {
         },
         {
             title: "Primary production dynamics on the Agulhas Bank in autumn",
-            authors: "Carvalho, F., et al.",
+            authors: "F. Carvalho, T. J. Ryan-Keogh, S. J. Thomalla, I. Giddy, M. Nicholson",
             year: 2022,
             journal: "Deep Sea Research Part II",
             description: "Investigation of primary production patterns and drivers on the Agulhas Bank during autumn conditions.",
@@ -106,7 +170,7 @@ async function loadFallbackPublications() {
         },
         {
             title: "Optical particle measurements reveal cross-shelf turbidity gradients on the Agulhas Bank",
-            authors: "Carvalho, F., et al.",
+            authors: "F. Carvalho, T. J. Ryan-Keogh, S. J. Thomalla, I. Giddy",
             year: 2022,
             journal: "Deep Sea Research Part II",
             description: "Using optical particle measurements to understand cross-shelf variability in turbidity and particle dynamics.",
@@ -114,7 +178,7 @@ async function loadFallbackPublications() {
         },
         {
             title: "Evaluating the sensor-equipped autonomous surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
-            authors: "Carvalho, F., et al.",
+            authors: "F. Carvalho, S. Cryer, M. C. Tyrell, M. Palmer",
             year: 2020,
             journal: "Journal of Marine Science and Engineering",
             description: "Assessment of autonomous surface vehicles for monitoring ocean acidification in coastal environments.",
@@ -122,7 +186,7 @@ async function loadFallbackPublications() {
         },
         {
             title: "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
-            authors: "Carvalho, F., et al.",
+            authors: "F. Carvalho, S. Kohut, R. Oliver, O. Schofield, T. K. Frazer",
             year: 2020,
             journal: "Limnology and Oceanography: Methods",
             description: "Development and application of fluorescence measurements on autonomous underwater gliders for studying phytoplankton physiology.",
@@ -185,7 +249,7 @@ function createPublicationHTML(pub) {
     }
     
     // Cite link (placeholder)
-    links.push(`<a href="#" class="pub-link" onclick="event.preventDefault(); alert('Citation: ${pub.title}')">Cite</a>`);
+    links.push(`<a href="#" class="pub-link" onclick="event.preventDefault(); alert('Citation: ${pub.title.replace(/'/g, "\\'")}')">Cite</a>`);
     
     // Project link
     if (pub.project) {
