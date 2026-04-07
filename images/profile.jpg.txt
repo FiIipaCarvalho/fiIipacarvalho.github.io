@@ -1,0 +1,4 @@
+PLACEHOLDER: Replace this with your professional profile photo
+Recommended size: 400x400 pixels
+Format: JPG or PNG
+Name the file: profile.jpg
