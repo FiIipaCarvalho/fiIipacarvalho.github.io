@@ -23,6 +23,7 @@ async function initProjectPage() {
         ]);
 
         // Populate page
+        renderMeta();
         renderTeam();
         renderPublications();
     } catch (error) {
@@ -116,6 +117,28 @@ function getFallbackPublications() {
             doi: "10.1002/lom3.10380"
         }
     ];
+}
+
+// Render project meta bar from JSON data
+function renderMeta() {
+    const metaBar = document.querySelector('.project-meta-bar');
+    if (!metaBar || !projectData) return;
+
+    let html = '';
+    if (projectData.dates) {
+        html += `<div class="meta-item"><strong>Duration:</strong> ${projectData.dates}</div>`;
+    }
+    if (projectData.funding) {
+        html += `<div class="meta-item"><strong>Funding:</strong> ${projectData.funding}</div>`;
+    }
+    if (projectData.role) {
+        html += `<div class="meta-item"><strong>Role:</strong> ${projectData.role}</div>`;
+    }
+    if (projectData.website) {
+        html += `<div class="meta-item"><a href="${projectData.website}" target="_blank" rel="noopener" class="project-website-link">Project Website →</a></div>`;
+    }
+
+    metaBar.innerHTML = html;
 }
 
 // Render team members
