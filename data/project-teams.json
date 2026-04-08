@@ -3,7 +3,7 @@
     "rebels": {
       "pi": ["Filipa Carvalho"],
       "staff": [],
-      "students": ["Hans Hilder", "Daniel Bangay"]
+      "students": ["Hans Hilder", "Daniel Bangay","Faron Quinn", "Raul Costa"]
     },
     "polomints": {
       "pi": ["Filipa Carvalho"],
@@ -18,16 +18,16 @@
     "idapro": {
       "pi": ["Filipa Carvalho"],
       "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
-      "students": ["Hans Hilder"]
+      "students": []
     },
     "gliders-i": {
       "pi": ["Filipa Carvalho"],
-      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh"],
+      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh","Elise Droste"],
       "students": ["Daniel Bangay", "Hans Hilder"]
     },
     "gliders-ii": {
       "pi": ["Filipa Carvalho"],
-      "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
+      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh","Elise Droste"],
       "students": ["Daniel Bangay", "Hans Hilder"]
     },
     "apart": {
@@ -59,8 +59,8 @@
     },
     "custard": {
       "pi": ["Filipa Carvalho"],
-      "staff": ["Daniel Bangay"],
-      "students": []
+      "staff": [],
+      "students": ["Daniel Bangay"]
     },
     "pal-lter": {
       "pi": ["Filipa Carvalho"],
