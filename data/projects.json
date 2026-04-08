@@ -13,7 +13,7 @@
       "description": "Understanding how winter convection and spring restratification control biological carbon export in the Labrador Sea using autonomous platforms and ship-based observations.",
       "summary": "ReBELS, a project funded by the UK Natural Environmental Research Council (NERC), is a New Investigator Standard Grant awarded to NOC (and BAS as partner). It aims to understand and quantify the transport of oceanic organic carbon into the deep sea and its effect on ocean carbon storage. Using a year-long ocean observatory in the Labrador Sea — combining autonomous observing technologies (gliders and biogeochemical Argo floats) with moored sediment traps — ReBELS will quantify the relative contribution of gravitational, eddy subduction and mixed layer particle injection pumps to overall carbon export, and identify the key processes that must be represented in climate models to predict North Atlantic carbon drawdown with confidence.",
       "website": "https://noc.ac.uk/projects/rebels",
-      "fieldwork": ["rebels1-jc268-2024", "rebels2-jc268-2025"],
+      "fieldwork": ["rebels1-jc268-2024", "rebels2-jc282-2025"],
       "themes": ["biophysical", "polar"]
     },
     {
@@ -252,7 +252,7 @@
       "noc_pi": "",
       "description": "Linking local oceanographic variability to Adélie penguin foraging behaviour along the West Antarctic Peninsula.",
       "summary": "CONVERGE investigated how mesoscale and submesoscale ocean features — fronts, eddies and convergence zones — influence prey aggregation and Adélie penguin foraging success along the West Antarctic Peninsula. As part of the PAL-LTER program, the project combined biologging data from instrumented penguins with concurrent physical and biogeochemical oceanographic surveys to link penguin behaviour to the underlying ocean environment.",
-      "website": "https://pal.lternet.edu",
+      "website": "",
       "fieldwork": [],
       "themes": ["polar"]
     },
@@ -262,14 +262,14 @@
       "fullTitle": "Fluorescence Induction and Relaxation on Gliders",
       "status": "past",
       "dates": "2015-2018",
-      "funding": "NERC / NOC",
+      "funding": "NOPP",
       "role": "Postdoctoral Researcher",
       "pi": "",
       "noc_pi": "",
       "description": "Developing and deploying fluorescence-based phytoplankton physiology sensors on autonomous gliders.",
       "summary": "FIRe-Glider developed and validated a miniaturised Fluorescence Induction and Relaxation (FIRe) sensor for integration on ocean gliders, enabling continuous autonomous measurements of phytoplankton photophysiology. The project demonstrated that glider-mounted FIRe can resolve spatial and temporal variability in phytoplankton light-use efficiency and nutrient stress at scales previously inaccessible to ship-based surveys, opening new possibilities for large-scale monitoring of phytoplankton physiology.",
       "website": "",
-      "fieldwork": ["pal-lter-palmer-2012-2013"],
+      "fieldwork": ["fire-glider-20"],
       "themes": ["autonomous", "biophysical"]
     }
   ],

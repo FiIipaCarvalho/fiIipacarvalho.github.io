@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python3 -)",
-      "Bash(grep -l \"meta-item\" /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/projects/*.html)"
+      "Bash(grep -l \"meta-item\" /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/projects/*.html)",
+      "Bash(sed -i '' 's/rebels2-jc268-2025/rebels2-jc282-2025/g' /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/data/projects.json)",
+      "Bash(sed -i '' 's/rebels2-jc268-2025/rebels2-jc282-2025/g; s/JC268/JC282/g' /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/images/fieldwork/rebels2-jc282-2025/info.json)"
     ]
   }
 }
