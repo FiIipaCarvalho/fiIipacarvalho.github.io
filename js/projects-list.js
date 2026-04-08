@@ -16,7 +16,7 @@ async function initProjectsList() {
             currentContainer.innerHTML = currentProjects.map(p => renderProjectCard(p, true)).join('');
         }
         if (pastContainer) {
-            pastContainer.innerHTML = pastProjects.map(p => renderProjectCard(p, false)).join('');
+            pastContainer.innerHTML = pastProjects.map(p => renderProjectCard(p, true)).join('');
         }
     } catch (error) {
         console.error('Error loading projects:', error);
