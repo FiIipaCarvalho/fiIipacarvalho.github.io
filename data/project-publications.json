@@ -3,18 +3,60 @@
   
   "publications": [
     {
-      "title": "polar-ecosystems Ocean Mixing by Internal Tsunamis",
+      "title": "Polar Ocean Mixing by Internal Tsunamis",
       "doi": "",
       "year": 2025,
       "projects": ["polomints"],
       "keywords": ["biophysical-interactions", "autonomous-systems", "polar-ecosystems","phytoplankton-dynamics"]
     },
     {
-      "title": "Species-specific diatom dynamics shape their vertical distribution and export during bloom decline",
+      "title": "shape their vertical distribution and export during bloom decline",
       "doi": "",
       "year": 2025,
       "projects": ["comics"],
       "keywords": ["biophysical-interactions", "autonomous-systems","phytoplankton-dynamics"]
+    },
+    {
+      "title": "CTD sensor and related bottle data analyses from RRS Discovery",
+      "doi": "",
+      "year": 2025,
+      "projects": ["comics"],
+      "keywords": ["biological-carbon-pump","dataset"]
+    },
+    {
+      "title": "NetCDF mean underwater glider data collected in the Northern Benguela during February",
+      "doi": "",
+      "year": 2025,
+      "projects": ["comics"],
+      "keywords": ["autonomous-systems","dataset"]
+    },
+    {
+      "title": "Inefficient transfer of diatoms through the subpolar Southern Ocean",
+      "doi": "",
+      "year": 2025,
+      "projects": ["comics"],
+      "keywords": ["biological-carbon-pump","biophysical-interactions"]
+    },
+    {
+      "title": "Discrete particulate organic carbon (POC) concentration and flux data from three visits",
+      "doi": "",
+      "year": 2024,
+      "projects": ["comics"],
+      "keywords": ["biological-carbon-pump","dataset"]
+    },
+    {
+      "title": "GOCART Benguela Mission: Physical and biogeochemical data from an underwater Slocum glider ('Doombar') in a low",
+      "doi": "",
+      "year": 2024,
+      "projects": ["gocart"],
+      "keywords": ["biological-carbon-pump","dataset","autonomous-systems"]
+    },
+    {
+      "title": "Glider data collected in the Scotia Sea, October 2017-February 2018",
+      "doi": "",
+      "year": 2024,
+      "projects": ["gocart"],
+      "keywords": ["biological-carbon-pump","dataset","autonomous-systems"]
     },
     {
       "title": "Mesopelagic particle layers in the dynamic hypoxic northern Benguela are shaped by zooplankton activity",
