@@ -8,8 +8,301 @@
   ],
   "photos": [
     {
-      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
-      "file": "example.jpg",
+      "file": "IMG_5766.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5823.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5825.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5826.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5828.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5837.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5842.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5850.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5894.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5920.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5923.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5925.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5935.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5973.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5991.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_5996.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6001.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6003.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6008.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6010.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6012.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6013.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6022.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6032.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6038.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6040.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6059.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6060.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6073.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6080.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6088.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6100.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6160.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6212.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6228.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6232.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6235.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6250.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6258.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6262.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6296.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6297.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6299.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6303.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6325.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6355.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6370.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6376.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "cover.JPG",
+      "caption": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "file": "IMG_6420.JPG",
       "caption": "",
       "location": "",
       "date": ""
