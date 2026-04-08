@@ -1,0 +1,183 @@
+{
+  "fieldwork": [
+    {
+      "id": "glider-deployments",
+      "title": "Glider Deployments",
+      "years": "2008 - Present",
+      "description": "Ocean glider operations across multiple research cruises and locations",
+      "folder": "images/fieldwork/glider-deployments",
+      "cover": "cover.jpg",
+      "projects": []
+    },
+    {
+      "id": "seafarers-2011",
+      "title": "SeAFARERS",
+      "years": "2011",
+      "description": "Ross Sea, Antarctica",
+      "folder": "images/fieldwork/seafarers-2011",
+      "cover": "cover.jpg",
+      "projects": []
+    },
+    {
+      "id": "na-vice-2012",
+      "title": "NA-VICE",
+      "years": "2012",
+      "description": "North Atlantic",
+      "folder": "images/fieldwork/na-vice-2012",
+      "cover": "cover.jpg",
+      "projects": []
+    },
+    {
+      "id": "pal-lter-palmer-2012-2013",
+      "title": "PAL-LTER - Palmer Station",
+      "years": "2012-2013",
+      "description": "Palmer Station, Antarctica",
+      "folder": "images/fieldwork/pal-lter-palmer-2012-2013",
+      "cover": "cover.jpg",
+      "projects": ["pal-lter", "converge"]
+    },
+    {
+      "id": "pal-lter-wap-2014",
+      "title": "PAL-LTER - West Antarctica Peninsula",
+      "years": "2014",
+      "description": "West Antarctica Peninsula research expedition",
+      "folder": "images/fieldwork/pal-lter-wap-2014",
+      "cover": "cover.jpg",
+      "projects": ["pal-lter", "converge"]
+    },
+    {
+      "id": "pal-lter-wap-2015",
+      "title": "PAL-LTER - West Antarctica Peninsula",
+      "years": "2015",
+      "description": "West Antarctica Peninsula research expedition",
+      "folder": "images/fieldwork/pal-lter-wap-2015",
+      "cover": "cover.jpg",
+      "projects": ["pal-lter", "converge"]
+    },
+    {
+      "id": "mesohux-2017",
+      "title": "MESOHUX",
+      "years": "2017",
+      "description": "Norway research cruise",
+      "folder": "images/fieldwork/mesohux-2017",
+      "cover": "cover.jpg",
+      "projects": []
+    },
+    {
+      "id": "comics1-dy086-2017",
+      "title": "COMICS 1",
+      "years": "2017",
+      "description": "South Georgia (DY086)",
+      "folder": "images/fieldwork/comics1-dy086-2017",
+      "cover": "cover.jpg",
+      "projects": ["comics"]
+    },
+    {
+      "id": "gocart2-2018",
+      "title": "GOCART 2",
+      "years": "2018",
+      "description": "Benguela Upwelling System",
+      "folder": "images/fieldwork/gocart2-2018",
+      "cover": "cover.jpg",
+      "projects": ["gocart"]
+    },
+    {
+      "id": "comics2-dy090-2018",
+      "title": "COMICS 2",
+      "years": "2018",
+      "description": "South Atlantic (DY090)",
+      "folder": "images/fieldwork/comics2-dy090-2018",
+      "cover": "cover.jpg",
+      "projects": ["comics"]
+    },
+    {
+      "id": "custard1-dy096-2018",
+      "title": "CUSTARD 1",
+      "years": "2018",
+      "description": "Southern Ocean (DY096)",
+      "folder": "images/fieldwork/custard1-dy096-2018",
+      "cover": "cover.jpg",
+      "projects": ["custard"]
+    },
+    {
+      "id": "pap-dy130-2022",
+      "title": "PAP",
+      "years": "2022",
+      "description": "North Atlantic (DY130)",
+      "folder": "images/fieldwork/pap-dy130-2022",
+      "cover": "cover.jpg",
+      "projects": []
+    },
+    {
+      "id": "biocarbon-dy180-2024",
+      "title": "BIO-Carbon",
+      "years": "2024",
+      "description": "Iceland Basin (DY180)",
+      "folder": "images/fieldwork/biocarbon-dy180-2024",
+      "cover": "cover.jpg",
+      "projects": ["partitrics", "idapro"]
+    },
+    {
+      "id": "rebels1-jc268-2024",
+      "title": "ReBELS 1",
+      "years": "2024",
+      "description": "Labrador Sea (JC268)",
+      "folder": "images/fieldwork/rebels1-jc268-2024",
+      "cover": "cover.jpg",
+      "projects": ["rebels"]
+    },
+    {
+      "id": "rebels2-jc268-2025",
+      "title": "ReBELS 2",
+      "years": "2025",
+      "description": "Labrador Sea (JC268)",
+      "folder": "images/fieldwork/rebels2-jc268-2025",
+      "cover": "cover.jpg",
+      "projects": ["rebels"]
+    }
+  ],
+  "nature": [
+    {
+      "id": "antarctica-wildlife",
+      "title": "Antarctica Wildlife",
+      "description": "Penguins, seals, and Antarctic fauna",
+      "folder": "images/nature/antarctica-wildlife",
+      "cover": "cover.jpg"
+    },
+    {
+      "id": "antarctic-landscapes",
+      "title": "Antarctic Landscapes",
+      "description": "Ice, mountains, and polar scenery",
+      "folder": "images/nature/antarctic-landscapes",
+      "cover": "cover.jpg"
+    },
+    {
+      "id": "underwater-wildlife",
+      "title": "Underwater Wildlife",
+      "description": "Marine life beneath the surface",
+      "folder": "images/nature/underwater-wildlife",
+      "cover": "cover.jpg"
+    },
+    {
+      "id": "whales-dolphins",
+      "title": "Whales and Dolphins",
+      "description": "Cetacean encounters at sea",
+      "folder": "images/nature/whales-dolphins",
+      "cover": "cover.jpg"
+    },
+    {
+      "id": "birds",
+      "title": "Birds",
+      "description": "Seabirds and coastal avifauna",
+      "folder": "images/nature/birds",
+      "cover": "cover.jpg"
+    },
+    {
+      "id": "landscapes",
+      "title": "Landscapes",
+      "description": "Coastal and oceanic vistas",
+      "folder": "images/nature/landscapes",
+      "cover": "cover.jpg"
+    }
+  ]
+}

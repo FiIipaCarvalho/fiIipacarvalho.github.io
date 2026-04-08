@@ -5,6 +5,7 @@ let projectData = null;
 let projectTeams = null;
 let projectPubs = null;
 let allPublications = [];
+let galleryData = null;
 
 // Initialize project page
 async function initProjectPage() {
@@ -19,15 +20,28 @@ async function initProjectPage() {
             loadProjectData(),
             loadProjectTeams(),
             loadProjectPublications(),
-            loadORCIDPublications()
+            loadORCIDPublications(),
+            loadGalleryData()
         ]);
 
         // Populate page
         renderMeta();
+        renderSummary();
         renderTeam();
         renderPublications();
+        renderFieldwork();
     } catch (error) {
         console.error('Error loading project data:', error);
+    }
+}
+
+// Load gallery data (for fieldwork albums)
+async function loadGalleryData() {
+    try {
+        const response = await fetch('../data/gallery.json');
+        galleryData = await response.json();
+    } catch (e) {
+        console.error('Failed to load gallery.json', e);
     }
 }
 
@@ -139,6 +153,58 @@ function renderMeta() {
     }
 
     metaBar.innerHTML = html;
+}
+
+// Render summary paragraph from JSON into .project-description
+function renderSummary() {
+    const descSection = document.querySelector('.project-description');
+    if (!descSection || !projectData?.summary) return;
+
+    const summaryEl = document.createElement('p');
+    summaryEl.className = 'project-summary';
+    summaryEl.textContent = projectData.summary;
+
+    // Insert before any existing custom content
+    descSection.insertBefore(summaryEl, descSection.firstChild);
+}
+
+// Render fieldwork album cards from gallery.json into .project-photos
+function renderFieldwork() {
+    const section = document.querySelector('.project-photos');
+    if (!section) return;
+
+    const albumIds = projectData?.fieldwork;
+    if (!albumIds || albumIds.length === 0 || !galleryData) {
+        section.innerHTML = `
+            <h2>Fieldwork</h2>
+            <p class="text-muted">No fieldwork expeditions recorded for this project yet.</p>`;
+        return;
+    }
+
+    const albums = galleryData.fieldwork.filter(a => albumIds.includes(a.id));
+
+    if (albums.length === 0) {
+        section.innerHTML = `
+            <h2>Fieldwork</h2>
+            <p class="text-muted">No fieldwork expeditions recorded for this project yet.</p>`;
+        return;
+    }
+
+    const cards = albums.map(album => `
+        <a class="fieldwork-card" href="../photos.html?album=${album.id}">
+            <div class="fieldwork-card-cover">
+                <img src="../${album.folder}/${album.cover}"
+                     alt="${album.title}"
+                     onerror="this.src='../images/gallery-placeholder.svg'">
+            </div>
+            <div class="fieldwork-card-info">
+                <strong>${album.title}</strong>
+                ${album.years ? `<span>${album.years}</span>` : ''}
+                <p>${album.description}</p>
+            </div>
+        </a>`).join('');
+
+    section.innerHTML = `<h2>Fieldwork</h2><div class="fieldwork-grid">${cards}</div>`;
 }
 
 // Render team members

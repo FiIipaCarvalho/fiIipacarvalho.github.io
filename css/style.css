@@ -1615,6 +1615,73 @@ body {
     border-bottom: 2px solid var(--border-color);
 }
 
+/* Summary paragraph injected from JSON */
+.project-summary {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Fieldwork album cards on project pages */
+.fieldwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.fieldwork-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fieldwork-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+}
+
+.fieldwork-card-cover {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--bg-secondary);
+}
+
+.fieldwork-card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fieldwork-card-info {
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.fieldwork-card-info strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.fieldwork-card-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.fieldwork-card-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0.25rem 0 0;
+}
+
 .project-description p {
     color: var(--text-secondary);
     line-height: 1.8;
