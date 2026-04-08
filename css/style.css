@@ -993,14 +993,14 @@ body {
 
 /* Year Grouping */
 .year-group {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .year-header {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-color);
 }
@@ -1008,12 +1008,12 @@ body {
 .year-publications {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
 }
 
 /* Individual Publication Item */
 .publication-item {
-    padding-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
 }
 
 .pub-title {
@@ -1054,8 +1054,8 @@ body {
 
 /* Publication Links */
 .publication-item {
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
     border-bottom: 1px solid var(--border-color);
 }
 
