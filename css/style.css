@@ -650,15 +650,6 @@ body {
     flex-wrap: wrap;
 }
 
-.project-tag {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: var(--bg-tertiary);
-    color: var(--text-secondary);
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
-}
-
 .project-card p {
     color: var(--text-secondary);
     line-height: 1.7;
@@ -2228,4 +2219,16 @@ a:hover {
 
 .pub-link-compact:hover {
     color: #0052a3 !important;
+}
+
+/* DOI Link Styling */
+.doi-link {
+    color: #0066cc !important;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.doi-link:hover {
+    color: #0052a3 !important;
+    text-decoration: underline;
 }

@@ -214,6 +214,7 @@ function renderPublications() {
                 <p class="pub-meta">
                     ${pub.journal ? `<em>${pub.journal}</em>` : ''}
                     ${pub.month && pub.year ? ` (${getMonthName(pub.month)} ${pub.year})` : pub.year ? ` (${pub.year})` : ''}
+                    ${pub.doi ? `. <a href="https://doi.org/${pub.doi}" target="_blank" class="doi-link">doi: ${pub.doi}</a>` : ''}
                 </p>`;
             
             // Tags (keywords and projects)
@@ -226,20 +227,13 @@ function renderPublications() {
                 });
             }
             
-            // Project tags (green)
+            // Project tags (green boxes with "Project: " prefix)
             if (pub.projects && pub.projects.length > 0) {
                 pub.projects.forEach(proj => {
-                    html += `<span class="pub-tag project-tag">${proj.toUpperCase()}</span>`;
+                    html += `<span class="pub-tag project-tag">Project: ${proj.toUpperCase()}</span>`;
                 });
             }
             
-            html += '</div>';
-            
-            // DOI link
-            html += '<div class="pub-links">';
-            if (pub.doi) {
-                html += `<a href="https://doi.org/${pub.doi}" target="_blank">DOI</a>`;
-            }
             html += '</div></div>';
         });
         

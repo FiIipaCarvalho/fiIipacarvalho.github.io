@@ -150,17 +150,17 @@ function renderPublications() {
     const html = filtered.map(pub => {
         let tags = '';
         
-        // Keyword tags
+        // Keyword tags (blue)
         if (pub.keywords && pub.keywords.length > 0) {
             tags += pub.keywords.map(kw => 
                 `<span class="pub-tag keyword-tag">${KEYWORD_NAMES[kw] || kw}</span>`
             ).join('');
         }
         
-        // Project tags
+        // Project tags (green boxes with "Project: " prefix)
         if (pub.projects && pub.projects.length > 0) {
             tags += pub.projects.map(proj => 
-                `<span class="pub-tag project-tag">${proj.toUpperCase()}</span>`
+                `<span class="pub-tag project-tag">Project: ${proj.toUpperCase()}</span>`
             ).join('');
         }
 
@@ -168,10 +168,9 @@ function renderPublications() {
         <div class="pub-item-compact">
             <h4>${pub.title}</h4>
             <p class="pub-meta-compact">
-                ${pub.journal ? pub.journal + ' • ' : ''}${pub.year}
+                ${pub.journal ? pub.journal + ' • ' : ''}${pub.year}${pub.doi ? `. <a href="https://doi.org/${pub.doi}" target="_blank" class="doi-link">doi: ${pub.doi}</a>` : ''}
             </p>
             ${tags ? `<div class="pub-tags">${tags}</div>` : ''}
-            ${pub.doi ? `<a href="https://doi.org/${pub.doi}" target="_blank" class="pub-link-compact">DOI</a>` : ''}
         </div>
     `;
     }).join('');
