@@ -1,34 +1,40 @@
-// Enhanced Publications JavaScript with Theme Filtering
+// Publications JavaScript with Keyword Filtering
 const ORCID_ID = '0000-0002-8355-4329';
 const ORCID_API_URL = `https://pub.orcid.org/v3.0/${ORCID_ID}/works`;
 
 let allPublications = [];
 let publicationTags = {};
-let currentThemeFilter = 'all';
+let currentKeywordFilter = 'all';
 let currentYearFilter = 'all';
 let searchTerm = '';
 
-// Load publications and tags
+// Keyword display names
+const KEYWORD_NAMES = {
+    'biological-carbon-pump': 'Biological Carbon Pump',
+    'phytoplankton-dynamics': 'Phytoplankton Dynamics',
+    'biophysical-interactions': 'Biophysical Interactions',
+    'autonomous-systems': 'Autonomous Systems',
+    'best-practices': 'Best Practices',
+    'polar-ecosystems': 'Polar Ecosystems',
+    'dataset': 'Dataset',
+    'methods': 'Methods'
+};
+
 async function init() {
     try {
-        // Load publication tags (projects + themes)
         const tagsResponse = await fetch('data/project-publications.json');
         const tagsData = await tagsResponse.json();
         
-        // Create lookup map
         tagsData.publications.forEach(pub => {
             const key = pub.doi || pub.title.toLowerCase();
             publicationTags[key] = {
                 projects: pub.projects || [],
-                themes: pub.themes || []
+                keywords: pub.keywords || []
             };
         });
         
-        // Load publications from ORCID
         await loadPublications();
-        
-        // Setup filters
-        setupThemeFilters();
+        setupKeywordFilters();
         setupSearch();
         
     } catch (error) {
@@ -50,21 +56,18 @@ async function loadPublications() {
             allPublications = getFallbackPublications();
         }
         
-        // Tag publications with themes
         allPublications.forEach(pub => {
             const doiKey = pub.doi;
             const titleKey = pub.title.toLowerCase();
             
-            // Try DOI first, then title
             let tags = publicationTags[doiKey];
             if (!tags) {
-                // Try partial title match
                 tags = Object.entries(publicationTags).find(([key, val]) => {
                     return titleKey.includes(key.toLowerCase()) || key.toLowerCase().includes(titleKey);
                 })?.[1];
             }
             
-            pub.themes = tags?.themes || [];
+            pub.keywords = tags?.keywords || [];
             pub.projects = tags?.projects || [];
         });
         
@@ -95,7 +98,7 @@ function parseORCIDData(data) {
             type: workSummary.type || '',
             doi: extractDOI(workSummary),
             url: workSummary.url?.value || '',
-            themes: [],
+            keywords: [],
             projects: []
         };
         
@@ -113,25 +116,16 @@ function extractDOI(workSummary) {
 }
 
 function getFallbackPublications() {
-    return [
-        {
-            title: "FIRe glider: Mapping in situ chlorophyll variable fluorescence with autonomous underwater gliders",
-            year: 2020,
-            journal: "Limnology and Oceanography: Methods",
-            doi: "10.1002/lom3.10380",
-            themes: ['autonomous', 'polar'],
-            projects: ['fire-glider', 'pal-lter']
-        }
-    ];
+    return [];
 }
 
-function setupThemeFilters() {
+function setupKeywordFilters() {
     const buttons = document.querySelectorAll('.theme-filter-btn');
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            currentThemeFilter = btn.dataset.theme;
+            currentKeywordFilter = btn.dataset.keyword;
             renderPublications();
         });
     });
@@ -155,7 +149,6 @@ function setupYearFilters() {
         yearFiltersDiv.appendChild(btn);
     });
     
-    // All years button
     document.querySelector('.filter-btn[data-year="all"]').addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         document.querySelector('.filter-btn[data-year="all"]').classList.add('active');
@@ -175,23 +168,19 @@ function setupSearch() {
 function renderPublications() {
     const container = document.getElementById('publications-list');
     
-    // Filter publications
     let filtered = allPublications.filter(pub => {
-        // Theme filter
-        if (currentThemeFilter !== 'all') {
-            if (!pub.themes || !pub.themes.includes(currentThemeFilter)) {
+        if (currentKeywordFilter !== 'all') {
+            if (!pub.keywords || !pub.keywords.includes(currentKeywordFilter)) {
                 return false;
             }
         }
         
-        // Year filter
         if (currentYearFilter !== 'all') {
             if (pub.year != currentYearFilter) {
                 return false;
             }
         }
         
-        // Search filter
         if (searchTerm) {
             const searchText = `${pub.title} ${pub.journal} ${pub.year}`.toLowerCase();
             if (!searchText.includes(searchTerm)) {
@@ -207,7 +196,6 @@ function renderPublications() {
         return;
     }
     
-    // Group by year
     const byYear = {};
     filtered.forEach(pub => {
         const year = pub.year || 'Unknown';
@@ -215,7 +203,6 @@ function renderPublications() {
         byYear[year].push(pub);
     });
     
-    // Render
     let html = '';
     Object.keys(byYear).sort((a, b) => b - a).forEach(year => {
         html += `<div class="year-group">
@@ -229,21 +216,14 @@ function renderPublications() {
                     ${pub.month && pub.year ? ` (${getMonthName(pub.month)} ${pub.year})` : pub.year ? ` (${pub.year})` : ''}
                 </p>`;
             
-            // Theme tags
-            if (pub.themes && pub.themes.length > 0) {
+            if (pub.keywords && pub.keywords.length > 0) {
                 html += '<div class="pub-tags">';
-                pub.themes.forEach(theme => {
-                    const themeNames = {
-                        'biophysical': 'Biophysical',
-                        'polar': 'Polar',
-                        'autonomous': 'Autonomous'
-                    };
-                    html += `<span class="pub-tag theme-tag">${themeNames[theme] || theme}</span>`;
+                pub.keywords.forEach(kw => {
+                    html += `<span class="pub-tag theme-tag">${KEYWORD_NAMES[kw] || kw}</span>`;
                 });
                 html += '</div>';
             }
             
-            // Links
             html += '<div class="pub-links">';
             if (pub.doi) {
                 html += `<a href="https://doi.org/${pub.doi}" target="_blank">DOI</a>`;
@@ -253,9 +233,7 @@ function renderPublications() {
                     html += `<a href="projects/${proj}.html">Project: ${proj.toUpperCase()}</a>`;
                 });
             }
-            html += '</div>';
-            
-            html += '</div>';
+            html += '</div></div>';
         });
         
         html += '</div>';
@@ -274,7 +252,6 @@ function displayError() {
         '<p class="error-message">Unable to load publications. Please try again later.</p>';
 }
 
-// Initialize
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
