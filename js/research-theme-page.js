@@ -60,6 +60,7 @@ async function loadPublications() {
             }
             
             pub.keywords = tags?.keywords || [];
+            pub.projects = tags?.projects || [];
         });
         
     } catch (error) {
@@ -81,7 +82,8 @@ function parseORCIDData(data) {
             year: parseInt(workSummary['publication-date']?.year?.value) || null,
             journal: workSummary['journal-title']?.value || '',
             doi: extractDOI(workSummary),
-            keywords: []
+            keywords: [],
+            projects: []
         };
         
         publications.push(pub);
@@ -134,15 +136,45 @@ function renderPublications() {
         return;
     }
 
-    const html = filtered.map(pub => `
+    const KEYWORD_NAMES = {
+        'biological-carbon-pump': 'Biological Carbon Pump',
+        'phytoplankton-dynamics': 'Phytoplankton Dynamics',
+        'biophysical-interactions': 'Biophysical Interactions',
+        'autonomous-systems': 'Autonomous Systems',
+        'best-practices': 'Best Practices',
+        'polar-ecosystems': 'Polar Ecosystems',
+        'dataset': 'Dataset',
+        'methods': 'Methods'
+    };
+
+    const html = filtered.map(pub => {
+        let tags = '';
+        
+        // Keyword tags
+        if (pub.keywords && pub.keywords.length > 0) {
+            tags += pub.keywords.map(kw => 
+                `<span class="pub-tag keyword-tag">${KEYWORD_NAMES[kw] || kw}</span>`
+            ).join('');
+        }
+        
+        // Project tags
+        if (pub.projects && pub.projects.length > 0) {
+            tags += pub.projects.map(proj => 
+                `<span class="pub-tag project-tag">${proj.toUpperCase()}</span>`
+            ).join('');
+        }
+
+        return `
         <div class="pub-item-compact">
             <h4>${pub.title}</h4>
             <p class="pub-meta-compact">
                 ${pub.journal ? pub.journal + ' • ' : ''}${pub.year}
             </p>
+            ${tags ? `<div class="pub-tags">${tags}</div>` : ''}
             ${pub.doi ? `<a href="https://doi.org/${pub.doi}" target="_blank" class="pub-link-compact">DOI</a>` : ''}
         </div>
-    `).join('');
+    `;
+    }).join('');
 
     container.innerHTML = html;
 }

@@ -1002,15 +1002,15 @@ body {
 
 /* Year Grouping */
 .year-group {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 .year-header {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
+    padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-color);
 }
 
@@ -1101,10 +1101,16 @@ body {
     font-weight: 500;
 }
 
-.theme-tag {
+.keyword-tag {
     background-color: var(--bg-secondary);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
+}
+
+.project-tag {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #4caf50;
 }
 
 .pub-links {
@@ -2153,4 +2159,73 @@ body {
 
 .pub-link-compact:hover {
     text-decoration: underline;
+}
+
+/* Research Theme Pages */
+.theme-page-content {
+    max-width: 900px;
+}
+
+.theme-description {
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+.theme-projects {
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary-color);
+}
+
+.theme-projects h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.theme-projects p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.theme-projects a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.theme-projects a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+.theme-publications-full h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Better link colors throughout */
+a {
+    color: #0066cc;
+}
+
+a:hover {
+    color: #0052a3;
+}
+
+.pub-link-compact {
+    color: #0066cc !important;
+}
+
+.pub-link-compact:hover {
+    color: #0052a3 !important;
 }

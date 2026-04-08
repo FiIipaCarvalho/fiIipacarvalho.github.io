@@ -216,22 +216,29 @@ function renderPublications() {
                     ${pub.month && pub.year ? ` (${getMonthName(pub.month)} ${pub.year})` : pub.year ? ` (${pub.year})` : ''}
                 </p>`;
             
+            // Tags (keywords and projects)
+            html += '<div class="pub-tags">';
+            
+            // Keyword tags (blue)
             if (pub.keywords && pub.keywords.length > 0) {
-                html += '<div class="pub-tags">';
                 pub.keywords.forEach(kw => {
-                    html += `<span class="pub-tag theme-tag">${KEYWORD_NAMES[kw] || kw}</span>`;
+                    html += `<span class="pub-tag keyword-tag">${KEYWORD_NAMES[kw] || kw}</span>`;
                 });
-                html += '</div>';
             }
             
+            // Project tags (green)
+            if (pub.projects && pub.projects.length > 0) {
+                pub.projects.forEach(proj => {
+                    html += `<span class="pub-tag project-tag">${proj.toUpperCase()}</span>`;
+                });
+            }
+            
+            html += '</div>';
+            
+            // DOI link
             html += '<div class="pub-links">';
             if (pub.doi) {
                 html += `<a href="https://doi.org/${pub.doi}" target="_blank">DOI</a>`;
-            }
-            if (pub.projects && pub.projects.length > 0) {
-                pub.projects.forEach(proj => {
-                    html += `<a href="projects/${proj}.html">Project: ${proj.toUpperCase()}</a>`;
-                });
             }
             html += '</div></div>';
         });
