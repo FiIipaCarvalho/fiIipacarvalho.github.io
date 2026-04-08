@@ -26,8 +26,8 @@ async function initProjectsList() {
 function renderProjectCard(project, showDescription) {
     const metaParts = [project.dates, project.funding, project.role].filter(Boolean);
     const meta = metaParts.length ? `<p class="project-meta">${metaParts.join(' • ')}</p>` : '';
-    const description = showDescription && project.description
-        ? `<p class="project-description-short">${project.description}</p>`
+    const description = showDescription && (project.summary || project.description)
+        ? `<p class="project-description-short">${project.summary || project.description}</p>`
         : '';
 
     return `
