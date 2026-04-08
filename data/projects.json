@@ -7,7 +7,7 @@
       "status": "current",
       "dates": "2023-2028",
       "funding": "NERC Standard Grant, £1.05M",
-      "role": "Co-PI, WP1-2 lead",
+      "role": "PI, WP1-2 lead",
       "description": "Understanding how winter convection and spring restratification control biological carbon export in the Labrador Sea using autonomous platforms and ship-based observations.",
       "website": "https://rebelsproject.com",
       "themes": ["biophysical", "polar"]
@@ -79,7 +79,7 @@
       "status": "current",
       "dates": "2025-2026",
       "funding": "UKRI, £44k",
-      "role": "PI",
+      "role": "Co-I",
       "description": "Training and capacity building for autonomous platform deployment and data analysis.",
       "website": "",
       "themes": ["autonomous"]
@@ -115,7 +115,7 @@
       "status": "past",
       "dates": "2017-2018",
       "funding": "",
-      "role": "Researcher",
+      "role": "Postdoctoral Researcher",
       "description": "Using ocean gliders to study phytoplankton dynamics and productivity on the Agulhas Bank.",
       "website": "",
       "themes": ["biophysical", "autonomous"]
@@ -127,7 +127,7 @@
       "status": "past",
       "dates": "2017-2018",
       "funding": "",
-      "role": "Researcher",
+      "role": "Postdoctoral Researcher",
       "description": "Investigating mesopelagic carbon storage mechanisms in the South Atlantic and around South Georgia.",
       "website": "",
       "themes": ["biophysical"]
@@ -139,7 +139,7 @@
       "status": "past",
       "dates": "2018",
       "funding": "",
-      "role": "Researcher",
+      "role": "Postdoctoral Researcher",
       "description": "Examining seasonal controls on carbon export and remineralization in the Southern Ocean.",
       "website": "",
       "themes": ["polar", "biophysical"]
@@ -151,7 +151,19 @@
       "status": "past",
       "dates": "2011-2015",
       "funding": "NSF",
-      "role": "PhD Research",
+      "role": "PhD Student",
+      "description": "Long-term ecological research along the West Antarctic Peninsula examining climate impacts on marine ecosystems.",
+      "website": "https://pal.lternet.edu",
+      "themes": ["polar"]
+    },
+    {
+      "id": "converge",
+      "title": "CONVERGE",
+      "fullTitle": "Impacts of local oceanographic processes on Adélie penguin foraging ecology",
+      "status": "past",
+      "dates": "2011-2015",
+      "funding": "NSF",
+      "role": "PhD Student",
       "description": "Long-term ecological research along the West Antarctic Peninsula examining climate impacts on marine ecosystems.",
       "website": "https://pal.lternet.edu",
       "themes": ["polar"]
@@ -163,7 +175,7 @@
       "status": "past",
       "dates": "2015-2018",
       "funding": "",
-      "role": "Postdoc",
+      "role": "PhD Student",
       "description": "Developing and deploying fluorescence-based phytoplankton physiology sensors on autonomous gliders.",
       "website": "",
       "themes": ["autonomous"]

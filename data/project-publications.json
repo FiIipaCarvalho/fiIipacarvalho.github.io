@@ -59,6 +59,41 @@
       "keywords": ["biological-carbon-pump","dataset","autonomous-systems"]
     },
     {
+      "title": "Microbial remineralisation of the downward particle flux measured",
+      "doi": "",
+      "year": 2024,
+      "projects": ["comics"],
+      "keywords": ["biological-carbon-pump","dataset","autonomous-systems"]
+    },
+    {
+      "title": "Characterizing Reef Net Metabolism Via the Diel Co‐Variation",
+      "doi": "",
+      "year": 2023,
+      "projects": [],
+      "keywords": ["student","autonomous-systems"]
+    },
+    {
+      "title": "NetCDF median glider data collected in the Northern Benguela during February - June 2018",
+      "doi": "",
+      "year": 2023,
+      "projects": ["gocart"],
+      "keywords": ["biological-carbon-pump","dataset","autonomous-systems"]
+    },
+    {
+      "title": "Oxygen Variability in the Offshore Northern Benguela Upwelling System From Glider Data",
+      "doi": "",
+      "year": 2022,
+      "projects": ["gocart","comics"],
+      "keywords": ["biological-carbon-pump","dataset","autonomous-systems"]
+    },
+    {
+      "title": "Internal tsunamigenesis and ocean mixing driven by glacier calving in Antarctica",
+      "doi": "",
+      "year": 2022,
+      "projects": ["polomints"],
+      "keywords": ["biophysical-interactions","dataset","polar-ecosystems"]
+    },
+    {
       "title": "Mesopelagic particle layers in the dynamic hypoxic northern Benguela are shaped by zooplankton activity",
       "doi": "",
       "year": 2025,
@@ -84,7 +119,7 @@
       "doi": "",
       "year": 2024,
       "projects": [],
-      "keywords": ["autonomous-systems", "best-practice"]
+      "keywords": ["autonomous-systems", "best-practices"]
     },
     {
       "title": "Assessment of oceanographic conditions during the North Atlantic EXport processes in the ocean from RemoTe Sensing",
@@ -129,11 +164,67 @@
       "keywords": ["biophysical-interactions","phytoplankton-dynamics"]
     },
     {
+      "title": "Testing the Canyon Hypothesis: Evaluating light and nutrient controls of phytoplankton growth in penguin",
+      "doi": "10.1002/lno.11313",
+      "year": 2020,
+      "projects": [],
+      "keywords": ["biophysical-interactions","phytoplankton-dynamics","polar-ecosystems"]
+    },
+    {
+      "title": "Central place foragers select ocean surface convergent features despite",
+      "doi": "10.1016/j.dsr2.2022.105153",
+      "year": 2019,
+      "projects": [],
+      "keywords": ["biophysical-interactions","phytoplankton-dynamics","polar-ecosystems"]
+    },
+    {
+      "title": "Glider Technology Enabling a Diversity of Opportunities With Autonomous",
+      "doi": "",
+      "year": 2019,
+      "projects": [],
+      "keywords": ["autonomous-systems","Methods"]
+    },
+    {
+      "title": "Mesoscale variability of the summer bloom over the northern Ross Sea shelf",
+      "doi": "",
+      "year": 2017,
+      "projects": ["converge"],
+      "keywords": ["biophysical-interactions","phytoplankton-dynamics","autonomous-systems","polar-ecosystems"]
+    },
+    {
+      "title": "Decadal variability in coastal phytoplankton community composition in a changing West Antarctic",
+      "doi": "",
+      "year": 2017,
+      "projects": ["pal-lter"],
+      "keywords": ["biophysical-interactions","phytoplankton-dynamics"]
+    },
+    {
+      "title": "Defining the ecologically relevant",
+      "doi": "",
+      "year": 2017,
+      "projects": ["pal-lter","converge"],
+      "keywords": ["biophysical-interactions","phytoplankton-dynamics","autonomous-systems","Methods"]
+    },
+    {
+      "title": "Mixing and phytoplankton dynamics in a submarine canyon in the West Antarctic Peninsula",
+      "doi": "",
+      "year": 2016,
+      "projects": ["pal-lter","converge"],
+      "keywords": ["biophysical-interactions","phytoplankton-dynamics","autonomous-systems"]
+    },
+    {
+      "title": "The Trans-Atlantic Slocum Glider Expeditions",
+      "doi": "",
+      "year": 2011,
+      "projects": [],
+      "keywords": ["autonomous-systems","Methods"]
+    },
+    {
       "title": "OceanGliders oxygen SOP",
       "doi": "",
       "year": 2022,
       "projects": [],
-      "keywords": ["autonomous-systems","Methods"]
+      "keywords": ["autonomous-systems","Methods","best-practices"
     },
     {
       "title": "Combining gliders and models to understand mesoscale biogeochemical patterns at the Angola-Benguela front",
@@ -150,9 +241,9 @@
       "keywords": ["biophysical-interactions", "autonomous-systems","polar-ecosystems","phytoplankton-dynamics","Methods"]
     },
     {
-      "title": "Mapping variable chlorophyll fluorescence using autonomous-systems underwater gliders",
+      "title": "MMapping Antarctic phytoplankton physiology using autonomous gliders",
       "doi": "",
-      "year": 2020,
+      "year": 2016,
       "projects": ["fire-glider", "pal-lter"],
       "keywords": ["biophysical-interactions", "autonomous-systems", "polar-ecosystems","phytoplankton-dynamics","Methods"]
     },
@@ -167,12 +258,12 @@
       "title": "Evaluating the sensor-equipped autonomous-systems surface vehicle C-Worker 4 as a tool for identifying coastal ocean acidification",
       "doi": "10.3390/jmse8110939",
       "year": 2020,
-      "projects": ["techoceans"],
-      "keywords": ["autonomous-systems","Methods","best-practice"]
+      "projects": [],
+      "keywords": ["autonomous-systems","Methods","best-practices","student"]
     },
     {
-      "title": "Glider technology enabling a diversity of opportunities with autonomous-systems ocean sampling",
-      "doi": "",
+      "title": "Glider",
+      "doi": " 10.1016/B978-0-12-809886-8.00008-9",
       "year": 2019,
       "projects": ["pal-lter"],
       "keywords": ["autonomous-systems","Methods"]
@@ -203,7 +294,7 @@
       "title": "Mapping Antarctic phytoplankton physiology using autonomous-systems gliders",
       "doi": "10.1109/OCEANS.2016.7761193",
       "year": 2016,
-      "projects": ["pal-lter"],
+      "projects": ["pal-lter","fire-glider"],
       "keywords": ["autonomous-systems", "polar-ecosystems","phytoplankton-dynamics"]    
     },
     {
@@ -225,37 +316,39 @@
   "_available_keywords": [
     "biological-carbon-pump",
     "phytoplankton-dynamics",
-    "biophysical-interactions-interactions",
-    "autonomous-systems-systems",
+    "biophysical-interactions",
+    "autonomous-systems",
     "best-practices",
-    "polar-ecosystems-ecosystems",
+    "polar-ecosystems",
     "dataset",
-    "methods"
+    "methods",
+    "student"
   ],
   
   "_keyword_descriptions": {
     "biological-carbon-pump": "Biological Carbon Pump",
     "phytoplankton-dynamics": "Phytoplankton Dynamics",
-    "biophysical-interactions-interactions": "biophysical-interactions Interactions",
-    "autonomous-systems-systems": "autonomous-systems Systems",
+    "biophysical-interactions": "Biophysical Interactions",
+    "autonomous-systems": "Autonomous Systems",
     "best-practices": "Best Practices",
-    "polar-ecosystems-ecosystems": "polar-ecosystems Ecosystems",
+    "polar-ecosystems": "Polar Ecosystems",
     "dataset": "Dataset",
-    "methods": "Methods"
+    "methods": "Methods",
+    "student": "Student/Postdoc led"
   },
   
   "_research_keywords": {
     "biophysical-interactions-controls": {
-      "name": "biophysical-interactions Controls on Marine Productivity and Carbon Export",
-      "keywords": ["biological-carbon-pump", "phytoplankton-dynamics", "biophysical-interactions-interactions"]
+      "name": "Controls on Marine Productivity and Carbon Export",
+      "keywords": ["biological-carbon-pump", "phytoplankton-dynamics", "biophysical-interactions"]
     },
-    "polar-ecosystems-ecosystems": {
-      "name": "polar-ecosystems and Subpolar-ecosystems Ocean Ecosystems",
-      "keywords": ["polar-ecosystems-ecosystems"]
+    "polar-ecosystems": {
+      "name": "Polar and Subpolar Ecosystems",
+      "keywords": ["polar-ecosystems"]
     },
-    "autonomous-systems-systems": {
-      "name": "autonomous-systems Ocean Observing Systems",
-      "keywords": ["autonomous-systems-systems", "best-practices"]
+    "autonomous-systems": {
+      "name": "Autonomous Ocean Observing Systems",
+      "keywords": ["autonomous-systems", "best-practices"]
     }
   },
   
