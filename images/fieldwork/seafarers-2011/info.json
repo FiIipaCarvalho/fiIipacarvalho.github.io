@@ -1,0 +1,16 @@
+{
+  "id": "seafarers-2011",
+  "title": "SeAFARERS",
+  "years": "2011",
+  "description": "Ross Sea, Antarctica",
+  "projects": [],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

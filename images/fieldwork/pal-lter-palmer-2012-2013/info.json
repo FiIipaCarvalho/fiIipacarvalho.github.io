@@ -1,0 +1,19 @@
+{
+  "id": "pal-lter-palmer-2012-2013",
+  "title": "PAL-LTER - Palmer Station",
+  "years": "2012-2013",
+  "description": "Palmer Station, Antarctica",
+  "projects": [
+    "pal-lter",
+    "converge"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

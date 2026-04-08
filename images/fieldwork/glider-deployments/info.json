@@ -1,0 +1,16 @@
+{
+  "id": "glider-deployments",
+  "title": "Glider Deployments",
+  "years": "2008 - Present",
+  "description": "Ocean glider operations across multiple research cruises and locations",
+  "projects": [],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

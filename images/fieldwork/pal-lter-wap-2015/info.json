@@ -1,0 +1,19 @@
+{
+  "id": "pal-lter-wap-2015",
+  "title": "PAL-LTER - West Antarctica Peninsula",
+  "years": "2015",
+  "description": "West Antarctica Peninsula research expedition",
+  "projects": [
+    "pal-lter",
+    "converge"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

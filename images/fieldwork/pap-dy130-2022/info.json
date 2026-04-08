@@ -1,0 +1,16 @@
+{
+  "id": "pap-dy130-2022",
+  "title": "PAP",
+  "years": "2022",
+  "description": "North Atlantic (DY130)",
+  "projects": [],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

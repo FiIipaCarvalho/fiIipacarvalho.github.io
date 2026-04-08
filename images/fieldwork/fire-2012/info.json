@@ -1,0 +1,16 @@
+{
+  "id": "fire-glider-2011",
+  "title": "FIRe-Glider",
+  "years": "2012-2013",
+  "description": "West Antarctica Peninsula",
+  "projects": [],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

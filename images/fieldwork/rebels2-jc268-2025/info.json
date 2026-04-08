@@ -1,0 +1,18 @@
+{
+  "id": "rebels2-jc268-2025",
+  "title": "ReBELS 2",
+  "years": "2025",
+  "description": "Labrador Sea (JC268)",
+  "projects": [
+    "rebels"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "comics1-dy086-2017",
+  "title": "COMICS 1",
+  "years": "2017",
+  "description": "South Georgia (DY086)",
+  "projects": [
+    "comics"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

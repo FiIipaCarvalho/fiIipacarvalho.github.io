@@ -1,0 +1,18 @@
+{
+  "id": "gocart2-2018",
+  "title": "GOCART 2",
+  "years": "2018",
+  "description": "Benguela Upwelling System",
+  "projects": [
+    "gocart"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

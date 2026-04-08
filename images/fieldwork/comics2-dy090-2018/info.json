@@ -1,0 +1,18 @@
+{
+  "id": "comics2-dy090-2018",
+  "title": "COMICS 2",
+  "years": "2018",
+  "description": "South Atlantic (DY090)",
+  "projects": [
+    "comics"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "custard1-dy096-2018",
+  "title": "CUSTARD 1",
+  "years": "2018",
+  "description": "Southern Ocean (DY096)",
+  "projects": [
+    "custard"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "biocarbon-dy180-2024",
+  "title": "BIO-Carbon",
+  "years": "2024",
+  "description": "Iceland Basin (DY180)",
+  "projects": [
+    "partitrics",
+    "idapro"
+  ],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

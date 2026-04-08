@@ -1,0 +1,16 @@
+{
+  "id": "mesohux-2017",
+  "title": "MESOHUX",
+  "years": "2017",
+  "description": "Norway research cruise",
+  "projects": [],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}

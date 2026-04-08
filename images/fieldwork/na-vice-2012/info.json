@@ -1,0 +1,16 @@
+{
+  "id": "na-vice-2012",
+  "title": "NA-VICE",
+  "years": "2012",
+  "description": "North Atlantic",
+  "projects": [],
+  "photos": [
+    {
+      "_comment": "Add one entry per photo. 'file' is the filename in this folder.",
+      "file": "example.jpg",
+      "caption": "",
+      "location": "",
+      "date": ""
+    }
+  ]
+}
