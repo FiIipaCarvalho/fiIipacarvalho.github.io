@@ -11,13 +11,15 @@ function initTheme() {
     
     document.documentElement.setAttribute('data-theme', currentTheme);
     
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
     
     // Listen for system theme changes
     prefersDark.addEventListener('change', (e) => {
@@ -33,6 +35,8 @@ function initMobileNav() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (!mobileToggle || !navMenu) return; // Exit if elements don't exist
     
     mobileToggle.addEventListener('click', () => {
         mobileToggle.classList.toggle('active');
@@ -60,9 +64,12 @@ function initMobileNav() {
 function initNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.querySelector('.navbar');
     
     // Highlight active section in nav
     function highlightNav() {
+        if (sections.length === 0) return; // Skip if no sections
+        
         const scrollPos = window.scrollY + 100;
         
         sections.forEach(section => {
@@ -82,11 +89,10 @@ function initNavigation() {
     }
     
     // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
     function handleScroll() {
-        if (window.scrollY > 50) {
+        if (navbar && window.scrollY > 50) {
             navbar.classList.add('scrolled');
-        } else {
+        } else if (navbar) {
             navbar.classList.remove('scrolled');
         }
         highlightNav();
@@ -99,6 +105,8 @@ function initNavigation() {
 // Contact Form Handler
 function initContactForm() {
     const form = document.getElementById('contact-form');
+    
+    if (!form) return; // Exit if form doesn't exist
     
     form.addEventListener('submit', (e) => {
         e.preventDefault();
