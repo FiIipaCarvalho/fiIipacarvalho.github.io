@@ -145,6 +145,14 @@ function renderMeta() {
     if (projectData.funding) {
         html += `<div class="meta-item"><strong>Funding:</strong> ${projectData.funding}</div>`;
     }
+    if (projectData.pi && projectData.noc_pi) {
+        html += `<div class="meta-item"><strong>Project PI:</strong> ${projectData.pi}</div>`;
+        html += `<div class="meta-item"><strong>NOC PI:</strong> ${projectData.noc_pi}</div>`;
+    } else if (projectData.pi) {
+        html += `<div class="meta-item"><strong>PI:</strong> ${projectData.pi}</div>`;
+    } else if (projectData.noc_pi) {
+        html += `<div class="meta-item"><strong>NOC PI:</strong> ${projectData.noc_pi}</div>`;
+    }
     if (projectData.role) {
         html += `<div class="meta-item"><strong>Role:</strong> ${projectData.role}</div>`;
     }
@@ -155,17 +163,14 @@ function renderMeta() {
     metaBar.innerHTML = html;
 }
 
-// Render summary paragraph from JSON into .project-description
+// Render summary from JSON, replacing any hardcoded description content
 function renderSummary() {
     const descSection = document.querySelector('.project-description');
     if (!descSection || !projectData?.summary) return;
 
-    const summaryEl = document.createElement('p');
-    summaryEl.className = 'project-summary';
-    summaryEl.textContent = projectData.summary;
-
-    // Insert before any existing custom content
-    descSection.insertBefore(summaryEl, descSection.firstChild);
+    descSection.innerHTML = `
+        <h2>Project Overview</h2>
+        <p class="project-summary">${projectData.summary}</p>`;
 }
 
 // Render fieldwork album cards from gallery.json into .project-photos
