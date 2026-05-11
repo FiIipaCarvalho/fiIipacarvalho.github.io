@@ -1618,7 +1618,7 @@ body {
 
 .project-meta-bar {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: 0.3rem;  /* Change this - smaller = less spacing */
     flex-wrap: wrap;
     padding: var(--spacing-md);
     background-color: var(--bg-secondary);
