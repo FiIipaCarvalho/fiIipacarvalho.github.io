@@ -1,5 +1,5 @@
 /**
- * Interactive Glider Track Map - Multi-file version
+ * Interactive Glider Track Map - Simplified button filters
  * Loads tracks from separate project files
  */
 
@@ -79,24 +79,24 @@ let gliderTracks = [];
 let regionLayers = L.layerGroup();
 let trackLayers = L.layerGroup();
 let markerLayers = L.layerGroup();
+let activeProjectFilter = 'all';
+let activeYearFilter = 'all';
 
 // Initialize map
 function initMap() {
     map = L.map('glider-map').setView([0, -30], 2);
-
-    L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
-        {
-            attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-            subdomains: 'abcd',
-            maxZoom: 20
-        }
-    ).addTo(map);
-
+    
+    // CartoDB Positron tiles - guaranteed English, clean style
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+    }).addTo(map);
+    
     regionLayers.addTo(map);
     trackLayers.addTo(map);
     markerLayers.addTo(map);
-
+    
     drawRegions();
     loadAllGliderData();
 }
@@ -151,7 +151,6 @@ async function loadAllGliderData() {
         console.log(`Loaded ${gliderTracks.length} tracks from ${projects.length} projects`);
         
         drawTracks(gliderTracks);
-        updateLegend();
     } catch (error) {
         console.error('Error loading glider data:', error);
         document.getElementById('glider-map').innerHTML += 
@@ -224,62 +223,6 @@ function drawTracks(tracks) {
             }
         });
     });
-}
-
-// Apply filters
-function applyFilters() {
-    const regionFilter = document.getElementById('region-filter').value;
-    const projectFilter = document.getElementById('project-filter').value;
-    const dateMin = document.getElementById('date-min').value;
-    const dateMax = document.getElementById('date-max').value;
-    
-    const filteredTracks = gliderTracks.filter(track => {
-        if (regionFilter !== 'all' && track.region !== regionFilter) return false;
-        if (projectFilter !== 'all' && track.project !== projectFilter) return false;
-        if (dateMin && track.date < dateMin) return false;
-        if (dateMax && track.date > dateMax) return false;
-        return true;
-    });
-    
-    drawTracks(filteredTracks);
-    console.log(`Showing ${filteredTracks.length} of ${gliderTracks.length} tracks`);
-}
-
-// Reset filters
-function resetFilters() {
-    document.getElementById('region-filter').value = 'all';
-    document.getElementById('project-filter').value = 'all';
-    document.getElementById('date-min').value = '';
-    document.getElementById('date-max').value = '';
-    drawTracks(gliderTracks);
-}
-
-// Update legend
-function updateLegend() {
-    const legendContent = document.getElementById('legend-content');
-    let html = '';
-    
-    Object.entries(PROJECT_COLORS).forEach(([project, colors]) => {
-        html += `
-            <div class="legend-item">
-                <div class="legend-color" style="background: ${colors[0]};"></div>
-                <span>${project}</span>
-            </div>
-        `;
-    });
-    
-    html += `
-        <div class="legend-item" style="margin-top: 0.5rem;">
-            <div style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; margin-right: 0.5rem; border: 2px solid white;"></div>
-            <span>Start Point</span>
-        </div>
-        <div class="legend-item">
-            <div style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%; margin-right: 0.5rem; border: 2px solid white;"></div>
-            <span>End Point</span>
-        </div>
-    `;
-    
-    legendContent.innerHTML = html;
 }
 
 document.addEventListener('DOMContentLoaded', initMap);
