@@ -18,7 +18,6 @@ const navigationHTML = `<nav class="navbar" id="navbar">
                     <li><a href="projects.html" class="nav-link">Projects</a></li>
                     <li><a href="people.html" class="nav-link">People</a></li>
                     <li><a href="fieldwork.html" class="nav-link">Fieldwork</a></li>
-                    <li><a href="fieldwork-map.html" class="nav-link">Glider Map</a></li>
                     <li><a href="photos.html" class="nav-link">Photos</a></li>
                     <li><a href="news.html" class="nav-link">News</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
