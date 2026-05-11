@@ -188,7 +188,7 @@
             <!-- ============================================ -->
             <h2 class="fieldwork-region-title">Glider Deployment Map</h2>
             
-            <div id="glider-map"></div>
+            <!-- <div id="glider-map"></div>
 
             <div class="map-controls">
                 <h3>Filter Deployments</h3>
@@ -227,8 +227,19 @@
                     <button onclick="applyFilters()" class="btn-filter btn-primary">Apply Filters</button>
                     <button onclick="resetFilters()" class="btn-filter btn-secondary">Reset</button>
                 </div>
+            </div> -->
+            <div class="map-controls">
+                <h3>Filter by Project</h3>
+                <div class="filter-button-group" id="project-buttons">
+                    <!-- Populated by JavaScript -->
+                </div>
+                
+                <h3 style="margin-top: var(--spacing-md);">Filter by Year</h3>
+                <div class="filter-button-group" id="year-buttons">
+                    <!-- Populated by JavaScript -->
+                </div>
             </div>
-
+            
             <div class="map-legend">
                 <h3>Legend</h3>
                 <div class="legend-content" id="legend-content">
