@@ -31,15 +31,37 @@ const REGIONS = {
             [-16.390728645190194, 63.19800180818393]
         ]]
     },
+    "Benguela": {
+        "project": "GOCART",
+        "link": "projects/gocart.html",
+        "bounds": [[
+            [11, -17.5],
+            [8, -17.5],
+            [9, -26],
+            [14, -23],
+            [11, -17]
+        ]]
+    },
+    "South Georgia": {
+        "project": "GOCART",
+        "link": "projects/gocart.html",
+        "bounds": [[
+            [-43, -51],
+            [-43, -54],
+            [-38, -54],
+            [-38, -51],
+            [-43, -51]
+        ]]
+    },    
     "Southern Ocean": {
         "project": "CUSTARD",
         "link": "projects.html#custard",
         "bounds": [[
-            [-70, -55],
-            [-70, -70],
-            [-30, -70],
-            [-30, -55],
-            [-70, -55]
+            [-95, -50],
+            [-95, -60],
+            [-85, -60],
+            [-85, -50],
+            [-95, -50]
         ]]
     }
 };
@@ -62,9 +84,11 @@ let markerLayers = L.layerGroup();
 function initMap() {
     map = L.map('glider-map').setView([45, -30], 3);
     
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 19
+    // Use CartoDB tiles which are always in English
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap contributors, © CARTO',
+        maxZoom: 19,
+        subdomains: 'abcd'
     }).addTo(map);
     
     regionLayers.addTo(map);
