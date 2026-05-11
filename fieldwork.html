@@ -6,6 +6,167 @@
     <title>Fieldwork | Dr. Filipa Carvalho</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Leaflet CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        /* Map-specific styles */
+        #glider-map {
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .map-controls {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            margin: var(--spacing-md) 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .map-controls h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+        
+        .filter-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .filter-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        
+        .filter-select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+        
+        .btn-filter {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-color);
+        }
+        
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--border-color);
+        }
+        
+        .map-legend {
+            background: var(--bg-secondary);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            margin: var(--spacing-md) 0 var(--spacing-xl) 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .map-legend h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+        
+        .legend-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--spacing-sm);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 3px;
+            border-radius: 2px;
+        }
+        
+        /* Leaflet popup styling */
+        .leaflet-popup-content-wrapper {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .leaflet-popup-tip {
+            background: var(--bg-primary);
+        }
+        
+        .glider-popup h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .glider-popup p {
+            margin: 0.25rem 0;
+        }
+        
+        .glider-popup a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .glider-popup a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            #glider-map {
+                height: 400px;
+            }
+            
+            .filter-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="navigation-placeholder"></div>
@@ -21,6 +182,60 @@
             <div class="fieldwork-intro">
                 <p>My research relies on observations collected during research cruises and field campaigns across polar, subpolar, and temperate ocean regions. This work combines ship-based measurements with autonomous platform deployments to capture processes from hours to seasons.</p>
             </div>
+
+            <!-- ============================================ -->
+            <!-- GLIDER DEPLOYMENT MAP SECTION -->
+            <!-- ============================================ -->
+            <h2 class="fieldwork-region-title">Glider Deployment Map</h2>
+            
+            <div id="glider-map"></div>
+
+            <div class="map-controls">
+                <h3>Filter Deployments</h3>
+                <div class="filter-group">
+                    <div>
+                        <label for="region-filter" class="filter-label">Region</label>
+                        <select id="region-filter" class="filter-select" onchange="applyFilters()">
+                            <option value="all">All Regions</option>
+                            <option value="Labrador Sea">Labrador Sea</option>
+                            <option value="Iceland Basin">Iceland Basin</option>
+                            <option value="Southern Ocean">Southern Ocean</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="project-filter" class="filter-label">Project</label>
+                        <select id="project-filter" class="filter-select" onchange="applyFilters()">
+                            <option value="all">All Projects</option>
+                            <option value="ReBELS">ReBELS</option>
+                            <option value="BIO">BIO-CARBON</option>
+                            <option value="CUSTARD">CUSTARD</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="date-min" class="filter-label">From Date</label>
+                        <input type="date" id="date-min" class="filter-select" onchange="applyFilters()">
+                    </div>
+                    <div>
+                        <label for="date-max" class="filter-label">To Date</label>
+                        <input type="date" id="date-max" class="filter-select" onchange="applyFilters()">
+                    </div>
+                </div>
+                <div class="filter-buttons">
+                    <button onclick="applyFilters()" class="btn-filter btn-primary">Apply Filters</button>
+                    <button onclick="resetFilters()" class="btn-filter btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="map-legend">
+                <h3>Legend</h3>
+                <div class="legend-content" id="legend-content">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- EXPEDITION DETAILS (EXISTING CONTENT) -->
+            <!-- ============================================ -->
 
             <h2 class="fieldwork-region-title">Labrador Sea & North Atlantic</h2>
             
@@ -199,7 +414,14 @@
         <div class="footer-bottom"><p>&copy; 2026 Dr. Filipa Carvalho</p></div>
     </div></footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Site JS -->
     <script src="js/main.js"></script>
     <script src="js/navigation.js"></script>
+    
+    <!-- Map JS -->
+    <script src="js/glider-map.js"></script>
 </body>
 </html>
