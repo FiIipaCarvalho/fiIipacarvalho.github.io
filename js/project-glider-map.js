@@ -90,15 +90,15 @@ function initProjectMap(projectId) {
     switch(projectId.toUpperCase()) {
         case 'REBELS':
             center = [58, -52];
-            zoom = 5;
+            zoom = 4;
             break;
         case 'BIO':
             center = [59, -22];
-            zoom = 5;
+            zoom = 3;
             break;
         case 'CUSTARD':
             center = [-58, -90];
-            zoom = 4;
+            zoom = 3;
             break;
         default:
             center = [0, -30];
