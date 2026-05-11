@@ -92,11 +92,11 @@ function initMap() {
     // }).addTo(map);
 
     L.tileLayer(
-    'https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=YOUR_KEY',
+    'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
     {
-        attribution: '&copy; OpenStreetMap contributors &copy; MapTiler',
-        tileSize: 512,
-        zoomOffset: -1
+        attribution: '© OpenStreetMap contributors © CARTO',
+        subdomains: 'abcd',
+        maxZoom: 20
     }).addTo(map);
     
     regionLayers.addTo(map);
