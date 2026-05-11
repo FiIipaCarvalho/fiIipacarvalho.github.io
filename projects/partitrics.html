@@ -47,11 +47,8 @@
     <!-- Project Map JS -->
     <script src="../js/project-glider-map.js"></script>
     <script>
-        // Auto-detect project ID from PROJECT_ID variable or page
         document.addEventListener('DOMContentLoaded', function() {
-            if (typeof PROJECT_ID !== 'undefined') {
-                initProjectMap(PROJECT_ID);
-            }
+            initProjectMap('bio');
         });
     </script>
 </body>
