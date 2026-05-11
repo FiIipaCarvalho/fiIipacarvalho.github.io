@@ -83,13 +83,6 @@ let markerLayers = L.layerGroup();
 // Initialize map
 function initMap() {
     map = L.map('glider-map').setView([0, -30], 2);
-    
-    // // Use CartoDB tiles which are always in English
-    // L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    //     attribution: '© OpenStreetMap contributors, © CARTO',
-    //     maxZoom: 19,
-    //     subdomains: 'abcd'
-    // }).addTo(map);
 
     L.tileLayer(
         'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
@@ -99,12 +92,11 @@ function initMap() {
             maxZoom: 20
         }
     ).addTo(map);
-}
-    
+
     regionLayers.addTo(map);
     trackLayers.addTo(map);
     markerLayers.addTo(map);
-    
+
     drawRegions();
     loadAllGliderData();
 }
