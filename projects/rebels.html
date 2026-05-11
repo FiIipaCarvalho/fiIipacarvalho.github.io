@@ -6,23 +6,45 @@
     <title>ReBELS Project | Dr. Filipa Carvalho</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Leaflet CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        /* Project map styling */
+        #project-glider-map {
+            width: 100%;
+            height: 500px;
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Leaflet popup styling */
+        .leaflet-popup-content-wrapper {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .leaflet-popup-tip {
+            background: var(--bg-primary);
+        }
+        
+        .glider-popup h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .glider-popup p {
+            margin: 0.25rem 0;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar"><div class="container"><div class="nav-wrapper">
-        <a href="../index.html" class="logo">Filipa Carvalho</a>
-        <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
-        <ul class="nav-menu">
-            <li><a href="../index.html" class="nav-link">Home</a></li>
-            <li><a href="../biography.html" class="nav-link">Biography</a></li>
-            <li><a href="../research.html" class="nav-link">Research</a></li>
-            <li><a href="../publications.html" class="nav-link">Publications</a></li>
-            <li><a href="../projects.html" class="nav-link active">Projects</a></li>
-            <li><a href="../people.html" class="nav-link">People</a></li>
-            <li><a href="../photos.html" class="nav-link">Photos</a></li>
-            <li><a href="../news.html" class="nav-link">News</a></li>
-            <li><a href="../contact.html" class="nav-link">Contact</a></li>
-        </ul>
-    </div></div></nav>
+    <!-- Shared Navigation -->
+    <div id="navigation-placeholder"></div>
 
     <section class="section page-header"><div class="container">
         <div class="breadcrumb">
@@ -68,6 +90,14 @@
                 </div>
             </div>
 
+            <!-- ============================================ -->
+            <!-- GLIDER DEPLOYMENT MAP -->
+            <!-- ============================================ -->
+            <div class="project-deployments">
+                <h2>Glider Deployments</h2>
+                <div id="project-glider-map"></div>
+            </div>
+
             <div class="project-publications">
                 <h2>Related Publications</h2>
                 <div id="project-publications-container" class="publications-list-compact">
@@ -88,10 +118,23 @@
         <div class="footer-bottom"><p>&copy; 2026 Dr. Filipa Carvalho</p></div>
     </div></footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Site JS -->
     <script>
         const PROJECT_ID = 'rebels';
     </script>
     <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
     <script src="../js/project-page.js"></script>
+    
+    <!-- Project Map JS -->
+    <script src="../js/project-glider-map.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initProjectMap('rebels');
+        });
+    </script>
 </body>
 </html>
