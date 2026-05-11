@@ -153,20 +153,39 @@ async function loadProjectGliderData(projectId) {
     
     try {
         const response = await fetch(`../data/glider_tracks_${projectFile}.json`);
-        if (!response.ok) throw new Error(`Could not load ${projectFile} tracks`);
+        if (!response.ok) {
+            // No data available - hide the map section
+            const mapSection = document.querySelector('.project-deployments');
+            if (mapSection) {
+                mapSection.style.display = 'none';
+            }
+            console.log(`No glider data available for ${projectId}`);
+            return;
+        }
         
         projectTracks = await response.json();
+        
+        if (projectTracks.length === 0) {
+            // Empty data - hide the map section
+            const mapSection = document.querySelector('.project-deployments');
+            if (mapSection) {
+                mapSection.style.display = 'none';
+            }
+            console.log(`No glider tracks for ${projectId}`);
+            return;
+        }
         
         console.log(`Loaded ${projectTracks.length} tracks for ${projectId}`);
         
         drawProjectRegion(projectId);
         drawProjectTracks(projectTracks);
     } catch (error) {
-        console.error('Error loading project glider data:', error);
-        document.getElementById('project-glider-map').innerHTML = 
-            '<div style="padding: 2rem; text-align: center; color: #666;">' +
-            '<p>Glider deployment data not yet available for this project.</p>' +
-            '</div>';
+        // Error loading data - hide the map section
+        const mapSection = document.querySelector('.project-deployments');
+        if (mapSection) {
+            mapSection.style.display = 'none';
+        }
+        console.log(`Glider data not available for ${projectId}`);
     }
 }
 

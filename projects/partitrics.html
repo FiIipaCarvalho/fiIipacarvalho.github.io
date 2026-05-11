@@ -6,6 +6,7 @@
     <title>PARTITRICS | Dr. Filipa Carvalho</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <div id="navigation-placeholder"></div>
@@ -25,12 +26,33 @@
             <p>By constraining the processes governing particle fate in the mesopelagic, PARTITRICS aims to reduce uncertainty in ocean carbon storage estimates and improve predictions of how the biological pump will respond to environmental change.</p>
         </div>
         <div class="project-team"><h2>Project Team</h2><div id="project-team-container" class="team-grid-small"></div></div>
-        <div class="project-publications"><h2>Related Publications</h2><div id="project-publications-container" class="publications-list-compact"><p class="text-muted">Loading publications...</p></div></div>
+        
+            <!-- ============================================ -->
+            <!-- GLIDER DEPLOYMENT MAP (auto-hides if no data) -->
+            <!-- ============================================ -->
+            <div class="project-deployments">
+                <h2>Glider Deployments</h2>
+                <div id="project-glider-map" style="width: 100%; height: 500px; border-radius: 8px; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+            </div>
+<div class="project-publications"><h2>Related Publications</h2><div id="project-publications-container" class="publications-list-compact"><p class="text-muted">Loading publications...</p></div></div>
     </div></div></section>
     <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 Dr. Filipa Carvalho</p></div></div></footer>
     <script>const PROJECT_ID = 'partitrics';</script>
     <script src="../js/main.js"></script>
     <script src="../js/project-page.js"></script>
     <script src="../js/navigation.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Project Map JS -->
+    <script src="../js/project-glider-map.js"></script>
+    <script>
+        // Auto-detect project ID from PROJECT_ID variable or page
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof PROJECT_ID !== 'undefined') {
+                initProjectMap(PROJECT_ID);
+            }
+        });
+    </script>
 </body>
 </html>
