@@ -34,63 +34,34 @@
             font-size: 1.1rem;
         }
         
-        .filter-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
+        .filter-button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-sm);
         }
         
-        .filter-label {
-            display: block;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-        }
-        
-        .filter-select {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid var(--border-color);
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--border-color);
             border-radius: 4px;
             background: var(--bg-primary);
             color: var(--text-primary);
-            font-family: var(--font-sans);
-        }
-        
-        .filter-buttons {
-            display: flex;
-            gap: var(--spacing-sm);
-        }
-        
-        .btn-filter {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
             cursor: pointer;
             font-family: var(--font-sans);
             font-weight: 500;
             transition: all 0.2s;
         }
         
-        .btn-primary {
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            background: var(--bg-secondary);
+        }
+        
+        .filter-btn.active {
             background: var(--primary-color);
             color: white;
-        }
-        
-        .btn-primary:hover {
-            background: var(--accent-color);
-        }
-        
-        .btn-secondary {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--border-color);
+            border-color: var(--primary-color);
         }
         
         .map-legend {
@@ -161,10 +132,6 @@
             #glider-map {
                 height: 400px;
             }
-            
-            .filter-group {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -173,61 +140,23 @@
 
     <section class="section page-header"><div class="container">
         <h1 class="page-title">Fieldwork & Expeditions</h1>
-        <p class="page-subtitle">My research relies on observations collected during research cruises and field campaigns across polar, subpolar, and temperate ocean regions. This work combines ship-based measurements with autonomous platform deployments to capture processes from hours to seasons</p>
+        <p class="page-subtitle">Research cruises and field campaigns</p>
     </div></section>
 
     <section class="section"><div class="container">
         <div class="fieldwork-content">
             
-            <!-- <div class="fieldwork-intro">
+            <div class="fieldwork-intro">
                 <p>My research relies on observations collected during research cruises and field campaigns across polar, subpolar, and temperate ocean regions. This work combines ship-based measurements with autonomous platform deployments to capture processes from hours to seasons.</p>
-            </div> -->
+            </div>
 
             <!-- ============================================ -->
             <!-- GLIDER DEPLOYMENT MAP SECTION -->
             <!-- ============================================ -->
             <h2 class="fieldwork-region-title">Glider Deployment Map</h2>
             
-            <!-- <div id="glider-map"></div>
+            <div id="glider-map"></div>
 
-            <div class="map-controls">
-                <h3>Filter Deployments</h3>
-                <div class="filter-group">
-                    <div>
-                        <label for="region-filter" class="filter-label">Region</label>
-                        <select id="region-filter" class="filter-select" onchange="applyFilters()">
-                            <option value="all">All Regions</option>
-                            <option value="Labrador Sea">Labrador Sea</option>
-                            <option value="Iceland Basin">Iceland Basin</option>
-                            <option value="Southern Ocean">Southern Ocean</option>
-                            <option value="Benguela">Benguela</option>
-                            <option value="South Georgia">South Georgia</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="project-filter" class="filter-label">Project</label>
-                        <select id="project-filter" class="filter-select" onchange="applyFilters()">
-                            <option value="all">All Projects</option>
-                            <option value="ReBELS">ReBELS</option>
-                            <option value="BIO">BIO-CARBON</option>
-                            <option value="CUSTARD">CUSTARD</option>
-                            <option value="CUSTARD">GOCART</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="date-min" class="filter-label">From Date</label>
-                        <input type="date" id="date-min" class="filter-select" onchange="applyFilters()">
-                    </div>
-                    <div>
-                        <label for="date-max" class="filter-label">To Date</label>
-                        <input type="date" id="date-max" class="filter-select" onchange="applyFilters()">
-                    </div>
-                </div>
-                <div class="filter-buttons">
-                    <button onclick="applyFilters()" class="btn-filter btn-primary">Apply Filters</button>
-                    <button onclick="resetFilters()" class="btn-filter btn-secondary">Reset</button>
-                </div>
-            </div> -->
             <div class="map-controls">
                 <h3>Filter by Project</h3>
                 <div class="filter-button-group" id="project-buttons">
@@ -239,7 +168,7 @@
                     <!-- Populated by JavaScript -->
                 </div>
             </div>
-            
+
             <div class="map-legend">
                 <h3>Legend</h3>
                 <div class="legend-content" id="legend-content">
