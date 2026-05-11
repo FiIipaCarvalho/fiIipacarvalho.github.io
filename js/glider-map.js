@@ -82,7 +82,7 @@ let markerLayers = L.layerGroup();
 
 // Initialize map
 function initMap() {
-    map = L.map('glider-map').setView([45, -30], 3);
+    map = L.map('glider-map').setView([0, -30], 2);
     
     // Use CartoDB tiles which are always in English
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
