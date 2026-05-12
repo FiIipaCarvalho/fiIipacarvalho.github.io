@@ -1781,9 +1781,9 @@ body {
 }
 /* .publications-list-compact .publication-item {
     border-bottom: 1px solid var(--border-color);  /* Lighter divider */
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem;
     margin-bottom: 1rem;
-} */
+}  */
 .publications-list-compact .publication-item {
     border-bottom: none;
     padding-bottom: 1rem;
