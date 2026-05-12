@@ -1777,7 +1777,7 @@ body {
 
 /* Compact publication list for project pages */
 .publications-list-compact {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
 }
 .publications-list-compact .publication-item {
     border-bottom: 1px solid var(--border-color);  /* Lighter divider */
