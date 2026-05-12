@@ -1618,7 +1618,7 @@ body {
 
 .project-meta-bar {
     display: flex;
-    gap: 0.3rem;  /* Change this - smaller = less spacing */
+    gap: 0.5rem;  /* Change this - smaller = less spacing */
     flex-wrap: wrap;
     padding: var(--spacing-md);
     background-color: var(--bg-secondary);
@@ -1779,7 +1779,15 @@ body {
 .publications-list-compact {
     margin-top: var(--spacing-md);
 }
+.publications-list-compact .publication-item {
+    border-bottom: 1px solid var(--border-color);  /* Lighter divider */
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
 
+.publications-list-compact .publication-item:last-child {
+    border-bottom: none;  /* Remove divider after last publication */
+}
 .pub-item-compact {
     padding: var(--spacing-md) 0;
     border-bottom: 1px solid var(--border-color);
