@@ -1779,12 +1779,16 @@ body {
 .publications-list-compact {
     margin-top: var(--spacing-sm);
 }
-.publications-list-compact .publication-item {
+/* .publications-list-compact .publication-item {
     border-bottom: 1px solid var(--border-color);  /* Lighter divider */
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+} */
+.publications-list-compact .publication-item {
+    border-bottom: none;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
-
 .publications-list-compact .publication-item:last-child {
     border-bottom: none;  /* Remove divider after last publication */
 }
