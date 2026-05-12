@@ -1,7 +1,7 @@
 // Shared Navigation System
 (function() {
     // Detect if we're in a subfolder
-    const inSubfolder = window.location.pathname.includes('/projects/');
+    const inSubfolder = window.location.pathname.includes('/projects/') || window.location.pathname.includes('/research_themes/');
     const prefix = inSubfolder ? '../' : '';
     
     const nav = `
