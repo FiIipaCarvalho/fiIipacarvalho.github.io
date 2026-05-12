@@ -1,0 +1,329 @@
+{
+  "_instructions": "Add activities here. The page groups by region → project and sorts projects and activities by date (latest first) automatically. Activity IDs match the fieldwork[] arrays in projects.json. Glider names should match names in the corresponding glider_tracks_*.json file for map cross-reference.",
+
+  "regions": [
+
+    {
+      "name": "Labrador Sea & North Atlantic",
+      "projects": [
+
+        {
+          "id": "rebels",
+          "name": "ReBELS",
+          "link": "projects/rebels.html",
+          "activities": [
+            {
+              "id": "rebels2-gliders-2026",
+              "type": "glider_mission",
+              "label": "ReBELS 2 Gliders",
+              "date": "2026-04-03",
+              "date_display": "April 2026",
+              "location": "Labrador Sea",
+              "gliders": ["Stella_713"],
+              "glider_data_file": "glider_tracks_rebels.json",
+              "description": "",
+              "photos_album": ""
+            },
+            {
+              "id": "rebels2-jc282-2025",
+              "type": "cruise",
+              "label": "ReBELS 2",
+              "cruise_id": "JC282",
+              "date": "2025-01-15",
+              "date_display": "January – February 2025",
+              "location": "Labrador Sea",
+              "role": "Co-Chief Scientist",
+              "description": "Winter observations during deep convection, deploying gliders and biogeochemical floats to capture spring bloom development.",
+              "photos_album": "rebels2-jc282-2025"
+            },
+            {
+              "id": "rebels1-gliders-2024",
+              "type": "glider_mission",
+              "label": "ReBELS 1 Gliders",
+              "date": "2024-11-15",
+              "date_display": "November 2024 – March 2025",
+              "location": "Labrador Sea",
+              "gliders": ["Growler_677", "Zephyr_675", "Stella_678", "9JA"],
+              "glider_data_file": "glider_tracks_rebels.json",
+              "description": "",
+              "photos_album": ""
+            },
+            {
+              "id": "rebels1-jc268-2024",
+              "type": "cruise",
+              "label": "ReBELS 1",
+              "cruise_id": "JC268",
+              "date": "2024-11-01",
+              "date_display": "November 2024",
+              "location": "Labrador Sea",
+              "role": "Co-Chief Scientist",
+              "description": "Autumn pre-conditioning cruise deploying autonomous platforms ahead of winter convection.",
+              "photos_album": "rebels1-jc268-2024"
+            }
+          ]
+        },
+
+        {
+          "id": "partitrics-idapro",
+          "name": "PARTITRICS / IDAPro",
+          "link": "projects/partitrics.html",
+          "activities": [
+            {
+              "id": "biocarbon-gliders-2024",
+              "type": "glider_mission",
+              "label": "BIO-Carbon Gliders",
+              "date": "2024-05-28",
+              "date_display": "May – June 2024",
+              "location": "Iceland Basin, North Atlantic",
+              "gliders": ["Churchill_647", "Doombar_648", "Nelson_646", "Cabot_645"],
+              "glider_data_file": "glider_tracks_bio.json",
+              "description": "",
+              "photos_album": ""
+            },
+            {
+              "id": "biocarbon-dy180-2024",
+              "type": "cruise",
+              "label": "BIO-Carbon",
+              "cruise_id": "DY180",
+              "date": "2024-05-01",
+              "date_display": "May – June 2024",
+              "location": "Iceland Basin, North Atlantic",
+              "role": "",
+              "description": "Spring productivity and particle export observations in the Iceland Basin.",
+              "photos_album": "biocarbon-dy180-2024"
+            }
+          ]
+        },
+
+        {
+          "id": "pap",
+          "name": "PAP Observatory",
+          "link": "",
+          "activities": [
+            {
+              "id": "pap-dy130-2022",
+              "type": "cruise",
+              "label": "PAP",
+              "cruise_id": "DY130",
+              "date": "2022-06-01",
+              "date_display": "June – July 2022",
+              "location": "Porcupine Abyssal Plain, North Atlantic",
+              "role": "",
+              "description": "Biogeochemical observations and glider deployments at the PAP sustained observatory.",
+              "photos_album": "pap-dy130-2022"
+            }
+          ]
+        },
+
+        {
+          "id": "mesohux",
+          "name": "MESOHUX",
+          "link": "",
+          "activities": [
+            {
+              "id": "mesohux-2017",
+              "type": "cruise",
+              "label": "MESOHUX",
+              "cruise_id": "",
+              "date": "2017-05-01",
+              "date_display": "May – June 2017",
+              "location": "Norwegian Sea",
+              "role": "",
+              "description": "Coccolithophore blooms and particle dynamics in high-latitude waters.",
+              "photos_album": "mesohux-2017"
+            }
+          ]
+        },
+
+        {
+          "id": "na-vice",
+          "name": "NA-VICE",
+          "link": "",
+          "activities": [
+            {
+              "id": "na-vice-2012",
+              "type": "cruise",
+              "label": "NA-VICE",
+              "cruise_id": "",
+              "date": "2012-05-01",
+              "date_display": "May – June 2012",
+              "location": "North Atlantic",
+              "role": "PhD Student",
+              "description": "Spring bloom observations and biogeochemical measurements.",
+              "photos_album": "na-vice-2012"
+            }
+          ]
+        }
+
+      ]
+    },
+
+    {
+      "name": "Southern Ocean & Antarctica",
+      "projects": [
+
+        {
+          "id": "custard",
+          "name": "CUSTARD",
+          "link": "projects/custard.html",
+          "activities": [
+            {
+              "id": "custard2-gliders-2019",
+              "type": "glider_mission",
+              "label": "CUSTARD Gliders 2",
+              "date": "2019-12-06",
+              "date_display": "December 2019",
+              "location": "Scotia Sea, Southern Ocean",
+              "gliders": ["Bellamite_538"],
+              "glider_data_file": "glider_tracks_custard.json",
+              "description": "",
+              "photos_album": ""
+            },
+            {
+              "id": "custard1-gliders-2018",
+              "type": "glider_mission",
+              "label": "CUSTARD Gliders 1",
+              "date": "2018-12-04",
+              "date_display": "December 2018",
+              "location": "Scotia Sea, Southern Ocean",
+              "gliders": ["Churchill_501"],
+              "glider_data_file": "glider_tracks_custard.json",
+              "description": "",
+              "photos_album": ""
+            },
+            {
+              "id": "custard1-dy096-2018",
+              "type": "cruise",
+              "label": "CUSTARD 1",
+              "cruise_id": "DY096",
+              "date": "2018-11-01",
+              "date_display": "November – December 2018",
+              "location": "Scotia Sea, Southern Ocean",
+              "role": "Postdoctoral Researcher",
+              "description": "Investigating seasonal controls on carbon export and remineralization depth in the Southern Ocean.",
+              "photos_album": "custard1-dy096-2018"
+            }
+          ]
+        },
+
+        {
+          "id": "comics",
+          "name": "COMICS",
+          "link": "projects/comics.html",
+          "activities": [
+            {
+              "id": "comics2-dy090-2018",
+              "type": "cruise",
+              "label": "COMICS 2",
+              "cruise_id": "DY090",
+              "date": "2018-11-01",
+              "date_display": "November – December 2018",
+              "location": "South Atlantic",
+              "role": "Postdoctoral Researcher",
+              "description": "Mesopelagic carbon storage mechanisms between South Georgia and South America.",
+              "photos_album": "comics2-dy090-2018"
+            },
+            {
+              "id": "comics1-dy086-2017",
+              "type": "cruise",
+              "label": "COMICS 1",
+              "cruise_id": "DY086",
+              "date": "2017-11-01",
+              "date_display": "November – December 2017",
+              "location": "South Georgia, South Atlantic",
+              "role": "Postdoctoral Researcher",
+              "description": "Carbon export and mesopelagic processes around South Georgia.",
+              "photos_album": "comics1-dy086-2017"
+            }
+          ]
+        },
+
+        {
+          "id": "gocart",
+          "name": "GOCART",
+          "link": "projects/gocart.html",
+          "activities": [
+            {
+              "id": "gocart2-2018",
+              "type": "cruise",
+              "label": "GOCART 2",
+              "cruise_id": "",
+              "date": "2018-05-01",
+              "date_display": "May 2018",
+              "location": "Benguela Upwelling System",
+              "role": "Postdoctoral Researcher",
+              "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
+              "photos_album": "gocart2-2018"
+            }
+          ]
+        },
+
+        {
+          "id": "pal-lter",
+          "name": "PAL-LTER",
+          "link": "projects/pal-lter.html",
+          "activities": [
+            {
+              "id": "pal-lter-wap-2015",
+              "type": "cruise",
+              "label": "PAL-LTER Annual Cruise",
+              "cruise_id": "",
+              "date": "2015-01-01",
+              "date_display": "January – March 2015",
+              "location": "West Antarctic Peninsula",
+              "role": "PhD Student",
+              "description": "Summer research cruise along the WAP examining climate impacts on marine ecosystems.",
+              "photos_album": "pal-lter-wap-2015"
+            },
+            {
+              "id": "pal-lter-wap-2014",
+              "type": "cruise",
+              "label": "PAL-LTER Annual Cruise",
+              "cruise_id": "",
+              "date": "2014-01-01",
+              "date_display": "January – March 2014",
+              "location": "West Antarctic Peninsula",
+              "role": "PhD Student",
+              "description": "Long-term ecological research cruise along the Antarctic Peninsula.",
+              "photos_album": "pal-lter-wap-2014"
+            },
+            {
+              "id": "pal-lter-palmer-2012-2013",
+              "type": "field_station",
+              "label": "Palmer Station",
+              "cruise_id": "",
+              "date": "2012-11-01",
+              "date_display": "November 2012 – March 2013",
+              "location": "Palmer Station, Antarctica",
+              "role": "Seasonal field team member",
+              "description": "Five-month deployment at Palmer Station conducting coastal oceanographic observations.",
+              "photos_album": "pal-lter-palmer-2012-2013"
+            }
+          ]
+        },
+
+        {
+          "id": "seafarers",
+          "name": "SeAFAReRS",
+          "link": "",
+          "activities": [
+            {
+              "id": "seafarers-2011",
+              "type": "cruise",
+              "label": "SeAFAReRS",
+              "cruise_id": "",
+              "date": "2011-12-01",
+              "date_display": "December 2011 – January 2012",
+              "location": "Ross Sea, Antarctica",
+              "role": "PhD Student",
+              "description": "Phytoplankton ecology and biogeochemistry in the Ross Sea polynya.",
+              "photos_album": "seafarers-2011"
+            }
+          ]
+        }
+
+      ]
+    }
+
+  ]
+}
