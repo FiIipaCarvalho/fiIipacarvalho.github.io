@@ -1485,7 +1485,7 @@ body {
     color: var(--primary-color);
 }
 
-.glider_mission-tag {
+.autonomy-tag {
     background-color: color-mix(in srgb, #10b981 15%, transparent);
     color: #065f46;
 }

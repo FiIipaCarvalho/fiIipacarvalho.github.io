@@ -1,5 +1,5 @@
 {
-  "_instructions": "Add activities here. The page groups by region → project and sorts projects and activities by date (latest first) automatically. Activity IDs match the fieldwork[] arrays in projects.json. Glider names should match names in the corresponding glider_tracks_*.json file for map cross-reference.",
+  "_instructions": "Add activities here. The page groups by region → project and sorts projects and activities by date (latest first) automatically. Activity IDs match the fieldwork[] arrays in projects.json. Three activity types: 'cruise', 'autonomy' (gliders/floats/ALRs), 'field_station'. For autonomy entries use 'gliders', 'floats', and/or 'alrs' arrays as needed. Glider names should match names in the corresponding glider_tracks_*.json file for map cross-reference.",
 
   "regions": [
 
@@ -14,7 +14,7 @@
           "activities": [
             {
               "id": "rebels2-gliders-2026",
-              "type": "glider_mission",
+              "type": "autonomy",
               "label": "ReBELS 2 Gliders",
               "date": "2026-04-03",
               "date_display": "April 2026",
@@ -27,23 +27,23 @@
             {
               "id": "rebels2-jc282-2025",
               "type": "cruise",
-              "label": "ReBELS 2",
+              "label": "ReBELS 2 Cruise",
               "cruise_id": "JC282",
-              "date": "2025-01-15",
-              "date_display": "January – February 2025",
+              "date": "2025-08-15",
+              "date_display": "August 2025",
               "location": "Labrador Sea",
-              "role": "Co-Chief Scientist",
-              "description": "Winter observations during deep convection, deploying gliders and biogeochemical floats to capture spring bloom development.",
+              "role": "Chief Scientist",
+              "description": "Summer cruise to recover autonomous assets and collect ancillary data to evaluate multiple pathways for carbon export in the Labrador Sea",
               "photos_album": "rebels2-jc282-2025"
             },
             {
               "id": "rebels1-gliders-2024",
-              "type": "glider_mission",
+              "type": "autonomy",
               "label": "ReBELS 1 Gliders",
               "date": "2024-11-15",
-              "date_display": "November 2024 – March 2025",
+              "date_display": "March - August 2025",
               "location": "Labrador Sea",
-              "gliders": ["Growler_677", "Zephyr_675", "Stella_678", "9JA"],
+              "gliders": ["Growler_677", "Zephyr_675", "Stella_678", "9JA_699"],
               "glider_data_file": "glider_tracks_rebels.json",
               "description": "",
               "photos_album": ""
@@ -51,13 +51,13 @@
             {
               "id": "rebels1-jc268-2024",
               "type": "cruise",
-              "label": "ReBELS 1",
+              "label": "ReBELS 1 Cruise",
               "cruise_id": "JC268",
-              "date": "2024-11-01",
-              "date_display": "November 2024",
+              "date": "2024-08-10",
+              "date_display": "August 2024",
               "location": "Labrador Sea",
-              "role": "Co-Chief Scientist",
-              "description": "Autumn pre-conditioning cruise deploying autonomous platforms ahead of winter convection.",
+              "role": "Chief Scientist",
+              "description": "Summer cruise to deploy autonomous assets and collect ancillary data to evaluate multiple pathways for carbon export in the Labrador Sea.",
               "photos_album": "rebels1-jc268-2024"
             }
           ]
@@ -70,22 +70,22 @@
           "activities": [
             {
               "id": "biocarbon-gliders-2024",
-              "type": "glider_mission",
+              "type": "autonomy",
               "label": "BIO-Carbon Gliders",
               "date": "2024-05-28",
-              "date_display": "May – June 2024",
+              "date_display": "May – September 2024",
               "location": "Iceland Basin, North Atlantic",
               "gliders": ["Churchill_647", "Doombar_648", "Nelson_646", "Cabot_645"],
               "glider_data_file": "glider_tracks_bio.json",
-              "description": "",
-              "photos_album": ""
+              "description": "Four glider were deployed as part of PARTITRICS and IDAPro projects to evaluate and seasonally resolve spring productivity and particle export observations in the Iceland Basin.",
+              "photos_album": "biocarbon-dy180-2024"
             },
             {
               "id": "biocarbon-dy180-2024",
               "type": "cruise",
-              "label": "BIO-Carbon",
+              "label": "BIO-Carbon 1 Cruise",
               "cruise_id": "DY180",
-              "date": "2024-05-01",
+              "date": "2024-05-28",
               "date_display": "May – June 2024",
               "location": "Iceland Basin, North Atlantic",
               "role": "",
@@ -111,6 +111,18 @@
               "role": "",
               "description": "Biogeochemical observations and glider deployments at the PAP sustained observatory.",
               "photos_album": "pap-dy130-2022"
+            },
+            {
+              "id": "gocart-gliders-2024",
+              "type": "autonomy",
+              "label": "EXPORT/GOCART Gliders",
+              "date": "2024-05-28",
+              "date_display": "May – September 2024",
+              "location": "Porcupine Abyssal Plain, North Atlantic",
+              "gliders": ["Dolomite_", "Doombar_648", "Nelson_646", "Cabot_645"],
+              "glider_data_file": "glider_tracks_gocart.json",
+              "description": "Thre glider were deployed as part of a collaboration between NASA EXPORTS and ERC GOCART projects to survey eddies ahead of the main cruise, to eventually evaluate particle export dynamics inside an eddy.",
+              "photos_album": "biocarbon-dy180-2024"
             }
           ]
         },
@@ -169,7 +181,7 @@
           "activities": [
             {
               "id": "custard2-gliders-2019",
-              "type": "glider_mission",
+              "type": "autonomy",
               "label": "CUSTARD Gliders 2",
               "date": "2019-12-06",
               "date_display": "December 2019",
@@ -181,7 +193,7 @@
             },
             {
               "id": "custard1-gliders-2018",
-              "type": "glider_mission",
+              "type": "autonomy",
               "label": "CUSTARD Gliders 1",
               "date": "2018-12-04",
               "date_display": "December 2018",

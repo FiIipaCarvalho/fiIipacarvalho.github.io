@@ -2,8 +2,8 @@
 
 const TYPE_LABELS = {
     cruise:        'Research Cruise',
-    glider_mission: 'Glider Mission',
-    field_station:  'Field Station'
+    autonomy:      'Autonomous Platforms',
+    field_station: 'Field Station'
 };
 
 async function initFieldworkPage() {
@@ -56,7 +56,13 @@ function renderCard(activity) {
     let meta = `<strong>Location:</strong> ${activity.location}`;
     if (activity.role)    meta += `<br><strong>Role:</strong> ${activity.role}`;
     if (activity.gliders && activity.gliders.length) {
-        meta += `<br><strong>Gliders:</strong> ${activity.gliders.map(g => g.replace(/_/g, ' ')).join(', ')}`;
+        meta += `<br><strong>Gliders:</strong> ${activity.gliders.map(g => g.replace(/_/g, ' ')).join(', ')}`;
+    }
+    if (activity.floats && activity.floats.length) {
+        meta += `<br><strong>Floats:</strong> ${activity.floats.join(', ')}`;
+    }
+    if (activity.alrs && activity.alrs.length) {
+        meta += `<br><strong>ALRs:</strong> ${activity.alrs.join(', ')}`;
     }
     if (activity.description) meta += `<br>${activity.description}`;
 
