@@ -149,18 +149,11 @@ function renderPublications() {
 
     const html = filtered.map(pub => {
         let tags = '';
-        
-        // Keyword tags (blue)
+
+        // Keyword tags only (page already filters by project/theme)
         if (pub.keywords && pub.keywords.length > 0) {
-            tags += pub.keywords.map(kw => 
+            tags += pub.keywords.map(kw =>
                 `<span class="pub-tag keyword-tag">${KEYWORD_NAMES[kw] || kw}</span>`
-            ).join('');
-        }
-        
-        // Project tags (green boxes with "Project: " prefix)
-        if (pub.projects && pub.projects.length > 0) {
-            tags += pub.projects.map(proj => 
-                `<span class="pub-tag project-tag">Project: ${proj.toUpperCase()}</span>`
             ).join('');
         }
 

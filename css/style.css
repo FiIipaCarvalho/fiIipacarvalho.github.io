@@ -1463,7 +1463,7 @@ body {
 }
 
 .fieldwork-region-title:first-of-type {
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .expedition-card {
@@ -2290,7 +2290,7 @@ body {
 
 .theme-projects {
     margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-lg);
+    padding: 1rem 1.5rem;
     background-color: var(--bg-secondary);
     border-radius: var(--radius-lg);
     border-left: 4px solid var(--primary-color);
@@ -2300,12 +2300,16 @@ body {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 0.5rem;
 }
 
 .theme-projects p {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.25rem;
     line-height: 1.6;
+}
+
+.theme-projects p:last-child {
+    margin-bottom: 0;
 }
 
 .theme-projects a {
