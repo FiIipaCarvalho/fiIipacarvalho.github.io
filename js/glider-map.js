@@ -122,6 +122,7 @@ const REGIONS = {
         "project": "POLOMINTS",
         "link": "",
         "anchor": "project-polomints",
+        "front": true,
         "bounds": [[
             [-68.0794098, -67.5789401],
             [-68.2291619, -67.5442834],
@@ -241,6 +242,8 @@ function drawPointMarkers() {
 
 // Draw regional boundary boxes
 function drawRegions() {
+    const frontLayers = [];
+
     Object.entries(REGIONS).forEach(([regionName, regionData]) => {
         const color = REGION_COLORS[regionData.project] || '#0066cc';
         const polyOptions = {
@@ -265,11 +268,14 @@ function drawRegions() {
         `;
         regionData.bounds.forEach(ring => {
             const latlngs = ring.map(coord => [coord[1], coord[0]]);
-            L.polygon([latlngs], polyOptions)
+            const poly = L.polygon([latlngs], polyOptions)
                 .bindPopup(popupContent)
                 .addTo(regionLayers);
+            if (regionData.front) frontLayers.push(poly);
         });
     });
+
+    frontLayers.forEach(l => l.bringToFront());
 }
 
 // Load glider data from multiple project files
