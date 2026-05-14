@@ -219,58 +219,6 @@
         },
 
         {
-          "id": "comics",
-          "name": "COMICS",
-          "link": "projects/comics.html",
-          "activities": [
-            {
-              "id": "comics2-dy090-2018",
-              "type": "cruise",
-              "label": "COMICS 2",
-              "cruise_id": "DY090",
-              "date": "2018-11-01",
-              "date_display": "November – December 2018",
-              "location": "South Atlantic",
-              "role": "Postdoctoral Researcher",
-              "description": "Mesopelagic carbon storage mechanisms between South Georgia and South America.",
-              "photos_album": "comics2-dy090-2018"
-            },
-            {
-              "id": "comics1-dy086-2017",
-              "type": "cruise",
-              "label": "COMICS 1",
-              "cruise_id": "DY086",
-              "date": "2017-11-01",
-              "date_display": "November – December 2017",
-              "location": "South Georgia, South Atlantic",
-              "role": "Postdoctoral Researcher",
-              "description": "Carbon export and mesopelagic processes around South Georgia.",
-              "photos_album": "comics1-dy086-2017"
-            }
-          ]
-        },
-
-        {
-          "id": "gocart",
-          "name": "GOCART",
-          "link": "projects/gocart.html",
-          "activities": [
-            {
-              "id": "gocart2-2018",
-              "type": "cruise",
-              "label": "GOCART 2",
-              "cruise_id": "",
-              "date": "2018-05-01",
-              "date_display": "May 2018",
-              "location": "Benguela Upwelling System",
-              "role": "Postdoctoral Researcher",
-              "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
-              "photos_album": "gocart2-2018"
-            }
-          ]
-        },
-
-        {
           "id": "pal-lter",
           "name": "PAL-LTER",
           "link": "projects/pal-lter.html",
@@ -330,6 +278,65 @@
               "role": "PhD Student",
               "description": "Phytoplankton ecology and biogeochemistry in the Ross Sea polynya.",
               "photos_album": "seafarers-2011"
+            }
+          ]
+        }
+
+      ]
+    },
+
+    {
+      "name": "Upwelling Regions",
+      "projects": [
+
+        {
+          "id": "gocart",
+          "name": "GOCART",
+          "link": "projects/gocart.html",
+          "activities": [
+            {
+              "id": "gocart2-2018",
+              "type": "cruise",
+              "label": "GOCART 2",
+              "cruise_id": "",
+              "date": "2018-05-01",
+              "date_display": "May 2018",
+              "location": "Benguela Upwelling System",
+              "role": "Postdoctoral Researcher",
+              "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
+              "photos_album": "gocart2-2018"
+            }
+          ]
+        },
+
+        {
+          "id": "comics",
+          "name": "COMICS",
+          "link": "projects/comics.html",
+          "activities": [
+            {
+              "id": "comics2-dy090-2018",
+              "type": "cruise",
+              "label": "COMICS 2",
+              "cruise_id": "DY090",
+              "date": "2018-11-01",
+              "date_display": "November – December 2018",
+              "location": "South Atlantic",
+              "role": "Postdoctoral Researcher",
+              "description": "Mesopelagic carbon storage mechanisms between South Georgia and South America.",
+              "photos_album": "comics2-dy090-2018"
+            },
+            {
+              "id": "comics1-dy086-2017",
+              "type": "cruise",
+              "label": "COMICS 1",
+              "cruise_id": "DY086",
+              "date": "2017-11-01",
+              "date_display": "November – December 2017",
+              "location": "South Georgia, South Atlantic",
+              "role": "Postdoctoral Researcher",
+              "description": "Carbon export and mesopelagic processes around South Georgia.",
+              "photos_album": "comics1-dy086-2017"
             }
           ]
         }
