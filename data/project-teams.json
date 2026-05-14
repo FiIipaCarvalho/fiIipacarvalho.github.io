@@ -40,11 +40,12 @@
     },
     "gocart": {
       "postdocs": ["Filipa Carvalho"],
-      "staff": ["Sarah Cryer"]
+      "phd_students": ["Benoit"]
     },
     "comics": {
       "postdocs": ["Filipa Carvalho"],
-      "staff": ["Evelyn Byer"]
+      "phd_students": ["Benoit"],
+      "msc_students": ["Evelyn Byer"]
     },
     "custard": {
       "postdocs": ["Filipa Carvalho"],
