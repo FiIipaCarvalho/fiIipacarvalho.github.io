@@ -64,6 +64,17 @@ const REGIONS = {
             [-95, -50]
         ]]
     },
+    "Porcupine Abyssal Plain": {
+        "project": "PAP Observatory",
+        "link": "",
+        "bounds": [[
+            [-17.5, 49.8333],
+            [-15.5, 49.8333],
+            [-15.5, 47.8333],
+            [-17.5, 47.8333],
+            [-17.5, 49.8333]
+        ]]
+    },
     "Ross Sea": {
         "project": "SeAFAReRS",
         "link": "",
