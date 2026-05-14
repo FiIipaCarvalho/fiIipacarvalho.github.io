@@ -110,6 +110,18 @@ const POINT_LOCATIONS = {
     }
 };
 
+// Region colors by project
+const REGION_COLORS = {
+    "ReBELS":          "#2563eb",
+    "BIO-CARBON":      "#10b981",
+    "GOCART":          "#9333ea",
+    "CUSTARD":         "#f97316",
+    "PAP Observatory": "#0891b2",
+    "SeAFAReRS":       "#dc2626",
+    "MESOHUX":         "#6b7280",
+    "NA-VICE":         "#db2777"
+};
+
 // Project color schemes
 const PROJECT_COLORS = {
     "ReBELS": ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa"],
@@ -149,13 +161,13 @@ function initMap() {
 // Draw single-point location markers
 function drawPointMarkers() {
     Object.entries(POINT_LOCATIONS).forEach(([regionName, data]) => {
+        const color = REGION_COLORS[data.project] || '#0066cc';
         const marker = L.circleMarker([data.lat, data.lon], {
             radius: 8,
-            color: '#0066cc',
+            color: color,
             weight: 2,
-            fillColor: '#0066cc',
-            fillOpacity: 0.1,
-            dashArray: '4, 4'
+            fillColor: color,
+            fillOpacity: 0.3
         });
 
         const linkHtml = data.link
@@ -181,19 +193,23 @@ function drawRegions() {
             polygon.map(coord => [coord[1], coord[0]])
         );
         
+        const color = REGION_COLORS[regionData.project] || '#0066cc';
         const polygon = L.polygon(latlngs, {
-            color: '#0066cc',
+            color: color,
             weight: 2,
-            fillColor: '#0066cc',
+            fillColor: color,
             fillOpacity: 0.1,
             dashArray: '5, 5'
         });
-        
+
+        const linkHtml = regionData.link
+            ? `<p><a href="${regionData.link}" target="_blank">View Project →</a></p>`
+            : '';
         polygon.bindPopup(`
             <div class="glider-popup">
                 <h3>${regionName}</h3>
                 <p><strong>Project:</strong> ${regionData.project}</p>
-                <p><a href="${regionData.link}" target="_blank">View Project →</a></p>
+                ${linkHtml}
             </div>
         `);
         
