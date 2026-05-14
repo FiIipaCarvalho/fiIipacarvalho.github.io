@@ -221,7 +221,8 @@ function renderTeam() {
     
     // PI
     if (projectTeams.pi && projectTeams.pi.length > 0) {
-        html += '<div class="team-role-section"><h4>Principal Investigator</h4><div class="team-members">';
+        const piLabel = projectData?.role || 'Principal Investigator';
+        html += `<div class="team-role-section"><h4>${piLabel}</h4><div class="team-members">`;
         projectTeams.pi.forEach(name => {
             html += createTeamMemberCard(name);
         });
