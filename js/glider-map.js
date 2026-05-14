@@ -140,7 +140,7 @@ let activeYearFilter = 'all';
 
 // Initialize map
 function initMap() {
-    map = L.map('glider-map').setView([0, -30], 2);
+    map = L.map('glider-map', { zoomSnap: 0.5 }).setView([0, -30], 1.5);
     
     // CartoDB Positron tiles - guaranteed English, clean style
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
