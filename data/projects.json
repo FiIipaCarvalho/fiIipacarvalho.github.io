@@ -78,7 +78,21 @@
       "summary": "GLIDERS I establishes the data infrastructure and processing pipelines needed to make ocean glider observations FAIR (Findable, Accessible, Interoperable, Reusable). The project develops automated quality-control workflows, real-time data visualisation tools and standardised data formats, enabling glider data collected at NOC to feed directly into operational oceanography and research data archives.",
       "website": "",
       "fieldwork": [],
-      "themes": ["autonomous"]
+      "themes": ["autonomous"],
+      "tools": [
+        {
+          "name": "NOC Glider Toolbox",
+          "description": "Processes raw glider data to science-ready quality level in OG1 format.",
+          "url": "https://github.com/NOC-OBG-Autonomy/toolbox",
+          "label": "GitHub"
+        },
+        {
+          "name": "Glider Playground",
+          "description": "Interactive web tool for visualising glider data, developed by Orlando Prugel-Bennett.",
+          "url": "https://glider-playground.co.uk/",
+          "label": "Visit site"
+        }
+      ]
     },
     {
       "id": "gliders-ii",
@@ -94,7 +108,21 @@
       "summary": "GLIDERS II extends the data infrastructure developed in GLIDERS I to the Autosub Long-Range (ALR) autonomous underwater vehicle, and scales the pipeline to support multi-platform, multi-mission deployments. The project also develops tools for integrated analysis of glider, ALR and Argo float data, supporting both real-time adaptive sampling and post-cruise data synthesis.",
       "website": "",
       "fieldwork": [],
-      "themes": ["autonomous"]
+      "themes": ["autonomous"],
+      "tools": [
+        {
+          "name": "NOC Glider Toolbox",
+          "description": "Processes raw glider data to science-ready quality level in OG1 format.",
+          "url": "https://github.com/NOC-OBG-Autonomy/toolbox",
+          "label": "GitHub"
+        },
+        {
+          "name": "Glider Playground",
+          "description": "Interactive web tool for visualising glider data, developed by Orlando Prugel-Bennett.",
+          "url": "https://glider-playground.co.uk/",
+          "label": "Visit site"
+        }
+      ]
     },
     {
       "id": "apart",

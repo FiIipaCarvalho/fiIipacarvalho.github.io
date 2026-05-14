@@ -1708,6 +1708,7 @@ body {
 
 .project-description h2,
 .project-team h2,
+.project-tools h2,
 .project-publications h2,
 .project-photos h2 {
     font-size: 1.5rem;
@@ -1717,6 +1718,52 @@ body {
     margin-bottom: var(--spacing-md);
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-color);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.tool-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+}
+
+.tool-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tool-card h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.tool-card h3 a:hover {
+    color: var(--primary-color);
+}
+
+.tool-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0 0 0.75rem;
+}
+
+.tool-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.tool-link:hover {
+    text-decoration: underline;
 }
 
 /* Summary paragraph injected from JSON */

@@ -28,6 +28,7 @@ async function initProjectPage() {
         renderMeta();
         renderSummary();
         renderTeam();
+        renderTools();
         renderPublications();
         renderFieldwork();
     } catch (error) {
@@ -171,6 +172,28 @@ function renderSummary() {
     descSection.innerHTML = `
         <h2>Project Overview</h2>
         <p class="project-summary">${projectData.summary}</p>`;
+}
+
+// Render software tools from projects.json tools[]
+function renderTools() {
+    if (!projectData?.tools || projectData.tools.length === 0) return;
+
+    const content = document.querySelector('.project-page-content');
+    if (!content) return;
+
+    const section = document.createElement('div');
+    section.className = 'project-tools';
+    section.innerHTML = `<h2>Software &amp; Tools</h2><div class="tools-grid">${
+        projectData.tools.map(tool => `
+            <div class="tool-card">
+                <h3><a href="${tool.url}" target="_blank" rel="noopener">${tool.name}</a></h3>
+                <p>${tool.description}</p>
+                <a href="${tool.url}" target="_blank" rel="noopener" class="tool-link">${tool.label} →</a>
+            </div>`).join('')
+    }</div>`;
+
+    const pubSection = content.querySelector('.project-publications');
+    pubSection ? content.insertBefore(section, pubSection) : content.appendChild(section);
 }
 
 // Render fieldwork album cards from gallery.json into .project-photos
