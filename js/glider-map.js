@@ -105,6 +105,31 @@ const REGIONS = {
             [-193.3458001, -77.0444625],
             [-195.9589735, -77.4733155]
         ]]
+    },
+    "Ryder Bay": {
+        "project": "POLOMINTS",
+        "link": "",
+        "anchor": "project-polomints",
+        "bounds": [[
+            [-68.0794098, -67.5789401],
+            [-68.2291619, -67.5442834],
+            [-68.2390015, -67.5105822],
+            [-68.4537202, -67.5597703],
+            [-68.3624954, -67.6392991],
+            [-68.0794098, -67.5789401]
+        ]]
+    },
+    "West Antarctic Peninsula": {
+        "project": "PAL-LTER",
+        "link": "projects/pal-lter.html",
+        "anchor": "project-pal-lter",
+        "bounds": [[
+            [-63.9339523, -64.8643682],
+            [-66.7831737, -63.6858323],
+            [-75.9541052, -68.2090107],
+            [-69.9885478, -69.0683451],
+            [-63.9339523, -64.8643682]
+        ]]
     }
 };
 
@@ -116,6 +141,20 @@ const POINT_LOCATIONS = {
         "anchor": "project-mesohux",
         "lat": 60.2625,
         "lon": 5.2341
+    },
+    "Palmer Station": {
+        "project": "PAL-LTER",
+        "link": "projects/pal-lter.html",
+        "anchor": "project-pal-lter",
+        "lat": -64.7743,
+        "lon": -64.0538
+    },
+    "Rothera Station": {
+        "project": "POLOMINTS",
+        "link": "",
+        "anchor": "project-polomints",
+        "lat": -67.5682,
+        "lon": -68.1242
     }
 };
 
@@ -128,7 +167,9 @@ const REGION_COLORS = {
     "PAP Observatory": "#0891b2",
     "SeAFAReRS":       "#dc2626",
     "MESOHUX":         "#6b7280",
-    "NA-VICE":         "#db2777"
+    "NA-VICE":         "#db2777",
+    "PAL-LTER":        "#0e7490",
+    "POLOMINTS":       "#65a30d"
 };
 
 // Project color schemes
