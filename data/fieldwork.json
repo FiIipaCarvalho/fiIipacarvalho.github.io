@@ -68,7 +68,7 @@
           "name": "PARTITRICS",
           "link": "projects/partitrics.html",
           "partners": [
-            { "name": "IDAPro", "link": "" }
+            { "name": "IDAPro", "link": "projects/idapro.html" }
           ],
           "activities": [
             {
@@ -101,10 +101,10 @@
 
         {
           "id": "pap",
-          "name": "PAP Observatory",
+          "name": "PAP Observatory / GOCART / EXPORTS",
           "link": "",
-          "collaborators": [
-            { "name": "NASA EXPORTS", "link": "" }
+          "partners": [
+            { "name": "GOCART", "link": "projects/gocart.html" }
           ],
           "activities": [
             {
