@@ -1490,6 +1490,10 @@ body {
     color: #78350f;
 }
 
+.expedition-card--autonomy {
+    border-left-color: #ca8a04;
+}
+
 .field_station-tag {
     background-color: color-mix(in srgb, #f59e0b 15%, transparent);
     color: #92400e;

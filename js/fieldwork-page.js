@@ -71,7 +71,7 @@ function renderCard(activity) {
         : '';
 
     return `
-<div class="expedition-card">
+<div class="expedition-card expedition-card--${activity.type}">
     <div class="expedition-header">
         <h3>${title}</h3>
         <span class="expedition-date">${activity.date_display}</span>
