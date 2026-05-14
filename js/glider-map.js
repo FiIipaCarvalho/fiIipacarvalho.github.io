@@ -59,7 +59,7 @@ const REGIONS = {
     },    
     "Southern Ocean": {
         "project": "CUSTARD",
-        "link": "projects.html#custard",
+        "link": "projects/custard.html",
         "anchor": "project-custard",
         "bounds": [[
             [-95, -50],
@@ -120,7 +120,7 @@ const REGIONS = {
     },
     "Ryder Bay": {
         "project": "POLOMINTS",
-        "link": "",
+        "link": "projects/polomints.html",
         "anchor": "project-polomints",
         "front": true,
         "bounds": [[
@@ -152,21 +152,21 @@ const POINT_LOCATIONS = {
     },
     "Rothera Station": {
         "project": "POLOMINTS",
-        "link": "",
+        "link": "projects/polomints.html",
         "anchor": "project-polomints",
         "lat": -67.5682,
         "lon": -68.1242
     },
     "OOI Southern Ocean": {
         "project": "CUSTARD",
-        "link": "",
+        "link": "projects/custard.html",
         "anchor": "project-custard",
         "lat": -54.0814,
         "lon": -89.6652
     },
     "P3 Mooring": {
         "project": "COMICS",
-        "link": "",
+        "link": "projects/comics.html",
         "anchor": "project-comics-so",
         "lat": -52.40,
         "lon": -40.06

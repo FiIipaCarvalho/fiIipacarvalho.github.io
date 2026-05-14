@@ -4,7 +4,13 @@
       "Bash(python3 -)",
       "Bash(grep -l \"meta-item\" /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/projects/*.html)",
       "Bash(sed -i '' 's/rebels2-jc268-2025/rebels2-jc282-2025/g' /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/data/projects.json)",
-      "Bash(sed -i '' 's/rebels2-jc268-2025/rebels2-jc282-2025/g; s/JC268/JC282/g' /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/images/fieldwork/rebels2-jc282-2025/info.json)"
+      "Bash(sed -i '' 's/rebels2-jc268-2025/rebels2-jc282-2025/g; s/JC268/JC282/g' /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io/images/fieldwork/rebels2-jc282-2025/info.json)",
+      "Bash(git -C /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io status)",
+      "Bash(git -C /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io diff)",
+      "Bash(git -C /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io add js/navigation.js research.html research_themes/autonomous-systems.html research_themes/biophysical-controls.html research_themes/polar-ecosystems.html)",
+      "Bash(git -C /Users/filcar/Documents/GitHub/fiIipacarvalho.github.io commit -m ' *)",
+      "Bash(git *)",
+      "Bash(python3 *)"
     ]
   }
 }
