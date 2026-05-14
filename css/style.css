@@ -1486,8 +1486,8 @@ body {
 }
 
 .autonomy-tag {
-    background-color: color-mix(in srgb, #10b981 15%, transparent);
-    color: #065f46;
+    background-color: color-mix(in srgb, #ca8a04 20%, transparent);
+    color: #78350f;
 }
 
 .field_station-tag {
