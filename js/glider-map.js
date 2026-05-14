@@ -89,12 +89,10 @@ const REGIONS = {
     "Ross Sea": {
         "project": "SeAFAReRS",
         "link": "",
-        "bounds": [[
-            [-195.4454205, -77.3359882],
-            [-187.9128966, -71.7458177],
-            [-157.4108246, -74.0657755],
-            [-163.176453,  -78.2024583],
-            [-179.3574302, -77.0889959]        ]]
+        "bounds": [
+            [[160, -70], [180, -70], [180, -79], [160, -79], [160, -70]],
+            [[-180, -70], [-155, -70], [-155, -79], [-180, -79], [-180, -70]]
+        ]
     }
 };
 
@@ -187,31 +185,30 @@ function drawPointMarkers() {
 // Draw regional boundary boxes
 function drawRegions() {
     Object.entries(REGIONS).forEach(([regionName, regionData]) => {
-        const latlngs = regionData.bounds.map(polygon => 
-            polygon.map(coord => [coord[1], coord[0]])
-        );
-        
         const color = REGION_COLORS[regionData.project] || '#0066cc';
-        const polygon = L.polygon(latlngs, {
+        const polyOptions = {
             color: color,
             weight: 2,
             fillColor: color,
             fillOpacity: 0.1,
             dashArray: '5, 5'
-        });
-
+        };
         const linkHtml = regionData.link
             ? `<p><a href="${regionData.link}" target="_blank">View Project →</a></p>`
             : '';
-        polygon.bindPopup(`
+        const popupContent = `
             <div class="glider-popup">
                 <h3>${regionName}</h3>
                 <p><strong>Project:</strong> ${regionData.project}</p>
                 ${linkHtml}
             </div>
-        `);
-        
-        polygon.addTo(regionLayers);
+        `;
+        regionData.bounds.forEach(ring => {
+            const latlngs = ring.map(coord => [coord[1], coord[0]]);
+            L.polygon([latlngs], polyOptions)
+                .bindPopup(popupContent)
+                .addTo(regionLayers);
+        });
     });
 }
 
