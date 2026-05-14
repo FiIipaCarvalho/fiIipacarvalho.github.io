@@ -89,6 +89,16 @@ const REGIONS = {
     }
 };
 
+// Single-point cruise/station locations (no polygon area to draw)
+const POINT_LOCATIONS = {
+    "Norwegian Sea": {
+        "project": "MESOHUX",
+        "link": "",
+        "lat": 60.2625,
+        "lon": 5.2341
+    }
+};
+
 // Project color schemes
 const PROJECT_COLORS = {
     "ReBELS": ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa"],
@@ -121,7 +131,36 @@ function initMap() {
     markerLayers.addTo(map);
     
     drawRegions();
+    drawPointMarkers();
     loadAllGliderData();
+}
+
+// Draw single-point location markers
+function drawPointMarkers() {
+    Object.entries(POINT_LOCATIONS).forEach(([regionName, data]) => {
+        const marker = L.circleMarker([data.lat, data.lon], {
+            radius: 8,
+            color: '#0066cc',
+            weight: 2,
+            fillColor: '#0066cc',
+            fillOpacity: 0.1,
+            dashArray: '4, 4'
+        });
+
+        const linkHtml = data.link
+            ? `<p><a href="${data.link}" target="_blank">View Project →</a></p>`
+            : '';
+
+        marker.bindPopup(`
+            <div class="glider-popup">
+                <h3>${regionName}</h3>
+                <p><strong>Project:</strong> ${data.project}</p>
+                ${linkHtml}
+            </div>
+        `);
+
+        marker.addTo(regionLayers);
+    });
 }
 
 // Draw regional boundary boxes
