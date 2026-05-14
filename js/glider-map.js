@@ -156,6 +156,20 @@ const POINT_LOCATIONS = {
         "anchor": "project-polomints",
         "lat": -67.5682,
         "lon": -68.1242
+    },
+    "OOI Southern Ocean": {
+        "project": "CUSTARD",
+        "link": "",
+        "anchor": "project-custard",
+        "lat": -54.0814,
+        "lon": -89.6652
+    },
+    "P3 Mooring": {
+        "project": "COMICS",
+        "link": "",
+        "anchor": "project-comics",
+        "lat": -52.40,
+        "lon": -40.06
     }
 };
 
@@ -170,7 +184,8 @@ const REGION_COLORS = {
     "MESOHUX":         "#6b7280",
     "NA-VICE":         "#db2777",
     "PAL-LTER":        "#0e7490",
-    "POLOMINTS":       "#65a30d"
+    "POLOMINTS":       "#65a30d",
+    "COMICS":          "#b45309"
 };
 
 // Project color schemes

@@ -185,7 +185,7 @@
               "label": "CUSTARD Gliders 2",
               "date": "2019-12-06",
               "date_display": "December 2019",
-              "location": "Scotia Sea, Southern Ocean",
+              "location": "East Pacific Sector of Southern Ocean",
               "gliders": ["Bellamite_538"],
               "glider_data_file": "glider_tracks_custard.json",
               "description": "",
@@ -197,10 +197,22 @@
               "label": "CUSTARD Gliders 1",
               "date": "2018-12-04",
               "date_display": "December 2018",
-              "location": "Scotia Sea, Southern Ocean",
+              "location": "East Pacific Sector of Southern Ocean",
               "gliders": ["Churchill_501"],
               "glider_data_file": "glider_tracks_custard.json",
               "description": "",
+              "photos_album": ""
+            },
+            {
+              "id": "custard-ooi-mooring",
+              "type": "field_station",
+              "label": "OOI Southern Ocean Mooring",
+              "date": "2018-11-01",
+              "date_display": "November 2018 – December 2019",
+              "location": "East Pacific Sector of Southern Ocean",
+              "role": "",
+              "stations": [{"name": "OOI Southern Ocean", "coords": "54.08°S, 89.67°W"}],
+              "description": "Ocean Observatories Initiative mooring providing sustained biogeochemical observations.",
               "photos_album": ""
             },
             {
@@ -210,7 +222,7 @@
               "cruise_id": "DY096",
               "date": "2018-11-01",
               "date_display": "November – December 2018",
-              "location": "Scotia Sea, Southern Ocean",
+              "location": "East Pacific Sector of Southern Ocean",
               "role": "Postdoctoral Researcher",
               "description": "Investigating seasonal controls on carbon export and remineralization depth in the Southern Ocean.",
               "photos_album": "custard1-dy096-2018"
@@ -335,7 +347,8 @@
               "date_display": "November – December 2017",
               "location": "South Georgia, South Atlantic",
               "role": "Postdoctoral Researcher",
-              "description": "Carbon export and mesopelagic processes around South Georgia.",
+              "stations": [{"name": "P3 Mooring", "coords": "52.40°S, 40.06°W"}],
+              "description": "Carbon export and mesopelagic processes around South Georgia. GOCART gliders were deployed in support of this cruise.",
               "photos_album": "comics1-dy086-2017"
             }
           ]

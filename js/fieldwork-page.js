@@ -64,6 +64,9 @@ function renderCard(activity) {
     if (activity.alrs && activity.alrs.length) {
         meta += `<br><strong>ALRs:</strong> ${activity.alrs.join(', ')}`;
     }
+    if (activity.stations && activity.stations.length) {
+        meta += `<br><strong>Stations:</strong> ${activity.stations.map(s => `${s.name} (${s.coords})`).join(', ')}`;
+    }
     if (activity.description) meta += `<br>${activity.description}`;
 
     const photosLink = activity.photos_album
