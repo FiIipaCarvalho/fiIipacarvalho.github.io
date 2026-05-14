@@ -275,6 +275,27 @@
         },
 
         {
+          "id": "comics-so",
+          "name": "COMICS",
+          "link": "projects/comics.html",
+          "activities": [
+            {
+              "id": "comics1-dy086-2017",
+              "type": "cruise",
+              "label": "COMICS 1",
+              "cruise_id": "DY086",
+              "date": "2017-11-01",
+              "date_display": "November – December 2017",
+              "location": "South Georgia, South Atlantic",
+              "role": "Postdoctoral Researcher",
+              "stations": [{"name": "P3 Mooring", "coords": "52.40°S, 40.06°W"}],
+              "description": "Carbon export and mesopelagic processes around South Georgia. GOCART gliders were deployed in support of this cruise.",
+              "photos_album": "comics1-dy086-2017"
+            }
+          ]
+        },
+
+        {
           "id": "seafarers",
           "name": "SeAFAReRS",
           "link": "",
@@ -313,7 +334,7 @@
               "cruise_id": "",
               "date": "2018-05-01",
               "date_display": "May 2018",
-              "location": "Benguela Upwelling System",
+              "location": "Benguela Upwelling Region",
               "role": "Postdoctoral Researcher",
               "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
               "photos_album": "gocart2-2018"
@@ -337,19 +358,6 @@
               "role": "Postdoctoral Researcher",
               "description": "Mesopelagic carbon storage mechanisms between South Georgia and South America.",
               "photos_album": "comics2-dy090-2018"
-            },
-            {
-              "id": "comics1-dy086-2017",
-              "type": "cruise",
-              "label": "COMICS 1",
-              "cruise_id": "DY086",
-              "date": "2017-11-01",
-              "date_display": "November – December 2017",
-              "location": "South Georgia, South Atlantic",
-              "role": "Postdoctoral Researcher",
-              "stations": [{"name": "P3 Mooring", "coords": "52.40°S, 40.06°W"}],
-              "description": "Carbon export and mesopelagic processes around South Georgia. GOCART gliders were deployed in support of this cruise.",
-              "photos_album": "comics1-dy086-2017"
             }
           ]
         }

@@ -167,7 +167,7 @@ const POINT_LOCATIONS = {
     "P3 Mooring": {
         "project": "COMICS",
         "link": "",
-        "anchor": "project-comics",
+        "anchor": "project-comics-so",
         "lat": -52.40,
         "lon": -40.06
     }
