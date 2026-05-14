@@ -136,7 +136,7 @@ const REGIONS = {
 
 // Single-point cruise/station locations (no polygon area to draw)
 const POINT_LOCATIONS = {
-    "Norwegian Sea": {
+    "Norwegian Fjord (Espegrend Station)": {
         "project": "MESOHUX",
         "link": "",
         "anchor": "project-mesohux",
@@ -192,6 +192,8 @@ let activeYearFilter = 'all';
 // Initialize map
 function initMap() {
     map = L.map('glider-map', { zoomSnap: 0.25 }).setView([0, -30], 1.75);
+    map.createPane('frontPane');
+    map.getPane('frontPane').style.zIndex = 450;
     
     // CartoDB Positron tiles - guaranteed English, clean style
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -242,8 +244,6 @@ function drawPointMarkers() {
 
 // Draw regional boundary boxes
 function drawRegions() {
-    const frontLayers = [];
-
     Object.entries(REGIONS).forEach(([regionName, regionData]) => {
         const color = REGION_COLORS[regionData.project] || '#0066cc';
         const polyOptions = {
@@ -251,7 +251,8 @@ function drawRegions() {
             weight: 2,
             fillColor: color,
             fillOpacity: 0.1,
-            dashArray: '5, 5'
+            dashArray: '5, 5',
+            ...(regionData.front ? { pane: 'frontPane' } : {})
         };
         const regionTitle = regionData.anchor
             ? `<a href="#${regionData.anchor}">${regionName}</a>`
@@ -268,14 +269,11 @@ function drawRegions() {
         `;
         regionData.bounds.forEach(ring => {
             const latlngs = ring.map(coord => [coord[1], coord[0]]);
-            const poly = L.polygon([latlngs], polyOptions)
+            L.polygon([latlngs], polyOptions)
                 .bindPopup(popupContent)
                 .addTo(regionLayers);
-            if (regionData.front) frontLayers.push(poly);
         });
     });
-
-    frontLayers.forEach(l => l.bringToFront());
 }
 
 // Load glider data from multiple project files
