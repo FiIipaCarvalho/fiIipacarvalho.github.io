@@ -37,11 +37,20 @@ function renderRegions(regions) {
             const acts = [...project.activities].sort(
                 (a, b) => new Date(b.date) - new Date(a.date)
             );
-            const heading = project.link
+            const primaryLink = project.link
                 ? `<a href="${project.link}">${project.name}</a>`
                 : project.name;
+            const partnerLinks = (project.partners || []).map(p =>
+                p.link ? `<a href="${p.link}">${p.name}</a>` : p.name
+            );
+            const heading = [primaryLink, ...partnerLinks].join(' / ');
+
+            const collaboratorsHtml = (project.collaborators || []).length
+                ? `<p class="fieldwork-collaborators">In collaboration with: ${project.collaborators.map(c => c.link ? `<a href="${c.link}">${c.name}</a>` : c.name).join(', ')}</p>`
+                : '';
+
             const cards = acts.map(renderCard).join('');
-            return `<h3 class="fieldwork-project-title" id="project-${project.id}">${heading}</h3>${cards}`;
+            return `<h3 class="fieldwork-project-title" id="project-${project.id}">${heading}</h3>${collaboratorsHtml}${cards}`;
         }).join('');
 
         return `<h2 class="fieldwork-region-title">${region.name}</h2>${projectsHtml}`;

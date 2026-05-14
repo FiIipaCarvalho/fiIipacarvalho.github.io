@@ -1503,6 +1503,16 @@ body {
     border-left-color: #9333ea;
 }
 
+.fieldwork-collaborators {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: -0.5rem 0 0.75rem 0;
+}
+
+.fieldwork-collaborators a {
+    color: var(--text-muted);
+}
+
 .fieldwork-region-title {
     font-size: 1.75rem;
     font-weight: 600;
