@@ -213,7 +213,7 @@ function renderFieldwork() {
 }
 
 const TEAM_SECTIONS = [
-    { key: 'leads',        label: 'Project Lead' },
+    { key: 'lead',         label: 'Project Lead' },
     { key: 'co_leads',     label: 'Project Co-Lead' },
     { key: 'staff',        label: 'Research Staff' },
     { key: 'postdocs',     label: 'Postdoctoral Researcher' },
@@ -240,12 +240,12 @@ function renderTeam() {
 }
 
 function createTeamMemberCard(name) {
-    const slug = name.toLowerCase().replace(/\s+/g, '-');
+    const baseName = name.replace(/\s*\(.*\)$/, '').trim();
+    const slug = baseName.toLowerCase().replace(/\s+/g, '-');
     const photoPath = `../images/team/${slug}.jpg`;
-    
     return `
         <div class="team-member-mini">
-            <img src="${photoPath}" alt="${name}" onerror="this.src='../images/team/placeholder.svg'">
+            <img src="${photoPath}" alt="${baseName}" onerror="this.src='../images/team/placeholder.svg'">
             <p>${name}</p>
         </div>
     `;

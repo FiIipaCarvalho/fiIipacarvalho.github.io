@@ -1,70 +1,89 @@
 {
   "project_teams": {
     "rebels": {
-      "leads": ["Filipa Carvalho"],
+      "lead": ["Filipa Carvalho"],
+      "co_leads": ["Sari Giering", "Nathan Briggs", "Louis Clement","Gwyn Evans","Alex Brearley (BAS)"],
+      "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
       "phd_students": ["Hans Hilder", "Daniel Bangay", "Faron Quinn", "Raul Costa"]
     },
     "polomints": {
+      "lead":["Michael Meredith (BAS)"],
       "co_leads": ["Filipa Carvalho"],
       "staff": ["Elise Droste"],
       "phd_students": ["Faron Quinn", "Raul Costa"]
     },
     "partitrics": {
-      "co_leads": ["Filipa Carvalho"],
+      "lead": ["Steph Henson"],
+      "co_leads": ["Filipa Carvalho","Nathan Briggs","Sari Giering","Elisa Lovecchio"],
       "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
       "phd_students": ["Hans Hilder"]
     },
     "idapro": {
-      "co_leads": ["Filipa Carvalho"],
+      "lead": ["Mark Moore (UoS)"],
+      "co_leads": ["Filipa Carvalho", "Nathan Briggs"],
       "staff": ["Flavien Petit", "Tommy Ryan-Keogh"]
     },
     "gliders-i": {
-      "leads": ["Filipa Carvalho"],
-      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh", "Elise Droste"],
+      "lead": ["Filipa Carvalho"],
+      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh", "Elise Droste", "Nathan Briggs", "Louis Clement","Gwyn Evans"],
       "phd_students": ["Daniel Bangay", "Hans Hilder"]
     },
     "gliders-ii": {
-      "leads": ["Filipa Carvalho"],
-      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh", "Elise Droste"],
+      "lead": ["Filipa Carvalho"],
+      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh", "Elise Droste", "Nathan Briggs", "Louis Clement","Gwyn Evans"],
       "phd_students": ["Daniel Bangay", "Hans Hilder"]
     },
     "apart": {
+      "lead": ["James Burris"],
       "co_leads": ["Filipa Carvalho"],
       "staff": ["Flavien Petit"]
     },
     "techoceans": {
-      "co_leads": ["Filipa Carvalho"]
+      "lead": ["Matt Mowlem"],
+      "co_leads": ["Sari Giering"],
+      "staff": ["Filipa Carvalho"]
     },
     "biarritz": {
-      "co_leads": ["Filipa Carvalho"]
+      "lead": ["Adrian Martin"],
+      "co_leads": ["Filipa Carvalho", "Sari Giering"]
     },
     "gocart": {
-      "postdocs": ["Filipa Carvalho"],
-      "phd_students": ["Benoit"]
+      "lead": ["Steph Henson"],
+      "postdocs": ["Filipa Carvalho", "Nathan Briggs"],
+      "phd_students": ["Benoit Espinola"]
     },
     "comics": {
-      "postdocs": ["Filipa Carvalho"],
-      "phd_students": ["Benoit"],
+      "lead": ["Richard Sanders"],
+      "co_leads": ["Steph Henson", "Sari Giering"],
+      "postdocs": ["Filipa Carvalho","Nathan Briggs"],
+      "phd_students": ["Benoit Espinola"],
       "msc_students": ["Evelyn Byer"]
     },
     "custard": {
+      "lead": ["Adrian Martin"],
+      "co_leads": ["Steph Henson"],
       "postdocs": ["Filipa Carvalho"],
       "phd_students": ["Daniel Bangay"]
     },
     "pal-lter": {
+      "lead": ["Oscar Schofield (Rutgers U)", "Hugh Ducklow (Columbia U)"],
       "phd_students": ["Filipa Carvalho"]
     },
     "na-vice": {
+      "lead":["Kay Biddle (Rutgers U)"],
       "phd_students": ["Filipa Carvalho"]
     },
     "seafarers": {
+      "lead":["Josh Kohut (Rutgers U)"],
       "phd_students": ["Filipa Carvalho"]
     },
     "converge": {
+      "lead":["Josh Kohut (Rutgers U)"],
       "phd_students": ["Filipa Carvalho"]
     },
     "fire-glider": {
-      "postdocs": ["Filipa Carvalho"]
+      "lead": ["Oscar Schofield (Rutgers U)"],
+      "phd_students": ["Filipa Carvalho"]
     }
   }
 }
