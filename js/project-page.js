@@ -212,50 +212,30 @@ function renderFieldwork() {
     section.innerHTML = `<h2>Fieldwork</h2><div class="fieldwork-grid">${cards}</div>`;
 }
 
+const TEAM_SECTIONS = [
+    { key: 'leads',        label: 'Project Lead' },
+    { key: 'co_leads',     label: 'Project Co-Lead' },
+    { key: 'staff',        label: 'Research Staff' },
+    { key: 'postdocs',     label: 'Postdoctoral Researcher' },
+    { key: 'technicians',  label: 'Technician' },
+    { key: 'phd_students', label: 'PhD Student' },
+    { key: 'msc_students', label: 'MSc Student' }
+];
+
 // Render team members
 function renderTeam() {
     const container = document.getElementById('project-team-container');
     if (!container || !projectTeams) return;
 
     let html = '';
-    
-    // PI
-    if (projectTeams.pi && projectTeams.pi.length > 0) {
-        const piLabel = projectData?.role || 'Principal Investigator';
-        html += `<div class="team-role-section"><h4>${piLabel}</h4><div class="team-members">`;
-        projectTeams.pi.forEach(name => {
-            html += createTeamMemberCard(name);
-        });
+    TEAM_SECTIONS.forEach(({ key, label }) => {
+        const members = projectTeams[key];
+        if (!members || members.length === 0) return;
+        html += `<div class="team-role-section"><h4>${label}</h4><div class="team-members">`;
+        members.forEach(name => { html += createTeamMemberCard(name); });
         html += '</div></div>';
-    }
-    
-    // Staff
-    if (projectTeams.staff && projectTeams.staff.length > 0) {
-        html += '<div class="team-role-section"><h4>Research Staff</h4><div class="team-members">';
-        projectTeams.staff.forEach(name => {
-            html += createTeamMemberCard(name);
-        });
-        html += '</div></div>';
-    }
-    
-    // Students
-    if (projectTeams.students && projectTeams.students.length > 0) {
-        html += '<div class="team-role-section"><h4>PhD Students</h4><div class="team-members">';
-        projectTeams.students.forEach(name => {
-            html += createTeamMemberCard(name);
-        });
-        html += '</div></div>';
-    }
-    
-    // Alumni
-    if (projectTeams.alumni && projectTeams.alumni.length > 0) {
-        html += '<div class="team-role-section"><h4>Alumni</h4><div class="team-members">';
-        projectTeams.alumni.forEach(name => {
-            html += createTeamMemberCard(name);
-        });
-        html += '</div></div>';
-    }
-    
+    });
+
     container.innerHTML = html;
 }
 

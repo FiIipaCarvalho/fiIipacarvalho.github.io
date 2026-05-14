@@ -1,77 +1,69 @@
 {
   "project_teams": {
     "rebels": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": ["Hans Hilder", "Daniel Bangay","Faron Quinn", "Raul Costa"]
+      "leads": ["Filipa Carvalho"],
+      "phd_students": ["Hans Hilder", "Daniel Bangay", "Faron Quinn", "Raul Costa"]
     },
     "polomints": {
-      "pi": ["Filipa Carvalho"],
+      "co_leads": ["Filipa Carvalho"],
       "staff": ["Elise Droste"],
-      "students": ["Faron Quinn", "Raul Costa"]
+      "phd_students": ["Faron Quinn", "Raul Costa"]
     },
     "partitrics": {
-      "pi": ["Filipa Carvalho"],
+      "co_leads": ["Filipa Carvalho"],
       "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
-      "students": ["Hans Hilder"]
+      "phd_students": ["Hans Hilder"]
     },
     "idapro": {
-      "pi": ["Filipa Carvalho"],
-      "staff": ["Flavien Petit", "Tommy Ryan-Keogh"],
-      "students": []
+      "co_leads": ["Filipa Carvalho"],
+      "staff": ["Flavien Petit", "Tommy Ryan-Keogh"]
     },
     "gliders-i": {
-      "pi": ["Filipa Carvalho"],
-      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh","Elise Droste"],
-      "students": ["Daniel Bangay", "Hans Hilder"]
+      "leads": ["Filipa Carvalho"],
+      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh", "Elise Droste"],
+      "phd_students": ["Daniel Bangay", "Hans Hilder"]
     },
     "gliders-ii": {
-      "pi": ["Filipa Carvalho"],
-      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh","Elise Droste"],
-      "students": ["Daniel Bangay", "Hans Hilder"]
+      "leads": ["Filipa Carvalho"],
+      "staff": ["Orlando Prugel-Bennett", "Flavien Petit", "Tommy Ryan-Keogh", "Elise Droste"],
+      "phd_students": ["Daniel Bangay", "Hans Hilder"]
     },
     "apart": {
-      "pi": ["Filipa Carvalho"],
-      "staff": ["Flavien Petit"],
-      "students": []
+      "co_leads": ["Filipa Carvalho"],
+      "staff": ["Flavien Petit"]
     },
     "techoceans": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": []
+      "co_leads": ["Filipa Carvalho"]
     },
     "biarritz": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": []
+      "co_leads": ["Filipa Carvalho"]
     },
     "gocart": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": [],
-      "alumni": ["Sarah Cryer"]
+      "postdocs": ["Filipa Carvalho"],
+      "staff": ["Sarah Cryer"]
     },
     "comics": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": [],
-      "alumni": ["Evelyn Byer"]
+      "postdocs": ["Filipa Carvalho"],
+      "staff": ["Evelyn Byer"]
     },
     "custard": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": ["Daniel Bangay"]
+      "postdocs": ["Filipa Carvalho"],
+      "phd_students": ["Daniel Bangay"]
     },
     "pal-lter": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": [],
-      "alumni": []
+      "phd_students": ["Filipa Carvalho"]
+    },
+    "na-vice": {
+      "phd_students": ["Filipa Carvalho"]
+    },
+    "seafarers": {
+      "phd_students": ["Filipa Carvalho"]
+    },
+    "converge": {
+      "phd_students": ["Filipa Carvalho"]
     },
     "fire-glider": {
-      "pi": ["Filipa Carvalho"],
-      "staff": [],
-      "students": []
+      "postdocs": ["Filipa Carvalho"]
     }
   }
 }
