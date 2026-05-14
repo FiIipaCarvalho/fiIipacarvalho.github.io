@@ -3,7 +3,8 @@
 const TYPE_LABELS = {
     cruise:        'Research Cruise',
     autonomy:      'Autonomous Platforms',
-    field_station: 'Field Station'
+    field_station: 'Field Station',
+    mooring_site:  'Mooring Site'
 };
 
 async function initFieldworkPage() {
@@ -65,7 +66,7 @@ function renderCard(activity) {
         meta += `<br><strong>ALRs:</strong> ${activity.alrs.join(', ')}`;
     }
     if (activity.stations && activity.stations.length) {
-        meta += `<br><strong>Stations:</strong> ${activity.stations.map(s => `${s.name} (${s.coords})`).join(', ')}`;
+        meta += `<br><strong>Mooring Sites:</strong> ${activity.stations.map(s => `${s.name} (${s.coords})`).join(', ')}`;
     }
     if (activity.description) meta += `<br>${activity.description}`;
 

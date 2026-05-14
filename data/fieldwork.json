@@ -134,7 +134,7 @@
           "activities": [
             {
               "id": "mesohux-2017",
-              "type": "cruise",
+              "type": "field_station",
               "label": "MESOHUX",
               "cruise_id": "",
               "date": "2017-05-01",
@@ -204,18 +204,6 @@
               "photos_album": ""
             },
             {
-              "id": "custard-ooi-mooring",
-              "type": "field_station",
-              "label": "OOI Southern Ocean Mooring",
-              "date": "2018-11-01",
-              "date_display": "November 2018 – December 2019",
-              "location": "East Pacific Sector of Southern Ocean",
-              "role": "",
-              "stations": [{"name": "OOI Southern Ocean", "coords": "54.08°S, 89.67°W"}],
-              "description": "Ocean Observatories Initiative mooring providing sustained biogeochemical observations.",
-              "photos_album": ""
-            },
-            {
               "id": "custard1-dy096-2018",
               "type": "cruise",
               "label": "CUSTARD 1",
@@ -224,6 +212,7 @@
               "date_display": "November – December 2018",
               "location": "East Pacific Sector of Southern Ocean",
               "role": "Postdoctoral Researcher",
+              "stations": [{"name": "OOI Southern Ocean", "coords": "54.08°S, 89.67°W"}],
               "description": "Investigating seasonal controls on carbon export and remineralization depth in the Southern Ocean.",
               "photos_album": "custard1-dy096-2018"
             }
@@ -329,7 +318,7 @@
           "activities": [
             {
               "id": "gocart2-2018",
-              "type": "cruise",
+              "type": "autonomy",
               "label": "GOCART 2",
               "cruise_id": "",
               "date": "2018-05-01",

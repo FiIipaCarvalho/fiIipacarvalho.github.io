@@ -1495,8 +1495,12 @@ body {
 }
 
 .field_station-tag {
-    background-color: color-mix(in srgb, #f59e0b 15%, transparent);
-    color: #92400e;
+    background-color: color-mix(in srgb, #9333ea 15%, transparent);
+    color: #581c87;
+}
+
+.expedition-card--field_station {
+    border-left-color: #9333ea;
 }
 
 .fieldwork-region-title {
