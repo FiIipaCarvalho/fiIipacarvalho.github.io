@@ -179,18 +179,18 @@ function drawPointMarkers() {
             fillOpacity: 0.3
         });
 
+        const pointTitle = data.anchor
+            ? `<a href="#${data.anchor}">${regionName}</a>`
+            : regionName;
         const linkHtml = data.link
             ? `<p><a href="${data.link}" target="_blank">View Project →</a></p>`
-            : '';
-        const anchorHtml = data.anchor
-            ? `<p><a href="#${data.anchor}">View fieldwork ↓</a></p>`
             : '';
 
         marker.bindPopup(`
             <div class="glider-popup">
-                <h3>${regionName}</h3>
+                <h3>${pointTitle}</h3>
                 <p><strong>Project:</strong> ${data.project}</p>
-                ${linkHtml}${anchorHtml}
+                ${linkHtml}
             </div>
         `);
 
@@ -209,17 +209,17 @@ function drawRegions() {
             fillOpacity: 0.1,
             dashArray: '5, 5'
         };
+        const regionTitle = regionData.anchor
+            ? `<a href="#${regionData.anchor}">${regionName}</a>`
+            : regionName;
         const linkHtml = regionData.link
             ? `<p><a href="${regionData.link}" target="_blank">View Project →</a></p>`
             : '';
-        const anchorHtml = regionData.anchor
-            ? `<p><a href="#${regionData.anchor}">View fieldwork ↓</a></p>`
-            : '';
         const popupContent = `
             <div class="glider-popup">
-                <h3>${regionName}</h3>
+                <h3>${regionTitle}</h3>
                 <p><strong>Project:</strong> ${regionData.project}</p>
-                ${linkHtml}${anchorHtml}
+                ${linkHtml}
             </div>
         `;
         regionData.bounds.forEach(ring => {
