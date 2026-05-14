@@ -8,6 +8,7 @@ const REGIONS = {
     "Labrador Sea": {
         "project": "ReBELS",
         "link": "projects/rebels.html",
+        "anchor": "project-rebels",
         "bounds": [[
             [-52.79302082650534, 65.45927508504622],
             [-59.13240908270683, 60.33577565288866],
@@ -22,6 +23,7 @@ const REGIONS = {
     "Iceland Basin": {
         "project": "BIO-CARBON",
         "link": "projects/partitrics.html",
+        "anchor": "project-partitrics-idapro",
         "bounds": [[
             [-16.390728645190194, 63.19800180818393],
             [-23.625669669607618, 62.59787239784313],
@@ -34,6 +36,7 @@ const REGIONS = {
     "Benguela": {
         "project": "GOCART",
         "link": "projects/gocart.html",
+        "anchor": "project-gocart",
         "bounds": [[
             [11, -17.5],
             [8, -17.5],
@@ -45,6 +48,7 @@ const REGIONS = {
     "South Georgia": {
         "project": "GOCART",
         "link": "projects/gocart.html",
+        "anchor": "project-gocart",
         "bounds": [[
             [-43, -51],
             [-43, -54],
@@ -56,6 +60,7 @@ const REGIONS = {
     "Southern Ocean": {
         "project": "CUSTARD",
         "link": "projects.html#custard",
+        "anchor": "project-custard",
         "bounds": [[
             [-95, -50],
             [-95, -60],
@@ -67,6 +72,7 @@ const REGIONS = {
     "Porcupine Abyssal Plain": {
         "project": "PAP Observatory",
         "link": "",
+        "anchor": "project-pap",
         "bounds": [[
             [-17.5, 49.8333],
             [-15.5, 49.8333],
@@ -78,6 +84,7 @@ const REGIONS = {
     "North Atlantic": {
         "project": "NA-VICE",
         "link": "",
+        "anchor": "project-na-vice",
         "bounds": [[
             [-33.4027257,      39.6446975],
             [-19.9348597,      39.6446975],
@@ -89,6 +96,7 @@ const REGIONS = {
     "Ross Sea": {
         "project": "SeAFAReRS",
         "link": "",
+        "anchor": "project-seafarers",
         "bounds": [[
             [-195.9589735, -77.4733155],
             [-189.2741114, -72.1461064],
@@ -105,6 +113,7 @@ const POINT_LOCATIONS = {
     "Norwegian Sea": {
         "project": "MESOHUX",
         "link": "",
+        "anchor": "project-mesohux",
         "lat": 60.2625,
         "lon": 5.2341
     }
@@ -173,12 +182,15 @@ function drawPointMarkers() {
         const linkHtml = data.link
             ? `<p><a href="${data.link}" target="_blank">View Project →</a></p>`
             : '';
+        const anchorHtml = data.anchor
+            ? `<p><a href="#${data.anchor}">View fieldwork ↓</a></p>`
+            : '';
 
         marker.bindPopup(`
             <div class="glider-popup">
                 <h3>${regionName}</h3>
                 <p><strong>Project:</strong> ${data.project}</p>
-                ${linkHtml}
+                ${linkHtml}${anchorHtml}
             </div>
         `);
 
@@ -200,11 +212,14 @@ function drawRegions() {
         const linkHtml = regionData.link
             ? `<p><a href="${regionData.link}" target="_blank">View Project →</a></p>`
             : '';
+        const anchorHtml = regionData.anchor
+            ? `<p><a href="#${regionData.anchor}">View fieldwork ↓</a></p>`
+            : '';
         const popupContent = `
             <div class="glider-popup">
                 <h3>${regionName}</h3>
                 <p><strong>Project:</strong> ${regionData.project}</p>
-                ${linkHtml}
+                ${linkHtml}${anchorHtml}
             </div>
         `;
         regionData.bounds.forEach(ring => {

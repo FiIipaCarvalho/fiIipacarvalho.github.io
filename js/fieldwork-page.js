@@ -40,7 +40,7 @@ function renderRegions(regions) {
                 ? `<a href="${project.link}">${project.name}</a>`
                 : project.name;
             const cards = acts.map(renderCard).join('');
-            return `<h3 class="fieldwork-project-title">${heading}</h3>${cards}`;
+            return `<h3 class="fieldwork-project-title" id="project-${project.id}">${heading}</h3>${cards}`;
         }).join('');
 
         return `<h2 class="fieldwork-region-title">${region.name}</h2>${projectsHtml}`;
