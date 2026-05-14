@@ -23,6 +23,7 @@
                         <li><a href="${prefix}people.html" class="nav-link">People</a></li>
                         <li><a href="${prefix}photos.html" class="nav-link">Photos</a></li>
                         <li><a href="${prefix}fieldwork.html" class="nav-link">Fieldwork</a></li>
+                        <li><a href="${prefix}resources.html" class="nav-link">Resources</a></li>
                         <li><a href="${prefix}news.html" class="nav-link">News</a></li>
                         <li><a href="${prefix}contact.html" class="nav-link">Contact</a></li>
                         <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
