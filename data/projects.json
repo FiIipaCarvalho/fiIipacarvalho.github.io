@@ -198,8 +198,8 @@
       "role": "Postdoctoral Researcher",
       "pi": "Stephanie Henson (NOC)",
       "noc_pi": "",
-      "description": "Glider component of the COMICS project, studying phytoplankton dynamics and carbon export at South Georgia using autonomous underwater gliders.",
-      "summary": "GOCART was the glider component of the COMICS project (sister project), using autonomous underwater gliders to study the physical and biological controls on phytoplankton productivity and carbon export in the iron-enriched waters around South Georgia. Three Slocum gliders were deployed between October and February, surveying an area NW of South Georgia and capturing the transition from winter to spring, the onset of stratification, the spring phytoplankton bloom and the consequent carbon export event to the mesopelagic.",
+      "description": "Glider-based study of phytoplankton dynamics and carbon export, with deployments at South Georgia (COMICS sister project) and in the Benguela upwelling system.",
+      "summary": "GOCART used autonomous underwater gliders to study phytoplankton productivity and carbon export in two contrasting systems. At South Georgia (2017-2018), three Slocum gliders were deployed as the glider component of the COMICS project, surveying an area NW of South Georgia through the transition from winter to spring and capturing the spring phytoplankton bloom and carbon export event. A separate Benguela mission (2018) deployed gliders in the northern Benguela upwelling system to study phytoplankton dynamics, oxygen variability and mesopelagic particle layers in this highly productive eastern boundary current.",
       "website": "",
       "fieldwork": ["gocart2-2018"],
       "themes": ["biophysical", "autonomous"]

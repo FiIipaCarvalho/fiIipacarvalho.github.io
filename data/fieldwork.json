@@ -275,9 +275,9 @@
               "date": "2012-11-15",
               "date_display": "November 2012",
               "location": "Palmer Deep, West Antarctic Peninsula",
-              "role": "Postdoctoral Researcher",
-              "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
-              "photos_album": "gocart1-2017"
+              "role": "PhD Student",
+              "description": "Glider deployments from Palmer Station observing phytoplankton dynamics and physical forcing in Palmer Deep.",
+              "photos_album": "pal-lter-palmer-2012-2013"
             }
           ]
         },
@@ -305,13 +305,13 @@
             {
               "id": "gocart1-2017",
               "type": "autonomy",
-              "label": "GOCART 1",
+              "label": "GOCART 1 Gliders",
               "cruise_id": "",
               "date": "2017-10-15",
-              "date_display": "October 2017",
-              "location": "Benguela Upwelling Region, South Atlantic",
+              "date_display": "October 2017 – February 2018",
+              "location": "South Georgia, Southern Ocean",
               "role": "Postdoctoral Researcher",
-              "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
+              "description": "Three Slocum gliders deployed in support of COMICS, surveying the area NW of South Georgia through the transition from winter to spring and the onset of the phytoplankton bloom.",
               "photos_album": "gocart1-2017"
             }
           ]
@@ -352,13 +352,13 @@
             {
               "id": "gocart2-2018",
               "type": "autonomy",
-              "label": "GOCART 2",
+              "label": "GOCART 2 Gliders",
               "cruise_id": "",
               "date": "2018-05-01",
               "date_display": "May 2018",
-              "location": "Benguela Upwelling Region",
+              "location": "Benguela Upwelling Region, South Atlantic",
               "role": "Postdoctoral Researcher",
-              "description": "Glider observations of upwelling dynamics and productivity on the Agulhas Bank.",
+              "description": "Glider observations of phytoplankton dynamics, oxygen variability and productivity in the Benguela upwelling system.",
               "photos_album": "gocart2-2018"
             }
           ]
