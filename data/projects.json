@@ -191,15 +191,15 @@
     {
       "id": "gocart",
       "title": "GOCART",
-      "fullTitle": "Glider Observations and Connectivity Along a Reproductive Tract",
+      "fullTitle": "Gauging Ocean organic Carbon fluxes using Autonomous Robotic Technologies",
       "status": "past",
       "dates": "2017-2018",
       "funding": "ERC Consolidator Grant",
       "role": "Postdoctoral Researcher",
       "pi": "Stephanie Henson (NOC)",
       "noc_pi": "",
-      "description": "Using ocean gliders to study phytoplankton dynamics and productivity on the Agulhas Bank.",
-      "summary": "GOCART used ocean gliders to study the physical and biological controls on phytoplankton productivity along the Agulhas Bank, South Africa. The project combined glider-based fluorescence and optical backscatter measurements with ship-based sampling to characterise seasonal variability in phytoplankton biomass, community composition and carbon export in this highly productive eastern boundary system.",
+      "description": "Glider component of the COMICS project, studying phytoplankton dynamics and carbon export at South Georgia using autonomous underwater gliders.",
+      "summary": "GOCART was the glider component of the COMICS project (sister project), using autonomous underwater gliders to study the physical and biological controls on phytoplankton productivity and carbon export in the iron-enriched waters around South Georgia. Three Slocum gliders were deployed between October and February, surveying an area NW of South Georgia and capturing the transition from winter to spring, the onset of stratification, the spring phytoplankton bloom and the consequent carbon export event to the mesopelagic.",
       "website": "",
       "fieldwork": ["gocart2-2018"],
       "themes": ["biophysical", "autonomous"]
