@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fiiipacarvalho.github.io/sitemap.xml
