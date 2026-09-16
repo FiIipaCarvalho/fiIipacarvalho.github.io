@@ -1,0 +1,481 @@
+{
+  "_generated": {
+    "by": "knowledge-base/_tools/cv_build.py",
+    "generated": "2026-09-16",
+    "warning": "Do not edit by hand. Edit cv/ in the knowledge-base repo and re-run the generator."
+  },
+  "meta_description": "Filipa Carvalho is a Senior Research Scientist at the National Oceanography Centre (Southampton, UK) specialising in autonomous oceanography and the biological carbon pump. She uses underwater gliders and other autonomous platforms to study how physical forcing controls phytoplankton dynamics and carbon export in polar and subpolar seas. She is currently PI/Co-PI on four NERC-funded projects and leads the UK contribution to the NASA EXPORTS programme.",
+  "intro_html": [
+    "<p>I am a biological oceanographer investigating how physics regulates marine ecosystems and the biological carbon pump. My research focuses on biophysical interactions – the mechanisms through which physical forcing (mixing, stratification, circulation) shapes phytoplankton dynamics, particle formation, and carbon export efficiency. I use autonomous platforms, particularly ocean gliders, to observe these processes at high resolution across timescales from hours to seasons in remote and poorly sampled regions.</p>",
+    "<p>Much of my work examines polar and subpolar environments, where intense seasonality in light and mixing generates ephemeral but productive ecosystems with disproportionate influence on global carbon storage. Recent projects include wintertime observations in the Labrador Sea, where deep convection resets biological and biogeochemical conditions annually, and investigations of how mesoscale eddies mediate productivity and export in the Iceland Basin and on the Agulhas Bank. I also develop sensor integration and data processing pipelines that extend the scientific capability of glider platforms for ecosystem monitoring.</p>",
+    "<p>I serve as Co-Chair of OceanGliders, the Global Ocean Observing System (GOOS) network coordinating the scientific use of autonomous underwater vehicles worldwide. I am a Research Scientist at the National Oceanography Centre in Southampton, where I lead glider operations and contribute to programmes investigating the biological carbon pump, including NERC's BIO-Carbon and large grants studying the Labrador Sea and polar ocean dynamics.</p>"
+  ],
+  "sections": [
+    {
+      "id": "education",
+      "heading": "Education",
+      "rows": [
+        {
+          "years": "2017",
+          "detail_html": "<strong>PhD in Oceanography</strong>, Rutgers University, USA<br>Thesis: <em>\"Coupled physical and phytoplankton dynamics in coastal Antarctica\"</em> (Advisors: Prof. Oscar Schofield, Prof. Josh Kohut)",
+          "fields": {
+            "Year": "2017",
+            "Degree": "PhD in Oceanography",
+            "Institution": "Rutgers University, USA",
+            "Thesis": "Coupled physical and phytoplankton dynamics in coastal Antarctica",
+            "Advisors": "Prof. Oscar Schofield, Prof. Josh Kohut"
+          }
+        },
+        {
+          "years": "2009",
+          "detail_html": "<strong>MS in Integrated Ocean Studies (Specialized Studies, no thesis)</strong>, University of the Azores, Portugal",
+          "fields": {
+            "Year": "2009",
+            "Degree": "MS in Integrated Ocean Studies (Specialized Studies, no thesis)",
+            "Institution": "University of the Azores, Portugal",
+            "Thesis": "",
+            "Advisors": ""
+          }
+        },
+        {
+          "years": "2009",
+          "detail_html": "<strong>MS in Fisheries and Aquaculture</strong>, University of Lisbon, Portugal<br>Thesis: <em>\"Morphology of Fish Eggs: a comparative method for different salinities and preservatives\"</em> (Advisor: Dr. Luis Narciso)",
+          "fields": {
+            "Year": "2009",
+            "Degree": "MS in Fisheries and Aquaculture",
+            "Institution": "University of Lisbon, Portugal",
+            "Thesis": "Morphology of Fish Eggs: a comparative method for different salinities and preservatives",
+            "Advisors": "Dr. Luis Narciso"
+          }
+        },
+        {
+          "years": "2007",
+          "detail_html": "<strong>LIC (Pre-Bologna) in Environmental Marine Biology</strong>, University of Lisbon, Portugal",
+          "fields": {
+            "Year": "2007",
+            "Degree": "LIC (Pre-Bologna) in Environmental Marine Biology",
+            "Institution": "University of Lisbon, Portugal",
+            "Thesis": "",
+            "Advisors": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "appointments",
+      "heading": "Employment",
+      "rows": [
+        {
+          "years": "2022-present",
+          "detail_html": "<strong>Senior Research Scientist</strong>, National Oceanography Centre, Southampton, UK",
+          "fields": {
+            "Years": "2022 - present",
+            "Role": "Senior Research Scientist",
+            "Institution": "National Oceanography Centre, Southampton, UK"
+          }
+        },
+        {
+          "years": "2018-present",
+          "detail_html": "<strong>Visiting Scientist</strong>, University of Southampton, UK",
+          "fields": {
+            "Years": "2018 - present",
+            "Role": "Visiting Scientist",
+            "Institution": "University of Southampton, UK"
+          }
+        },
+        {
+          "years": "2021-2022",
+          "detail_html": "<strong>Research Scientist</strong>, National Oceanography Centre, Southampton, UK",
+          "fields": {
+            "Years": "2021 - 2022",
+            "Role": "Research Scientist",
+            "Institution": "National Oceanography Centre, Southampton, UK"
+          }
+        },
+        {
+          "years": "2017-2020",
+          "detail_html": "<strong>Postdoctoral Researcher in Biogeochemistry and Autonomous Vehicles</strong>, National Oceanography Centre, Southampton, UK",
+          "fields": {
+            "Years": "2017 - 2020",
+            "Role": "Postdoctoral Researcher in Biogeochemistry and Autonomous Vehicles",
+            "Institution": "National Oceanography Centre, Southampton, UK"
+          }
+        },
+        {
+          "years": "2017",
+          "detail_html": "<strong>Postdoctoral Research Associate</strong>, Rutgers University, USA",
+          "fields": {
+            "Years": "2017",
+            "Role": "Postdoctoral Research Associate",
+            "Institution": "Rutgers University, USA"
+          }
+        },
+        {
+          "years": "2011-2017",
+          "detail_html": "<strong>Teaching/Research Assistant</strong>, Rutgers University, USA",
+          "fields": {
+            "Years": "2011 - 2017",
+            "Role": "Teaching/Research Assistant",
+            "Institution": "Rutgers University, USA"
+          }
+        },
+        {
+          "years": "2009-2011",
+          "detail_html": "<strong>Research Assistant</strong>, University of Azores, Department of Oceanography and Fisheries, Portugal",
+          "fields": {
+            "Years": "2009 - 2011",
+            "Role": "Research Assistant",
+            "Institution": "University of Azores, Department of Oceanography and Fisheries, Portugal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "service_leadership",
+      "heading": "Professional activities and responsibilities",
+      "rows": [
+        {
+          "years": "2023-present",
+          "detail_html": "<strong>Co-Chair</strong>, OceanGliders (Global Ocean Observing System network)",
+          "fields": {
+            "Years": "2023 - present",
+            "Role": "Co-Chair, OceanGliders (Global Ocean Observing System network)"
+          }
+        },
+        {
+          "years": "2022-present",
+          "detail_html": "<strong>Scientific Advisory Group (SAG) member</strong>, NERC Future Marine Research Infrastructure (FMRI)",
+          "fields": {
+            "Years": "2022 - present",
+            "Role": "Scientific Advisory Group (SAG) member, NERC Future Marine Research Infrastructure (FMRI)"
+          }
+        },
+        {
+          "years": "2022-present",
+          "detail_html": "<strong>Steering Committee member</strong>, OceanGliders (GOOS network)",
+          "fields": {
+            "Years": "2022 - present",
+            "Role": "Steering Committee member, OceanGliders (GOOS network)"
+          }
+        },
+        {
+          "years": "2024-present",
+          "detail_html": "<strong>Scientific Advisory Committee member</strong>, Voice of the Ocean (VOTO, Sweden)",
+          "fields": {
+            "Years": "2024 - present",
+            "Role": "Scientific Advisory Committee member, Voice of the Ocean (VOTO, Sweden)"
+          }
+        },
+        {
+          "years": "2021-2023",
+          "detail_html": "<strong>Vice-Chair</strong>, OceanGliders Biogeochemistry Task Team",
+          "fields": {
+            "Years": "2021 - 2023",
+            "Role": "Vice-Chair, OceanGliders Biogeochemistry Task Team"
+          }
+        },
+        {
+          "years": "2021-present",
+          "detail_html": "<strong>Advisory Board panel member</strong>, Atlantic Observatory – Data and Monitoring Infrastructure project",
+          "fields": {
+            "Years": "2021 - present",
+            "Role": "Advisory Board panel member, Atlantic Observatory -- Data and Monitoring Infrastructure project"
+          }
+        },
+        {
+          "years": "2020-present",
+          "detail_html": "<strong>Member</strong>, UK Ocean Gliders Steering Group",
+          "fields": {
+            "Years": "2020 - present",
+            "Role": "Member, UK Ocean Gliders Steering Group"
+          }
+        },
+        {
+          "years": "2020-present",
+          "detail_html": "<strong>Invited member</strong>, OceanGliders best practices working group (bio-optics lead)",
+          "fields": {
+            "Years": "2020 - present",
+            "Role": "Invited member, OceanGliders best practices working group (bio-optics lead)"
+          }
+        },
+        {
+          "years": "2020-2023",
+          "detail_html": "<strong>ECR representative</strong>, NOC Research and Innovation Strategy Committee (RISC)",
+          "fields": {
+            "Years": "2020 - 2023",
+            "Role": "ECR representative, NOC Research and Innovation Strategy Committee (RISC)"
+          }
+        },
+        {
+          "years": "2021-2022",
+          "detail_html": "<strong>Invited member</strong>, Best Practices Working Group for OOI Biogeochemical Sensor Data (OCB/NSF)",
+          "fields": {
+            "Years": "2021 - 2022",
+            "Role": "Invited member, Best Practices Working Group for OOI Biogeochemical Sensor Data (OCB/NSF)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "awards",
+      "heading": "Awards and honors",
+      "rows": [
+        {
+          "years": "2018-2026",
+          "detail_html": "National Oceanography Centre awards: Team Award for the BIO-Carbon ALR data sprint (2026), Directorate Early Career Award for Science (2019), 'Over and Beyond' Contribution Bonus (5 awards, 2018-2024)",
+          "fields": {
+            "Year": "2018-2026",
+            "Award": "National Oceanography Centre awards: Team Award for the BIO-Carbon ALR data sprint (2026), Directorate Early Career Award for Science (2019), 'Over and Beyond' Contribution Bonus (5 awards, 2018-2024)"
+          }
+        },
+        {
+          "years": "2015",
+          "detail_html": "Ocean Sciences Meeting Student Travel Grant",
+          "fields": {
+            "Year": "2015",
+            "Award": "Ocean Sciences Meeting Student Travel Grant"
+          }
+        },
+        {
+          "years": "2015-2017",
+          "detail_html": "Teledyne Webb Research Graduate Research Fellowship",
+          "fields": {
+            "Years": "2015-2017",
+            "Funder / Grant": "Teledyne Webb Research",
+            "Project": "Graduate Research Fellowship",
+            "Role": "Fellow",
+            "Value": "—"
+          }
+        },
+        {
+          "years": "2011-2015",
+          "detail_html": "FCT (Portugal) Doctoral Fellowship",
+          "fields": {
+            "Years": "2011-2015",
+            "Funder / Grant": "FCT (Portugal)",
+            "Project": "Doctoral Fellowship",
+            "Role": "Fellow",
+            "Value": "~€100k"
+          }
+        },
+        {
+          "years": "2009",
+          "detail_html": "FLAD (Luso-American Foundation) Saldanha/Tenore Fellowship",
+          "fields": {
+            "Years": "2009",
+            "Funder / Grant": "FLAD (Luso-American Foundation)",
+            "Project": "Saldanha/Tenore Fellowship",
+            "Role": "Fellow",
+            "Value": "~€3.5k"
+          }
+        }
+      ]
+    },
+    {
+      "id": "invited_talks",
+      "heading": "Selected invited presentations and workshops",
+      "rows": [
+        {
+          "years": "2024",
+          "detail_html": "Invited speaker, Ocean Sciences Meeting, New Orleans, USA",
+          "fields": {
+            "Year": "2024",
+            "Type": "Invited speaker",
+            "Title / Topic": "Carbon export in the Labrador Sea",
+            "Venue / Event": "Ocean Sciences Meeting, New Orleans, USA"
+          }
+        },
+        {
+          "years": "2023",
+          "detail_html": "Invited speaker, BEPSII (Biogeochemical Exchange Processes at Sea-Ice Interfaces) Workshop, Cambridge, UK",
+          "fields": {
+            "Year": "2023",
+            "Type": "Invited speaker",
+            "Title / Topic": "—",
+            "Venue / Event": "BEPSII (Biogeochemical Exchange Processes at Sea-Ice Interfaces) Workshop, Cambridge, UK"
+          }
+        },
+        {
+          "years": "2022",
+          "detail_html": "Invited speaker, OceanGliders Best Practices Workshop, Monterey, USA",
+          "fields": {
+            "Year": "2022",
+            "Type": "Invited speaker",
+            "Title / Topic": "—",
+            "Venue / Event": "OceanGliders Best Practices Workshop, Monterey, USA"
+          }
+        },
+        {
+          "years": "2019",
+          "detail_html": "Invited seminar, Woods Hole Oceanographic Institution (WHOI), USA",
+          "fields": {
+            "Year": "2019",
+            "Type": "Invited seminar",
+            "Title / Topic": "—",
+            "Venue / Event": "Woods Hole Oceanographic Institution (WHOI), USA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "funding",
+      "heading": "Research funding summary",
+      "rows": [
+        {
+          "years": "2027-2030",
+          "detail_html": "NERC Pushing the Frontiers, <strong>DANCE</strong> (Co-lead (UK), 20% FTE). £1,003,074",
+          "fields": {
+            "Years": "2027-2030",
+            "Funder / Grant": "NERC Pushing the Frontiers",
+            "Project": "**DANCE**",
+            "Role": "Co-lead (UK), 20% FTE",
+            "Value": "£1,003,074"
+          }
+        },
+        {
+          "years": "2026-2027",
+          "detail_html": "FMRI, <strong>GLIDERS II:</strong> GLider-type Infrastructure and Digital Environment for Research Science (PI). £250k",
+          "fields": {
+            "Years": "2026-2027",
+            "Funder / Grant": "FMRI",
+            "Project": "**GLIDERS II:** GLider-type Infrastructure and Digital Environment for Research Science",
+            "Role": "PI",
+            "Value": "£250k"
+          }
+        },
+        {
+          "years": "2025-2026",
+          "detail_html": "UKRI, <strong>APART:</strong> Autonomous Platforms as A Research Tool (Co-I). £44k",
+          "fields": {
+            "Years": "2025-2026",
+            "Funder / Grant": "UKRI",
+            "Project": "**APART:** Autonomous Platforms as A Research Tool",
+            "Role": "Co-I",
+            "Value": "£44k"
+          }
+        },
+        {
+          "years": "2025-2026",
+          "detail_html": "Internal (RISC), <strong>GLIDERS I:</strong> GLider-type Infrastructure and Digital Environment for Research Science (PI). £167k",
+          "fields": {
+            "Years": "2025-2026",
+            "Funder / Grant": "Internal (RISC)",
+            "Project": "**GLIDERS I:** GLider-type Infrastructure and Digital Environment for Research Science",
+            "Role": "PI",
+            "Value": "£167k"
+          }
+        },
+        {
+          "years": "2024-2029",
+          "detail_html": "NERC Large Grant, <strong>POLOMINTS:</strong> Polar Ocean Mixing by Internal Tsunamis (Co-PI, WP2 lead). £3.7M",
+          "fields": {
+            "Years": "2024-2029",
+            "Funder / Grant": "NERC Large Grant",
+            "Project": "**POLOMINTS:** Polar Ocean Mixing by Internal Tsunamis",
+            "Role": "Co-PI, WP2 lead",
+            "Value": "£3.7M"
+          }
+        },
+        {
+          "years": "2023-2028",
+          "detail_html": "NERC Standard Grant, <strong>ReBELS:</strong> Resolving Biological Carbon Export in the Labrador Sea (PI, WP1-2 lead). £1.3M",
+          "fields": {
+            "Years": "2023-2028",
+            "Funder / Grant": "NERC Standard Grant",
+            "Project": "**ReBELS:** Resolving Biological Carbon Export in the Labrador Sea",
+            "Role": "PI, WP1-2 lead",
+            "Value": "£1.3M"
+          }
+        },
+        {
+          "years": "2023-2028",
+          "detail_html": "HORIZON-RIA, <strong>SEAO2-CDR:</strong> Strategies for the Evaluation and Assessment of Ocean-based Carbon Dioxide Removal (Co-I). €6.9M",
+          "fields": {
+            "Years": "2023-2028",
+            "Funder / Grant": "HORIZON-RIA",
+            "Project": "**SEAO2-CDR:** Strategies for the Evaluation and Assessment of Ocean-based Carbon Dioxide Removal",
+            "Role": "Co-I",
+            "Value": "€6.9M"
+          }
+        },
+        {
+          "years": "2023-2026",
+          "detail_html": "NERC BIO-Carbon Programme, <strong>PARTITRICS:</strong> PARTIcle Transformation and Respiration Influence on ocean Carbon Storage (Co-PI, WP1 lead). £2.3M",
+          "fields": {
+            "Years": "2023-2026",
+            "Funder / Grant": "NERC BIO-Carbon Programme",
+            "Project": "**PARTITRICS:** PARTIcle Transformation and Respiration Influence on ocean Carbon Storage",
+            "Role": "Co-PI, WP1 lead",
+            "Value": "£2.3M"
+          }
+        },
+        {
+          "years": "2023-2026",
+          "detail_html": "NERC BIO-Carbon Programme, <strong>IDAPro:</strong> Integrating Drivers of Atlantic Productivity (Co-PI, NOC PI). £2.3M",
+          "fields": {
+            "Years": "2023-2026",
+            "Funder / Grant": "NERC BIO-Carbon Programme",
+            "Project": "**IDAPro:** Integrating Drivers of Atlantic Productivity",
+            "Role": "Co-PI, NOC PI",
+            "Value": "£2.3M"
+          }
+        },
+        {
+          "years": "2021-2024",
+          "detail_html": "H2020, <strong>TechOceans:</strong> Technologies for Ocean Sensing (Co-I). €8.9M",
+          "fields": {
+            "Years": "2021-2024",
+            "Funder / Grant": "H2020",
+            "Project": "**TechOceans:** Technologies for Ocean Sensing",
+            "Role": "Co-I",
+            "Value": "€8.9M"
+          }
+        },
+        {
+          "years": "2018-2020",
+          "detail_html": "NERC GPSF, <strong>BIARRITZ:</strong> Bridging International Activity and Related Research Into the Twilight Zone (Res Co-I). £83.4k",
+          "fields": {
+            "Years": "2018-2020",
+            "Funder / Grant": "NERC GPSF",
+            "Project": "**BIARRITZ:** Bridging International Activity and Related Research Into the Twilight Zone",
+            "Role": "Res Co-I",
+            "Value": "£83.4k"
+          }
+        },
+        {
+          "years": "2015-2017",
+          "detail_html": "Teledyne Webb Research, Graduate Research Fellowship (Fellow)",
+          "fields": {
+            "Years": "2015-2017",
+            "Funder / Grant": "Teledyne Webb Research",
+            "Project": "Graduate Research Fellowship",
+            "Role": "Fellow",
+            "Value": "—"
+          }
+        },
+        {
+          "years": "2011-2015",
+          "detail_html": "FCT (Portugal), Doctoral Fellowship (Fellow). ~€100k",
+          "fields": {
+            "Years": "2011-2015",
+            "Funder / Grant": "FCT (Portugal)",
+            "Project": "Doctoral Fellowship",
+            "Role": "Fellow",
+            "Value": "~€100k"
+          }
+        },
+        {
+          "years": "2009",
+          "detail_html": "FLAD (Luso-American Foundation), Saldanha/Tenore Fellowship (Fellow). ~€3.5k",
+          "fields": {
+            "Years": "2009",
+            "Funder / Grant": "FLAD (Luso-American Foundation)",
+            "Project": "Saldanha/Tenore Fellowship",
+            "Role": "Fellow",
+            "Value": "~€3.5k"
+          }
+        }
+      ]
+    }
+  ]
+}
