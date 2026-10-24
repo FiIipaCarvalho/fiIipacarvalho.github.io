@@ -138,6 +138,7 @@
               "date_display": "April 2021",
               "location": "Porcupine Abyssal Plain, North Atlantic",
               "role": "",
+              "stations": [{"name": "PAP-SO", "coords": "49.00°N, 16.50°W"}],
               "description": "Biogeochemical observations and glider deployments at the PAP sustained observatory.",
               "photos_album": "pap-dy130-2021"
             },
@@ -149,7 +150,7 @@
               "date_display": "April – May 2021",
               "location": "Porcupine Abyssal Plain, North Atlantic",
               "gliders": ["Dolomite (unit_305)", "SG-237","SG-219"],
-              "glider_data_file": "glider_tracks_gocart.json",
+              "glider_data_file": "glider_tracks_exports.json",
               "description": "Three gliders (two Seagliders and one NOC Slocum, Dolomite, jointly funded by GOCART and iFADO) were deployed from DY130 as part of a collaboration between the NASA EXPORTS and ERC GOCART projects, to survey eddies ahead of the main EXPORTS cruise and evaluate particle export dynamics inside an eddy.",
               "photos_album": "pap-dy130-2022"
             }

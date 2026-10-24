@@ -181,6 +181,13 @@ const POINT_LOCATIONS = {
         "lat": -54.0814,
         "lon": -89.6652
     },
+    "PAP-SO": {
+        "project": "PAP Observatory",
+        "link": "",
+        "anchor": "project-pap",
+        "lat": 49.0,
+        "lon": -16.5
+    },
     "P3 Mooring": {
         "project": "COMICS",
         "link": "projects/comics.html",
@@ -211,7 +218,8 @@ const PROJECT_COLORS = {
     "ReBELS": ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa"],
     "BIO": ["#064e3b", "#047857", "#10b981", "#34d399"],
     "CUSTARD": ["#7c2d12", "#c2410c", "#f97316", "#fb923c"],
-    "iFADO": ["#312e81", "#818cf8"]
+    "iFADO": ["#312e81", "#818cf8"],
+    "EXPORTS": ["#0e7490", "#06b6d4", "#155e75"]
 };
 
 // Global variables
@@ -312,7 +320,7 @@ function drawRegions() {
 
 // Load glider data from multiple project files
 async function loadAllGliderData() {
-    const projects = ['rebels', 'bio', 'custard', 'ifado'];
+    const projects = ['rebels', 'bio', 'custard', 'ifado', 'exports'];
     
     try {
         const promises = projects.map(project => 
