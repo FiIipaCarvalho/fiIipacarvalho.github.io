@@ -6,8 +6,10 @@ written there the source OG1 file is no longer needed (it can move or be archive
 Positions: GPS surface fixes (LATITUDE_GPS/LONGITUDE_GPS/TIME_GPS) when the file has them,
 otherwise LATITUDE/LONGITUDE/TIME. If the input is a directory instead of a file, it is
 read as Slocum .mlg text logs and their "GPS Location" lines are used (for missions with no
-full OG1 file yet, e.g. iFADO Leg 1 Aisling na Mara, raw/logs/). Fixes that jump more than --max-jump degrees from the
-previous kept fix are dropped, then the track is thinned to at most --max-points points.
+full OG1 file yet, e.g. iFADO Leg 1 Aisling na Mara, raw/logs/). GPS variables that are present
+but all empty count as absent. Fixes that would need a speed above --max-speed (m/s) from the
+previous kept fix are dropped (bad fixes, not long gaps), then the track is thinned to at most
+--max-points points.
 
 A track with the same id is replaced; all other tracks in the output file are kept.
 
@@ -31,7 +33,7 @@ import xarray as xr
 
 
 def positions(ds):
-    if "LATITUDE_GPS" in ds and "LONGITUDE_GPS" in ds and "TIME_GPS" in ds:
+    if all(v in ds for v in ("LATITUDE_GPS", "LONGITUDE_GPS", "TIME_GPS")) and np.isfinite(ds.LATITUDE_GPS.values).any():
         lat, lon, t = ds.LATITUDE_GPS.values, ds.LONGITUDE_GPS.values, ds.TIME_GPS.values
         kind = "GPS fixes"
     else:
@@ -40,6 +42,12 @@ def positions(ds):
     ok = np.isfinite(lat) & np.isfinite(lon) & ~np.isnat(t)
     order = np.argsort(t[ok], kind="stable")
     return t[ok][order], lat[ok][order], lon[ok][order], kind
+
+
+def haversine_km(la1, lo1, la2, lo2):
+    p = np.radians
+    h = np.sin(p(la2 - la1) / 2) ** 2 + np.cos(p(la1)) * np.cos(p(la2)) * np.sin(p(lo2 - lo1) / 2) ** 2
+    return 2 * 6371 * np.arcsin(np.sqrt(h))
 
 
 def mlg_positions(logdir):
@@ -80,7 +88,7 @@ def main():
     ap.add_argument("--start")
     ap.add_argument("--end")
     ap.add_argument("--max-points", type=int, default=500)
-    ap.add_argument("--max-jump", type=float, default=0.5)
+    ap.add_argument("--max-speed", type=float, default=3.0)
     a = ap.parse_args()
 
     if os.path.isdir(a.og1):
@@ -98,10 +106,12 @@ def main():
     if not len(t):
         raise SystemExit("no valid positions in range")
 
+    tsec = (t - t[0]).astype("timedelta64[ms]").astype(float) / 1000
     keep = [0]
     for i in range(1, len(t)):
         j = keep[-1]
-        if abs(lat[i] - lat[j]) < a.max_jump and abs(lon[i] - lon[j]) < a.max_jump:
+        km = haversine_km(lat[j], lon[j], lat[i], lon[i])
+        if km * 1000 <= a.max_speed * max(tsec[i] - tsec[j], 1.0) + 1000:  # 1 km slack for GPS scatter
             keep.append(i)
     t, lat, lon = t[keep], lat[keep], lon[keep]
 

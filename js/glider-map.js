@@ -98,6 +98,18 @@ const REGIONS = {
             [-12.5, 52.0]
         ]]
     },
+    "EXPORTS 2021": {
+        "project": "EXPORTS",
+        "link": "",
+        "anchor": "project-pap",
+        "bounds": [[
+            [-20.6, 49.9],
+            [-13.4, 49.9],
+            [-13.4, 47.1],
+            [-20.6, 47.1],
+            [-20.6, 49.9]
+        ]]
+    },
     "North Atlantic": {
         "project": "NA-VICE",
         "link": "",
@@ -210,7 +222,8 @@ const REGION_COLORS = {
     "PAL-LTER":        "#0e7490",
     "POLOMINTS":       "#65a30d",
     "COMICS":          "#b45309",
-    "iFADO":           "#4f46e5"
+    "iFADO":           "#4f46e5",
+    "EXPORTS":         "#0e7490"
 };
 
 // Project color schemes

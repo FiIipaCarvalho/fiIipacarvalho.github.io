@@ -17,7 +17,7 @@
               "type": "autonomy",
               "label": "ReBELS 2 Gliders",
               "date": "2026-04-03",
-              "date_display": "April 2026",
+              "date_display": "April – September 2026",
               "location": "Labrador Sea",
               "gliders": ["Stella_713"],
               "glider_data_file": "glider_tracks_rebels.json",
