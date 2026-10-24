@@ -112,6 +112,7 @@
               "date_display": "December 2022 – 2023",
               "location": "European Atlantic Arc, Ireland to the Canary Islands",
               "gliders": ["Aisling na Mara (unit_952)", "SG152", "P302"],
+              "glider_data_file": "glider_tracks_ifado.json",
               "description": "Multi-platform glider relay over more than 3,000 km of the European Atlantic, from SW Ireland to Gran Canaria, as the final demonstration of the iFADO project. Three gliders (a Marine Institute Slocum, a CSCS Seaglider on the NOC leg, and a PLOCAN Seaglider) flew four legs with CTD, oxygen and bio-optical sensors, crossing fixed-point observatories including PAP-SO and ESTOC.",
               "photos_album": ""
             }

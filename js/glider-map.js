@@ -93,8 +93,8 @@ const REGIONS = {
             [-13.5, 28.0],
             [-16.5, 27.5],
             [-14.0, 37.0],
-            [-12.5, 43.5],
-            [-17.0, 48.5],
+            [-16.5, 43.0],
+            [-17.5, 48.5],
             [-12.5, 52.0]
         ]]
     },
@@ -210,7 +210,8 @@ const REGION_COLORS = {
 const PROJECT_COLORS = {
     "ReBELS": ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa"],
     "BIO": ["#064e3b", "#047857", "#10b981", "#34d399"],
-    "CUSTARD": ["#7c2d12", "#c2410c", "#f97316", "#fb923c"]
+    "CUSTARD": ["#7c2d12", "#c2410c", "#f97316", "#fb923c"],
+    "iFADO": ["#312e81", "#818cf8"]
 };
 
 // Global variables
@@ -311,7 +312,7 @@ function drawRegions() {
 
 // Load glider data from multiple project files
 async function loadAllGliderData() {
-    const projects = ['rebels', 'bio', 'custard'];
+    const projects = ['rebels', 'bio', 'custard', 'ifado'];
     
     try {
         const promises = projects.map(project => 
