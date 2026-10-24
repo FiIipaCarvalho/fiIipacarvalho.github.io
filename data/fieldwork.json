@@ -100,11 +100,32 @@
         },
 
         {
+          "id": "ifado",
+          "name": "iFADO",
+          "link": "",
+          "activities": [
+            {
+              "id": "ifado-paanoramic-2022",
+              "type": "autonomy",
+              "label": "PAAnoramic Glider Relay",
+              "date": "2022-12-09",
+              "date_display": "December 2022 – 2023",
+              "location": "European Atlantic Arc, Ireland to the Canary Islands",
+              "gliders": ["Aisling na Mara (unit_952)", "SG152", "P302"],
+              "description": "Multi-platform glider relay over more than 3,000 km of the European Atlantic, from SW Ireland to Gran Canaria, as the final demonstration of the iFADO project. Three gliders (a Marine Institute Slocum, a CSCS Seaglider on the NOC leg, and a PLOCAN Seaglider) flew four legs with CTD, oxygen and bio-optical sensors, crossing fixed-point observatories including PAP-SO and ESTOC.",
+              "photos_album": ""
+            }
+          ]
+        },
+
+        {
           "id": "pap",
-          "name": "PAP Observatory / GOCART / EXPORTS",
+          "name": "PAP Observatory",
           "link": "",
           "partners": [
-            { "name": "GOCART", "link": "projects/gocart.html" }
+            { "name": "GOCART", "link": "projects/gocart.html" },
+            { "name": "EXPORTS", "link": "" },
+            { "name": "iFADO", "link": "" }
           ],
           "activities": [
             {
@@ -128,7 +149,7 @@
               "location": "Porcupine Abyssal Plain, North Atlantic",
               "gliders": ["Dolomite (unit_305)", "SG-237","SG-219"],
               "glider_data_file": "glider_tracks_gocart.json",
-              "description": "Thre glider were deployed as part of a collaboration between NASA EXPORTS and ERC GOCART projects to survey eddies ahead of the main cruise, to eventually evaluate particle export dynamics inside an eddy.",
+              "description": "Three gliders (two Seagliders and one NOC Slocum, Dolomite, jointly funded by GOCART and iFADO) were deployed from DY130 as part of a collaboration between the NASA EXPORTS and ERC GOCART projects, to survey eddies ahead of the main EXPORTS cruise and evaluate particle export dynamics inside an eddy.",
               "photos_album": "pap-dy130-2022"
             }
           ]

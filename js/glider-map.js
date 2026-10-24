@@ -81,6 +81,23 @@ const REGIONS = {
             [-17.5, 49.8333]
         ]]
     },
+    "European Atlantic Arc": {
+        "project": "iFADO",
+        "link": "",
+        "anchor": "project-ifado",
+        "bounds": [[
+            [-12.5, 52.0],
+            [-9.0, 51.5],
+            [-8.5, 43.5],
+            [-8.5, 37.0],
+            [-13.5, 28.0],
+            [-16.5, 27.5],
+            [-14.0, 37.0],
+            [-12.5, 43.5],
+            [-17.0, 48.5],
+            [-12.5, 52.0]
+        ]]
+    },
     "North Atlantic": {
         "project": "NA-VICE",
         "link": "",
@@ -185,7 +202,8 @@ const REGION_COLORS = {
     "NA-VICE":         "#db2777",
     "PAL-LTER":        "#0e7490",
     "POLOMINTS":       "#65a30d",
-    "COMICS":          "#b45309"
+    "COMICS":          "#b45309",
+    "iFADO":           "#4f46e5"
 };
 
 // Project color schemes
