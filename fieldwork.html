@@ -6,7 +6,7 @@
     <meta name="description" content="Research cruises and field campaigns combining ship-based measurements with ocean glider deployments across polar, subpolar, and temperate ocean regions.">
     <title>Fieldwork | Dr. Filipa Carvalho</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261026">
+    <link rel="stylesheet" href="css/style.css?v=20261026b">
     
     <!-- Leaflet CSS for map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -92,6 +92,50 @@
             font-size: 0.9rem;
         }
         
+        .legend-project {
+            background: none;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            padding: 0.2rem 0.4rem;
+            cursor: pointer;
+            color: inherit;
+            text-align: left;
+        }
+
+        .legend-project:hover,
+        .legend-project:focus {
+            border-color: var(--border-color);
+        }
+
+        .legend-swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #999;
+            flex-shrink: 0;
+        }
+
+        .legend-box {
+            width: 14px;
+            height: 10px;
+            border: 2px dashed #888;
+            flex-shrink: 0;
+        }
+
+        .legend-keys {
+            margin-top: var(--spacing-sm);
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid var(--border-color);
+        }
+
         .legend-color {
             width: 20px;
             height: 3px;
@@ -175,8 +219,8 @@
     <script src="js/navigation.js"></script>
     
     <!-- Map JS -->
-    <script src="js/glider-map.js?v=20261026"></script>
+    <script src="js/glider-map.js?v=20261026b"></script>
     <!-- Fieldwork page JS -->
-    <script src="js/fieldwork-page.js?v=20261026"></script>
+    <script src="js/fieldwork-page.js?v=20261026b"></script>
 </body>
 </html>

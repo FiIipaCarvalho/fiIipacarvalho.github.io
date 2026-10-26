@@ -219,7 +219,7 @@ const REGION_COLORS = {
     "SeAFAReRS":       "#dc2626",
     "MESOHUX":         "#6b7280",
     "NA-VICE":         "#db2777",
-    "PAL-LTER":        "#0e7490",
+    "PAL-LTER":        "#ca8a04",
     "POLOMINTS":       "#65a30d",
     "COMICS":          "#b45309",
     "iFADO":           "#4f46e5",
@@ -243,6 +243,15 @@ let trackLayers = L.layerGroup();
 let markerLayers = L.layerGroup();
 let trackIndex = {};   // track name -> polyline (for focusing from fieldwork cards)
 let regionIndex = {};  // region or point name -> [layers]
+let projectLayers = {}; // legend label -> [layers], for the legend and its click-to-fly
+
+// Track files use short project names; the legend uses the region names
+const TRACK_PROJECT_LABEL = { "BIO": "BIO-CARBON" };
+
+function registerProjectLayer(project, layer) {
+    const label = TRACK_PROJECT_LABEL[project] || project;
+    (projectLayers[label] = projectLayers[label] || []).push(layer);
+}
 let activeProjectFilter = 'all';
 let activeYearFilter = 'all';
 
@@ -265,6 +274,7 @@ function initMap() {
     
     drawRegions();
     drawPointMarkers();
+    renderLegend();
     loadAllGliderData();
 }
 
@@ -297,6 +307,7 @@ function drawPointMarkers() {
 
         marker.addTo(regionLayers);
         regionIndex[regionName] = [marker];
+        registerProjectLayer(data.project, marker);
     });
 }
 
@@ -327,9 +338,11 @@ function drawRegions() {
         `;
         regionIndex[regionName] = regionData.bounds.map(ring => {
             const latlngs = ring.map(coord => [coord[1], coord[0]]);
-            return L.polygon([latlngs], polyOptions)
+            const polygon = L.polygon([latlngs], polyOptions)
                 .bindPopup(popupContent)
                 .addTo(regionLayers);
+            registerProjectLayer(regionData.project, polygon);
+            return polygon;
         });
     });
 }
@@ -357,6 +370,7 @@ async function loadAllGliderData() {
         console.log(`Loaded ${gliderTracks.length} tracks from ${projects.length} projects`);
         
         drawTracks(gliderTracks);
+        renderLegend();
     } catch (error) {
         console.error('Error loading glider data:', error);
         document.getElementById('glider-map').innerHTML += 
@@ -372,6 +386,9 @@ function drawTracks(tracks) {
     trackLayers.clearLayers();
     markerLayers.clearLayers();
     trackIndex = {};
+    Object.keys(projectLayers).forEach(k => {
+        projectLayers[k] = projectLayers[k].filter(l => !(l instanceof L.Polyline) || l instanceof L.Polygon);
+    });
     
     const projectGroups = {};
     tracks.forEach(track => {
@@ -407,6 +424,7 @@ function drawTracks(tracks) {
             
             polyline.addTo(trackLayers);
             trackIndex[track.name] = polyline;
+            registerProjectLayer(track.project, polyline);
             
             if (latlngs.length > 0) {
                 L.circleMarker(latlngs[0], {
@@ -431,6 +449,40 @@ function drawTracks(tracks) {
             }
         });
     });
+}
+
+// Legend below the map: one swatch per project drawn, click to fly there
+function renderLegend() {
+    let el = document.getElementById('map-legend');
+    if (!el) {
+        const mapEl = document.getElementById('glider-map');
+        if (!mapEl) return;
+        el = document.createElement('div');
+        el.id = 'map-legend';
+        el.className = 'map-legend';
+        mapEl.insertAdjacentElement('afterend', el);
+    }
+    const colour = label => REGION_COLORS[label]
+        || (PROJECT_COLORS[label] || PROJECT_COLORS[Object.keys(TRACK_PROJECT_LABEL).find(k => TRACK_PROJECT_LABEL[k] === label)] || ['#666666'])[0];
+    const items = Object.keys(projectLayers).sort((a, b) => a.localeCompare(b)).map(label => `
+        <button type="button" class="legend-item legend-project" data-project="${label}" title="Show ${label} on the map">
+            <span class="legend-swatch" style="background:${colour(label)}"></span>${label}
+        </button>`).join('');
+    el.innerHTML = `
+        <h3>Projects</h3>
+        <div class="legend-content">${items}</div>
+        <div class="legend-content legend-keys">
+            <span class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Glider start</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Glider end</span>
+            <span class="legend-item"><span class="legend-box"></span>Study region</span>
+        </div>`;
+    el.onclick = e => {
+        const btn = e.target.closest('.legend-project');
+        if (!btn) return;
+        const bounds = L.latLngBounds([]);
+        (projectLayers[btn.dataset.project] || []).forEach(l => l.getBounds ? bounds.extend(l.getBounds()) : bounds.extend(l.getLatLng()));
+        if (bounds.isValid()) map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 7, duration: 1.2 });
+    };
 }
 
 // "49.00°N, 16.50°W" -> [49.0, -16.5]
