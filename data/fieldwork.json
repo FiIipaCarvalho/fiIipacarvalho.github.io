@@ -29,7 +29,7 @@
               "type": "cruise",
               "label": "ReBELS 2 Cruise",
               "cruise_id": "JC282",
-              "date": "2025-08-15",
+              "date": "2025-08-09",
               "date_display": "August 2025",
               "location": "Labrador Sea",
               "role": "Chief Scientist",
@@ -40,10 +40,10 @@
               "id": "rebels1-gliders-2024",
               "type": "autonomy",
               "label": "ReBELS 1 Gliders",
-              "date": "2024-11-15",
+              "date": "2025-03-23",
               "date_display": "March - August 2025",
               "location": "Labrador Sea",
-              "gliders": ["Growler_677", "Zephyr_675", "Stella_678", "9JA_699"],
+              "gliders": ["Growler_677", "Zephyr_675", "Stella_678", "9JA_699", "OMG-1_676"],
               "glider_data_file": "glider_tracks_rebels.json",
               "description": "",
               "photos_album": ""
@@ -53,7 +53,7 @@
               "type": "cruise",
               "label": "ReBELS 1 Cruise",
               "cruise_id": "JC268",
-              "date": "2024-08-10",
+              "date": "2024-08-15",
               "date_display": "August 2024",
               "location": "Labrador Sea",
               "role": "Chief Scientist",
@@ -334,6 +334,7 @@
               "date_display": "October 2017 – February 2018",
               "location": "South Georgia, Southern Ocean",
               "role": "Postdoctoral Researcher",
+              "gliders": ["Churchill (unit_398)", "Pancake (unit_404)", "SG-542 (Sea Biscuit)"],
               "description": "Two NOC Slocum gliders (Churchill and Pancake) and a SOCCO Seaglider (SG-542) deployed in support of COMICS, surveying the area NW of South Georgia through the transition from winter to spring and the onset of the phytoplankton bloom.",
               "photos_album": "gocart1-2017"
             }
@@ -381,8 +382,21 @@
               "date_display": "February – June 2018",
               "location": "Benguela Upwelling Region, South Atlantic",
               "role": "Postdoctoral Researcher",
+              "gliders": ["Doombar (unit_405)", "Grease (unit_409)"],
               "description": "Two Slocum gliders (Doombar and Grease) deployed from RV Mirabilis ahead of COMICS 2. Glider observations of phytoplankton dynamics, oxygen variability and productivity in the Benguela upwelling system.",
               "photos_album": "gocart2-2018"
+            },
+            {
+              "id": "hakemom1802-2018",
+              "type": "cruise",
+              "label": "Hake Survey (MOM1802)",
+              "cruise_id": "MOM1802",
+              "date": "2018-02-03",
+              "date_display": "February 2018",
+              "location": "Benguela Current, Namibia",
+              "role": "Glider lead",
+              "description": "Second leg of the 2018 Namibian hake survey on RV Mirabilis. Deployed the two GOCART Benguela gliders (Doombar and Grease) by small boat, with CTD calibration casts and fish sampling.",
+              "photos_album": ""
             }
           ]
         },
