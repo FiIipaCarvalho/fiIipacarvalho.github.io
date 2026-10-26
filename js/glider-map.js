@@ -35,6 +35,8 @@ const REGIONS = {
     },
     "Benguela": {
         "project": "GOCART",
+        "legend": "COMICS 2 / GOCART 2 (Benguela, 2018)",
+        "color": "#b45309",
         "link": "projects/gocart.html",
         "anchor": "project-gocart",
         "bounds": [[
@@ -47,6 +49,7 @@ const REGIONS = {
     },
     "South Georgia": {
         "project": "GOCART",
+        "legend": "COMICS 1 / GOCART 1 (South Georgia, 2017)",
         "link": "projects/gocart.html",
         "anchor": "project-gocart",
         "bounds": [[
@@ -202,6 +205,8 @@ const POINT_LOCATIONS = {
     },
     "P3 Mooring": {
         "project": "COMICS",
+        "legend": "COMICS 1 / GOCART 1 (South Georgia, 2017)",
+        "color": "#9333ea",
         "link": "projects/comics.html",
         "anchor": "project-comics-so",
         "lat": -52.40,
@@ -244,12 +249,14 @@ let markerLayers = L.layerGroup();
 let trackIndex = {};   // track name -> polyline (for focusing from fieldwork cards)
 let regionIndex = {};  // region or point name -> [layers]
 let projectLayers = {}; // legend label -> [layers], for the legend and its click-to-fly
+let legendColors = {};  // legend label -> colour, when a region overrides its project colour
 
 // Track files use short project names; the legend uses the region names
 const TRACK_PROJECT_LABEL = { "BIO": "BIO-CARBON" };
 
-function registerProjectLayer(project, layer) {
-    const label = TRACK_PROJECT_LABEL[project] || project;
+function registerProjectLayer(project, layer, legend, color) {
+    const label = legend || TRACK_PROJECT_LABEL[project] || project;
+    if (color) legendColors[label] = color;
     (projectLayers[label] = projectLayers[label] || []).push(layer);
 }
 let activeProjectFilter = 'all';
@@ -281,7 +288,7 @@ function initMap() {
 // Draw single-point location markers
 function drawPointMarkers() {
     Object.entries(POINT_LOCATIONS).forEach(([regionName, data]) => {
-        const color = REGION_COLORS[data.project] || '#0066cc';
+        const color = data.color || REGION_COLORS[data.project] || '#0066cc';
         const marker = L.circleMarker([data.lat, data.lon], {
             radius: 8,
             color: color,
@@ -307,14 +314,14 @@ function drawPointMarkers() {
 
         marker.addTo(regionLayers);
         regionIndex[regionName] = [marker];
-        registerProjectLayer(data.project, marker);
+        registerProjectLayer(data.project, marker, data.legend, data.color);
     });
 }
 
 // Draw regional boundary boxes
 function drawRegions() {
     Object.entries(REGIONS).forEach(([regionName, regionData]) => {
-        const color = REGION_COLORS[regionData.project] || '#0066cc';
+        const color = regionData.color || REGION_COLORS[regionData.project] || '#0066cc';
         const polyOptions = {
             color: color,
             weight: 2,
@@ -341,7 +348,7 @@ function drawRegions() {
             const polygon = L.polygon([latlngs], polyOptions)
                 .bindPopup(popupContent)
                 .addTo(regionLayers);
-            registerProjectLayer(regionData.project, polygon);
+            registerProjectLayer(regionData.project, polygon, regionData.legend, regionData.color);
             return polygon;
         });
     });
@@ -462,7 +469,7 @@ function renderLegend() {
         el.className = 'map-legend';
         mapEl.insertAdjacentElement('afterend', el);
     }
-    const colour = label => REGION_COLORS[label]
+    const colour = label => legendColors[label] || REGION_COLORS[label]
         || (PROJECT_COLORS[label] || PROJECT_COLORS[Object.keys(TRACK_PROJECT_LABEL).find(k => TRACK_PROJECT_LABEL[k] === label)] || ['#666666'])[0];
     const items = Object.keys(projectLayers).sort((a, b) => a.localeCompare(b)).map(label => `
         <button type="button" class="legend-item legend-project" data-project="${label}" title="Show ${label} on the map">
