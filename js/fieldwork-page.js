@@ -7,6 +7,9 @@ const TYPE_LABELS = {
     mooring_site:  'Mooring Site'
 };
 
+// activity id -> { activity, projectId }, used to focus the map when a card title is clicked
+const ACTIVITY_INDEX = {};
+
 async function initFieldworkPage() {
     const container = document.getElementById('fieldwork-activities');
     if (!container) return;
@@ -15,6 +18,7 @@ async function initFieldworkPage() {
         const response = await fetch('data/fieldwork.json');
         const data = await response.json();
         container.innerHTML = renderRegions(data.regions);
+        container.addEventListener('click', onCardTitleClick);
     } catch (err) {
         console.error('Error loading fieldwork data:', err);
         container.innerHTML = '<p class="text-muted">Unable to load fieldwork data.</p>';
@@ -49,7 +53,7 @@ function renderRegions(regions) {
                 ? `<p class="fieldwork-collaborators">In collaboration with: ${project.collaborators.map(c => c.link ? `<a href="${c.link}">${c.name}</a>` : c.name).join(', ')}</p>`
                 : '';
 
-            const cards = acts.map(renderCard).join('');
+            const cards = acts.map(a => renderCard(a, project.id)).join('');
             return `<h3 class="fieldwork-project-title" id="project-${project.id}">${heading}</h3>${collaboratorsHtml}${cards}`;
         }).join('');
 
@@ -57,8 +61,22 @@ function renderRegions(regions) {
     }).join('');
 }
 
-function renderCard(activity) {
+// Clicking a card title scrolls up to the map and flies to that activity
+function onCardTitleClick(e) {
+    const link = e.target.closest('.map-focus-link');
+    if (!link) return;
+    e.preventDefault();
+    const entry = ACTIVITY_INDEX[link.dataset.activityId];
+    const mapEl = document.getElementById('glider-map');
+    if (mapEl) mapEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (entry && typeof focusMapOn === 'function') {
+        setTimeout(() => focusMapOn(entry.activity, entry.projectId), 400);
+    }
+}
+
+function renderCard(activity, projectId) {
     const typeLabel = TYPE_LABELS[activity.type] || activity.type;
+    ACTIVITY_INDEX[activity.id] = { activity, projectId };
 
     let title = activity.label;
     if (activity.cruise_id) title += ` — ${activity.cruise_id}`;
@@ -86,7 +104,7 @@ function renderCard(activity) {
     return `
 <div class="expedition-card expedition-card--${activity.type}">
     <div class="expedition-header">
-        <h3>${title}</h3>
+        <h3><a href="#glider-map" class="map-focus-link" data-activity-id="${activity.id}" title="Show on map">${title}</a></h3>
         <span class="expedition-date">${activity.date_display}</span>
     </div>
     <span class="activity-type-tag ${activity.type}-tag">${typeLabel}</span>

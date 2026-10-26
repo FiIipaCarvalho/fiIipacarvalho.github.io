@@ -2475,3 +2475,19 @@ a:hover {
     color: #0052a3 !important;
     text-decoration: underline;
 }
+
+/* Fieldwork card titles link to the map (js/fieldwork-page.js) */
+.map-focus-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.map-focus-link:hover,
+.map-focus-link:focus {
+    text-decoration: underline;
+}
+.map-focus-link::after {
+    content: " \2316";
+    font-size: 0.8em;
+    opacity: 0.5;
+}

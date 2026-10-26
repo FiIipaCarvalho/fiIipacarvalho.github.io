@@ -241,6 +241,8 @@ let gliderTracks = [];
 let regionLayers = L.layerGroup();
 let trackLayers = L.layerGroup();
 let markerLayers = L.layerGroup();
+let trackIndex = {};   // track name -> polyline (for focusing from fieldwork cards)
+let regionIndex = {};  // region or point name -> [layers]
 let activeProjectFilter = 'all';
 let activeYearFilter = 'all';
 
@@ -294,6 +296,7 @@ function drawPointMarkers() {
         `);
 
         marker.addTo(regionLayers);
+        regionIndex[regionName] = [marker];
     });
 }
 
@@ -322,9 +325,9 @@ function drawRegions() {
                 ${linkHtml}
             </div>
         `;
-        regionData.bounds.forEach(ring => {
+        regionIndex[regionName] = regionData.bounds.map(ring => {
             const latlngs = ring.map(coord => [coord[1], coord[0]]);
-            L.polygon([latlngs], polyOptions)
+            return L.polygon([latlngs], polyOptions)
                 .bindPopup(popupContent)
                 .addTo(regionLayers);
         });
@@ -368,6 +371,7 @@ async function loadAllGliderData() {
 function drawTracks(tracks) {
     trackLayers.clearLayers();
     markerLayers.clearLayers();
+    trackIndex = {};
     
     const projectGroups = {};
     tracks.forEach(track => {
@@ -402,6 +406,7 @@ function drawTracks(tracks) {
             `);
             
             polyline.addTo(trackLayers);
+            trackIndex[track.name] = polyline;
             
             if (latlngs.length > 0) {
                 L.circleMarker(latlngs[0], {
@@ -426,6 +431,57 @@ function drawTracks(tracks) {
             }
         });
     });
+}
+
+// "49.00°N, 16.50°W" -> [49.0, -16.5]
+function parseCoords(text) {
+    const m = (text || '').match(/([\d.]+)\s*°?\s*([NS])\s*,\s*([\d.]+)\s*°?\s*([EW])/i);
+    if (!m) return null;
+    return [parseFloat(m[1]) * (/s/i.test(m[2]) ? -1 : 1), parseFloat(m[3]) * (/w/i.test(m[4]) ? -1 : 1)];
+}
+
+// Fly the map to a fieldwork activity. Tries, in order: an explicit map_region,
+// the activity's glider tracks, its station coordinates, the map region named
+// earliest in its location text, then every region linked to its project.
+// Returns false if nothing on the map matches.
+function focusMapOn(activity, projectId) {
+    if (!map) return false;
+    const bounds = L.latLngBounds([]);
+    const add = layer => layer.getBounds ? bounds.extend(layer.getBounds()) : bounds.extend(layer.getLatLng());
+    const highlight = [];
+
+    [].concat(activity.map_region || []).forEach(n => (regionIndex[n] || []).forEach(add));
+    if (!bounds.isValid()) {
+        (activity.gliders || []).forEach(g => {
+            if (trackIndex[g]) { add(trackIndex[g]); highlight.push(trackIndex[g]); }
+        });
+    }
+    if (!bounds.isValid()) {
+        (activity.stations || []).forEach(s => { const ll = parseCoords(s.coords); if (ll) bounds.extend(ll); });
+    }
+    if (!bounds.isValid() && activity.location) {
+        const hits = Object.keys(regionIndex)
+            .map(n => [activity.location.indexOf(n), n])
+            .filter(([i]) => i >= 0)
+            .sort((a, b) => a[0] - b[0]);
+        if (hits.length) regionIndex[hits[0][1]].forEach(add);
+    }
+    if (!bounds.isValid() && projectId) {
+        const anchor = `project-${projectId}`;
+        [...Object.entries(REGIONS), ...Object.entries(POINT_LOCATIONS)]
+            .filter(([, d]) => d.anchor === anchor)
+            .forEach(([n]) => (regionIndex[n] || []).forEach(add));
+    }
+    if (!bounds.isValid()) return false;
+
+    map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 7, duration: 1.2 });
+    highlight.forEach(line => {
+        const weight = line.options.weight;
+        line.setStyle({ weight: 7, opacity: 1 });
+        line.bringToFront();
+        setTimeout(() => line.setStyle({ weight, opacity: 0.7 }), 3000);
+    });
+    return true;
 }
 
 document.addEventListener('DOMContentLoaded', initMap);
