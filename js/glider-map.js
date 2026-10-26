@@ -35,7 +35,7 @@ const REGIONS = {
     },
     "Benguela": {
         "project": "GOCART",
-        "legend": "COMICS 2 / GOCART 2 (Benguela, 2018)",
+        "legend": "COMICS 2 / GOCART 2",
         "color": "#b45309",
         "link": "projects/gocart.html",
         "anchor": "project-gocart",
@@ -49,7 +49,7 @@ const REGIONS = {
     },
     "South Georgia": {
         "project": "GOCART",
-        "legend": "COMICS 1 / GOCART 1 (South Georgia, 2017)",
+        "legend": "COMICS 1 / GOCART 1",
         "link": "projects/gocart.html",
         "anchor": "project-gocart",
         "bounds": [[
@@ -205,7 +205,7 @@ const POINT_LOCATIONS = {
     },
     "P3 Mooring": {
         "project": "COMICS",
-        "legend": "COMICS 1 / GOCART 1 (South Georgia, 2017)",
+        "legend": "COMICS 1 / GOCART 1",
         "color": "#9333ea",
         "link": "projects/comics.html",
         "anchor": "project-comics-so",
